@@ -1,4 +1,4 @@
-import { SupModel } from "../../../types/sup";
+import { SupModel } from '../sup-data';
 
 export const ashayuvaData: Partial<SupModel> = {
   image: "https://i.ibb.co/6cN5Tyfb/Profile.png",

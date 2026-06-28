@@ -1,4 +1,4 @@
-import { SupModel } from "../../../types/sup";
+import { SupModel } from '../sup-data';
 
 export const avanyaData: Partial<SupModel> = {
   image: "https://i.ibb.co/3mN2V9r4/0cb1ac149f11145c6a530fc3b93a80a0.webp",
