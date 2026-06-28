@@ -247,6 +247,11 @@ const VideoWatch = () => {
                       className="w-full h-full border-0"
                       allow="autoplay; fullscreen; picture-in-picture; encrypted-media"
                       allowFullScreen
+                      {...({
+                        webkitallowfullscreen: "true",
+                        mozallowfullscreen: "true"
+                      } as Record<string, string>)}
+                      sandbox="allow-scripts allow-same-origin allow-forms allow-presentation allow-popups allow-popups-to-escape-sandbox allow-downloads"
                     />
                   );
                 }

@@ -26,9 +26,9 @@ export const mapAuthError = (error: unknown): string => {
     case "auth/user-not-found":
     case "auth/wrong-password":
     case "auth/invalid-credential":
-      return "Invalid email or password. Please check your credentials.";
+      return "Invalid email or password. If you don't have an account yet, please click 'Sign up' below.";
     case "auth/email-already-in-use":
-      return "This email address is already in use by another account.";
+      return "This email address is already in use. Try logging in instead.";
     case "auth/weak-password":
       return "The password is too weak. Please use at least 6 characters.";
     case "auth/popup-closed-by-user":

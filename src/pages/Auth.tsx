@@ -72,13 +72,14 @@ const Auth = () => {
     if (mode === "reset") return handleResetPassword(e);
     
     // Validation
-    if (!email || !email.includes("@")) {
+    const trimmedEmail = email.trim();
+    if (!trimmedEmail || !trimmedEmail.includes("@")) {
       setError("Please enter a valid email address.");
       return;
     }
 
     if (mode === "signup") {
-      if (!displayName) {
+      if (!displayName.trim()) {
         setError("Please enter a display name.");
         return;
       }
@@ -107,10 +108,10 @@ const Auth = () => {
 
     try {
       if (mode === "login") {
-        await loginUser(email, password);
+        await loginUser(trimmedEmail, password);
         // Navigation is handled by useEffect when user state changes
       } else {
-        await registerUser(email, password, displayName, birthdate);
+        await registerUser(trimmedEmail, password, displayName.trim(), birthdate);
         setVerificationSent(true);
       }
     } catch (err: unknown) {
