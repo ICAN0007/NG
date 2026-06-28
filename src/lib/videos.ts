@@ -34637,31 +34637,6 @@ export function getVideoEmbedUrl(src: string): string {
     url = url.replace("mixdrop.ps/f/", "mixdrop.ps/e/");
   }
 
-  // Handle damplips.com links - often need normalization or iframe rendering
-  if (url.includes("damplips.com")) {
-    url = url.replace("http://", "https://");
-    
-    // For damplips, if it's a direct mp4, try to use their embed page pattern if detectable
-    if (url.includes("/video/")) {
-      const match = url.match(/\/video\/(\d+)\//);
-      if (match && match[1]) {
-        // Only return embed if we are reasonably sure it's an ID
-        // Many damplips URLs have /video7/ or /video6/ which are NOT embed IDs
-        if (!url.includes("video.damplips.com") && !url.includes("video7.") && !url.includes("video6.")) {
-          return `https://www.damplips.com/embed/${match[1]}/`;
-        }
-      }
-    }
-  }
-
-  // Add autoplay=0 to ensure it doesn't blast audio unprompted
-  if (url.includes("mixdrop.ag") || url.includes("damplips.com")) {
-    const separator = url.includes("?") ? "&" : "?";
-    if (!url.includes("autoplay=")) {
-      return `${url}${separator}autoplay=0`;
-    }
-  }
-
   return url;
 }
 
