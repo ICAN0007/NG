@@ -1,0 +1,143 @@
+import { SupModel } from "../../../types/sup";
+
+export const ayselData: Partial<SupModel> = {
+  image: "https://i.ibb.co/6c2jtZW9/profile.png",
+  portrait: "https://i.ibb.co/6c2jtZW9/profile.png",
+  bio: "Aysel_Elid is a 21-year-old female model on Stripchat, born October 2, 2004.\n\nShe is athletic, has brown eyes, and is of Middle Eastern ethnicity. She is multilingual, speaking English, French, and Arabic. She is interested in everyone.",
+  banner: {
+    type: 'image',
+    url: "https://i.ibb.co/dsdh0LLv/banner.png"
+  },
+  photos: [
+    "https://i.ibb.co/0RtkyGQW/1n9rjvrqsnqvn6.jpg",
+    "https://i.ibb.co/PZ6hp9Gw/369g3d60fm6p4xe.jpg",
+    "https://i.ibb.co/DP1Kf3SX/039167zmb1dgpq.jpg",
+    "https://i.ibb.co/twxJ7v1z/4999327.png",
+    "https://i.ibb.co/NgHd7z7f/7765200.png",
+    "https://i.ibb.co/n85K0nLX/8055087.png",
+    "https://i.ibb.co/Dg5xjjXL/14411877.png",
+    "https://i.ibb.co/XrjNYWXc/14412241.png",
+    "https://i.ibb.co/pryfcXXC/14497903.png",
+    "https://i.ibb.co/3xvTgyj/14498379.png",
+    "https://i.ibb.co/x8Gt69dh/14527005.png",
+    "https://i.ibb.co/7t6xQPTN/14598271.png",
+    "https://i.ibb.co/q37SGkQk/14598417.png",
+    "https://i.ibb.co/4nLQbtt9/14612976.png",
+    "https://i.ibb.co/1tc13Jtk/14613155.png",
+    "https://i.ibb.co/Xk6kT1t1/poster-1.png",
+    "https://i.ibb.co/tMqSYjMB/poster-2.png",
+    "https://i.ibb.co/4BwmfNS/poster.png",
+    "https://i.ibb.co/4Zp3gBRT/q1vxr1nztx81xq4.jpg",
+    "https://i.ibb.co/qYKH2zyG/1ae7f690ed9fdecfb8dd1d286bc1f582.webp",
+    "https://i.ibb.co/7xhNpspw/9c8a165d9ecb76f04758af93daa0e9db.webp",
+    "https://i.ibb.co/WNCCZyd7/623282cfc8436865a6cdd9fb67b417b1.webp",
+    "https://i.ibb.co/jkfycPL5/81820018bcce58e4dadaf0388c643972.webp",
+    "https://i.ibb.co/bgK478b1/e07f93609ba564f74ffcced20f80bf9a.webp",
+    "https://i.ibb.co/1G9py0yK/images-1.jpg",
+    "https://i.ibb.co/PsHs9SBg/images-2.jpg",
+    "https://i.ibb.co/FbF084k7/images-3.jpg",
+    "https://i.ibb.co/xKW6vq2k/images.jpg",
+    "https://i.ibb.co/Kz2m8qQb/s.webp",
+    "https://i.ibb.co/6R6pRwyh/Stripchat-Public-Show-f-aysel-elid-2024-04-29-221939-preview.webp",
+    "https://i.ibb.co/prrD6dgv/Stripchat-Public-Show-f-aysel-elid-2024-05-29-055351-preview.webp",
+    "https://i.ibb.co/n86pBXqF/Stripchat-Public-Show-f-aysel-elid-2024-06-16-003343-preview.webp",
+    "https://i.ibb.co/MyjYzYd7/Stripchat-Public-Show-f-aysel-elid-2024-08-15-013501-preview.webp",
+    "https://i.ibb.co/0pzG2ff5/Stripchat-Public-Show-f-aysel-elid-2024-08-17-232552-preview.webp",
+    "https://i.ibb.co/q35RsDKY/Stripchat-Public-Show-f-aysel-elid-2024-08-19-224228-preview.webp",
+    "https://i.ibb.co/gLXzsbj3/Stripchat-Public-Show-f-aysel-elid-2024-08-30-235018-preview.webp",
+    "https://i.ibb.co/gM21dGdy/Stripchat-Public-Show-f-aysel-elid-2024-09-25-051250-preview.webp",
+    "https://i.ibb.co/CKmNjsK6/Stripchat-Public-Show-f-aysel-elid-2024-09-25-234342-preview.webp",
+    "https://i.ibb.co/9kftf5XM/Stripchat-Public-Show-f-aysel-elid-2024-10-26-232705-preview.webp",
+    "https://i.ibb.co/mVHVpVNk/Stripchat-Public-Show-f-aysel-elid-2024-10-27-182752-preview.webp",
+    "https://i.ibb.co/7Nr97N6G/Stripchat-Public-Show-f-aysel-elid-2024-11-23-231421-preview.webp",
+    "https://i.ibb.co/4R00TK9z/Stripchat-Public-Show-f-aysel-elid-2024-11-25-010039-preview.webp",
+    "https://i.ibb.co/S2vkjLx/Stripchat-Public-Show-f-aysel-elid-2024-12-11-232758-preview.webp",
+    "https://i.ibb.co/RkW4VJYk/Stripchat-Public-Show-f-aysel-elid-2025-02-16-000924-preview.webp",
+    "https://i.ibb.co/wZktVfFq/Stripchat-Public-Show-f-aysel-elid-2025-03-09-230133-preview.webp",
+    "https://i.ibb.co/LdWR5CCH/Stripchat-Public-Show-f-aysel-elid-2025-04-13-001648-preview.webp",
+    "https://i.ibb.co/Tx22tg4P/Stripchat-Public-Show-f-aysel-elid-2025-04-16-233422-preview.webp",
+    "https://i.ibb.co/9H63JSBy/sucking-my-little-feet.jpg"
+  ],
+  clips: [
+    {
+      title: "Stripchat Show 1",
+      url: "https://files.catbox.moe/l4ypds.mp4",
+      thumbnail: "https://i.ibb.co/6R6pRwyh/Stripchat-Public-Show-f-aysel-elid-2024-04-29-221939-preview.webp",
+    },
+    {
+      title: "Stripchat Show 2",
+      url: "https://files.catbox.moe/pnxegh.mp4",
+      thumbnail: "https://i.ibb.co/prrD6dgv/Stripchat-Public-Show-f-aysel-elid-2024-05-29-055351-preview.webp",
+    },
+    {
+      title: "Stripchat Show 3",
+      url: "https://files.catbox.moe/p0fmh0.mp4",
+      thumbnail: "https://i.ibb.co/n86pBXqF/Stripchat-Public-Show-f-aysel-elid-2024-06-16-003343-preview.webp",
+    },
+    {
+      title: "Stripchat Show 4",
+      url: "https://files.catbox.moe/uza8s6.mp4",
+      thumbnail: "https://i.ibb.co/MyjYzYd7/Stripchat-Public-Show-f-aysel-elid-2024-08-15-013501-preview.webp",
+    },
+    {
+      title: "Stripchat Show 5",
+      url: "https://files.catbox.moe/qbit8j.mp4",
+      thumbnail: "https://i.ibb.co/0pzG2ff5/Stripchat-Public-Show-f-aysel-elid-2024-08-17-232552-preview.webp",
+    },
+    {
+      title: "Stripchat Show 6",
+      url: "https://files.catbox.moe/0nsesh.mp4",
+      thumbnail: "https://i.ibb.co/q35RsDKY/Stripchat-Public-Show-f-aysel-elid-2024-08-19-224228-preview.webp",
+    },
+    {
+      title: "Stripchat Show 7",
+      url: "https://files.catbox.moe/qhs9i2.mp4",
+      thumbnail: "https://i.ibb.co/gLXzsbj3/Stripchat-Public-Show-f-aysel-elid-2024-08-30-235018-preview.webp",
+    },
+    {
+      title: "Stripchat Show 8",
+      url: "https://files.catbox.moe/0hih5v.mp4",
+      thumbnail: "https://i.ibb.co/gM21dGdy/Stripchat-Public-Show-f-aysel-elid-2024-09-25-051250-preview.webp",
+    },
+    {
+      title: "Stripchat Show 9",
+      url: "https://files.catbox.moe/hbpkt9.mp4",
+      thumbnail: "https://i.ibb.co/CKmNjsK6/Stripchat-Public-Show-f-aysel-elid-2024-09-25-234342-preview.webp",
+    },
+    {
+      title: "Stripchat Show 10",
+      url: "https://files.catbox.moe/g9q7jp.mp4",
+      thumbnail: "https://i.ibb.co/9kftf5XM/Stripchat-Public-Show-f-aysel-elid-2024-10-26-232705-preview.webp",
+    },
+    {
+      title: "Stripchat Show 11",
+      url: "https://files.catbox.moe/fknrxn.mp4",
+      thumbnail: "https://i.ibb.co/mVHVpVNk/Stripchat-Public-Show-f-aysel-elid-2024-10-27-182752-preview.webp",
+    },
+    {
+      title: "Stripchat Show 12",
+      url: "https://files.catbox.moe/qjp3jz.mp4",
+      thumbnail: "https://i.ibb.co/7Nr97N6G/Stripchat-Public-Show-f-aysel-elid-2024-11-23-231421-preview.webp",
+    },
+    {
+      title: "Stripchat Show 13",
+      url: "https://files.catbox.moe/wok1qb.mp4",
+      thumbnail: "https://i.ibb.co/4R00TK9z/Stripchat-Public-Show-f-aysel-elid-2024-11-25-010039-preview.webp",
+    },
+    {
+      title: "Stripchat Show 14",
+      url: "https://files.catbox.moe/o4rsa1.mp4",
+      thumbnail: "https://i.ibb.co/S2vkjLx/Stripchat-Public-Show-f-aysel-elid-2024-12-11-232758-preview.webp",
+    },
+    {
+      title: "Stripchat Show 15",
+      url: "https://files.catbox.moe/owfwgk.mp4",
+      thumbnail: "https://i.ibb.co/RkW4VJYk/Stripchat-Public-Show-f-aysel-elid-2025-02-16-000924-preview.webp",
+    },
+    {
+      title: "Stripchat Show 16",
+      url: "https://files.catbox.moe/ryl2gu.mp4",
+      thumbnail: "https://i.ibb.co/wZktVfFq/Stripchat-Public-Show-f-aysel-elid-2025-03-09-230133-preview.webp",
+    }
+  ]
+};

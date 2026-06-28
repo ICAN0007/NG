@@ -1,0 +1,121 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // -------------------------------------------------------------------------
+    // Phase 3: Primitives & Helpers
+    // -------------------------------------------------------------------------
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    // -------------------------------------------------------------------------
+    // Pillar 2: Validation Blueprints
+    // -------------------------------------------------------------------------
+    function isValidUserProfile(data) {
+      return data.uid == request.auth.uid
+        && data.email is string
+        && data.displayName is string
+        && data.displayName.size() <= 100
+        && data.createdAt is string;
+    }
+
+    function isValidVisitor(data) {
+      return data.ip is string
+        && data.userAgent is string
+        && data.platform is string
+        && data.screenWidth is int
+        && data.screenHeight is int
+        && data.referrer is string
+        && data.timestamp is string
+        && data.ageVerified == true;
+    }
+
+    function isValidInteraction(data) {
+      return data.userId == request.auth.uid
+        && data.timestamp is string;
+    }
+
+    // -------------------------------------------------------------------------
+    // Phase 1: Match Blocks
+    // -------------------------------------------------------------------------
+    
+    // Admins
+    match /admins/{userId} {
+      allow read: if isOwner(userId) || isAdmin();
+      allow write: if false; // System defined
+    }
+
+    // Videos & Models (Public read, Admin write)
+    match /videos/{videoId} {
+      allow get, list: if true;
+      allow write: if isAdmin() && isValidId(videoId);
+    }
+    
+    match /models/{modelId} {
+      allow get, list: if true;
+      allow write: if isAdmin() && isValidId(modelId);
+    }
+
+    // User Data (Split collection/ownership)
+    // Parent user document
+    match /users/{userId} {
+      allow get: if isOwner(userId);
+      allow create: if isOwner(userId) && isValidUserProfile(incoming());
+      allow update: if isOwner(userId) && isValidUserProfile(incoming()) 
+        && incoming().diff(existing()).affectedKeys().hasOnly(['displayName', 'birthdate']);
+    }
+
+    // Explicit sub-collection rules to ensure list operations are permitted
+    match /users/{userId}/likedVideos/{videoId} {
+      allow read, write: if isOwner(userId);
+    }
+    match /users/{userId}/savedVideos/{videoId} {
+      allow read, write: if isOwner(userId);
+    }
+    match /users/{userId}/favoriteModels/{modelId} {
+      allow read, write: if isOwner(userId);
+    }
+    match /users/{userId}/favoriteCategories/{categoryId} {
+      allow read, write: if isOwner(userId);
+    }
+
+    // Visitors (Public logging)
+    match /visitors/{visitorId} {
+      allow create: if isValidVisitor(incoming());
+      allow read: if isAdmin();
+    }
+    
+    match /visitor_logs/{logId} {
+      allow create: if true; // Debug fallback
+      allow read: if isAdmin();
+    }
+
+    match /_connection_test/{id} {
+      allow read: if false;
+    }
+
+    match /test/{id} {
+      allow read, write: if false;
+    }
+  }
+}

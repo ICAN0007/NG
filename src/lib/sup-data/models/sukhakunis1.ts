@@ -1,0 +1,62 @@
+import { SupModel } from '../sup-data';
+
+export const sukhakunis1Data: Partial<SupModel> = {
+  portrait: 'https://i.ibb.co/cKfmtpnP/portrait.webp',
+  folderThumb: 'https://i.ibb.co/dsPQv6RL/Folderthumb.jpg',
+  image: 'https://i.ibb.co/cKfmtpnP/portrait.webp',
+  photos: [
+    "https://i.ibb.co/bMjhS0JW/3e709884c20e3f2f6c5a7d041579d8d8.webp",
+    "https://i.ibb.co/F4vX92JL/4fa593fbe3aacf4fc16a692c5983f613.webp",
+    "https://i.ibb.co/wZmzWY47/6fcc07938bd27e459764f0826e502c9b.webp",
+    "https://i.ibb.co/Yzf0FKd/8c6f9cb107bcac20a05002ec34ddcdb0.webp",
+    "https://i.ibb.co/wFG1ZXzG/8f95365e37ebbc1755d96cba505a43cf.webp",
+    "https://i.ibb.co/yFXRmQMg/6021e37f7f9e0b932a2ff22a59dcf229.webp",
+    "https://i.ibb.co/9m3DSLRk/Amateur-video-shaving-my-hairy-vagina.jpg",
+    "https://i.ibb.co/gMzTbznn/Asshole.jpg",
+    "https://i.ibb.co/dsCR4WPD/d0c23fde2fb2fd7422822c6e50b3ca4c.webp",
+    "https://i.ibb.co/JwWfQzpp/d223385bf5249ff341266734634ce0ef.webp",
+    "https://i.ibb.co/d40Tmnwt/DIRTY-BLOWJOB-ANS-TWERK.webp",
+    "https://i.ibb.co/fG9sxRs4/double-penetration-2-toys-With-a-happy-ending.webp",
+    "https://i.ibb.co/99cdSCCz/e62dad380d93c1ac4bf34e578b07ae48.webp",
+    "https://i.ibb.co/gZ4XH0Y8/ecc18a3433ee260030138763b5268108.webp",
+    "https://i.ibb.co/fJ6JjFp/Enjoy-this-erotic-and-sensual-show.jpg",
+    "https://i.ibb.co/dsPQv6RL/Folderthumb.jpg",
+    "https://i.ibb.co/TBh64FMW/Fuck-my-tight-anus.jpg",
+    "https://i.ibb.co/sf9TJrz/Fuck-your-secretary-secretly-shh.jpg",
+    "https://i.ibb.co/C3sKWgpw/I-love-it-when-your-black-penis-is-in-the-middle-of-my-tits.jpg",
+    "https://i.ibb.co/mV36LGn0/my-juicy-pussy-so-so-wet.jpg",
+    "https://i.ibb.co/Gf7P1w4Q/playing-with-my-wet-and-delicious-hairy-pussy-You-can-also-see-my-virgin-anus.jpg",
+    "https://i.ibb.co/ymhSS5s6/playing-with-my-wet-clit.jpg",
+    "https://i.ibb.co/cKfmtpnP/portrait.webp",
+    "https://i.ibb.co/Pz9LXhNW/press-and-spit-my-tits.jpg",
+    "https://i.ibb.co/BVhFt6w9/Private-Show-fucking-faster.webp",
+    "https://i.ibb.co/hxk4CRCB/profile-1.png",
+    "https://i.ibb.co/hJ7J6gR3/profile-2.png",
+    "https://i.ibb.co/wZVWy4WW/Public-Show-SQUIRT.webp",
+    "https://i.ibb.co/zTsnmGWb/pvt-so-good.jpg",
+    "https://i.ibb.co/4wNyjjDF/Pvt-submission-gag-whipping-domi-cumtounge-dripping-pussy.jpg",
+    "https://i.ibb.co/KpfMwTY3/Ride-dildo-so-passionate.webp",
+    "https://i.ibb.co/twVYC23f/Ride-dildo-with-red-highhels.webp",
+    "https://i.ibb.co/jvQLFCLm/Riding-two-dildos-of-different-sizes.webp",
+    "https://i.ibb.co/JF73GBLr/Riding-you-in-the-bathroom-with-my-delicious-pussy.webp",
+    "https://i.ibb.co/rfMrsP0r/Role-play-teacher-I-know-you-re-going-to-love-it.jpg",
+    "https://i.ibb.co/zdJC2Jx/S-E-X-Y-without-MAKEUP.jpg",
+    "https://i.ibb.co/dJ0LGY4F/Screenshot-2026-06-17-050359.png",
+    "https://i.ibb.co/LzSW5NBD/Seduction-PVT.webp",
+    "https://i.ibb.co/HTRxtwCD/Shaving-my-pussy.webp",
+    "https://i.ibb.co/fG16QHM7/Slide-your-tongue-through-my-juicy-pussy.jpg",
+    "https://i.ibb.co/s9HB7PWR/squirt.webp",
+    "https://i.ibb.co/7tZnZGTx/Sucking-the-lolipop-and-your-cock-while-I-rub-it-in-my-armpit-and-play-with-them.jpg",
+    "https://i.ibb.co/11J1WWG/Sweating-with-passion.jpg",
+    "https://i.ibb.co/W4tL2PKw/Ticket-Show-fuck-so-hard-Dildo.webp",
+    "https://i.ibb.co/SXxBDwSv/Where-do-you-want-to-start.jpg"
+  ],
+  clips: [
+    { title: "Short Clip 1", url: "https://files.catbox.moe/3why34.mp4", thumbnail: "https://i.ibb.co/dsPQv6RL/Folderthumb.jpg" },
+    { title: "Short Clip 2", url: "https://files.catbox.moe/nb5pzx.mp4", thumbnail: "https://i.ibb.co/dsPQv6RL/Folderthumb.jpg" }
+  ],
+  videos: [
+    { id: "sk-c1", title: "Short Clip 1", src: "https://files.catbox.moe/3why34.mp4", thumb: "https://i.ibb.co/dsPQv6RL/Folderthumb.jpg", categories: ["Stripchat", "Short Clips"] },
+    { id: "sk-c2", title: "Short Clip 2", src: "https://files.catbox.moe/nb5pzx.mp4", thumb: "https://i.ibb.co/dsPQv6RL/Folderthumb.jpg", categories: ["Stripchat", "Short Clips"] }
+  ]
+};

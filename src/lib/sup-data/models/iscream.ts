@@ -1,0 +1,52 @@
+import { SupModel } from '../sup-data';
+
+export const iscreamData: Partial<SupModel> = {
+  banner: {
+    type: 'image',
+    url: 'https://i.ibb.co/Xfj5mmFJ/Portrait.png'
+  },
+  portrait: 'https://i.ibb.co/Xfj5mmFJ/Portrait.png',
+  folderThumb: 'https://i.ibb.co/8LrqHV1D/Folderthumb.png',
+  photos: [
+    "https://i.ibb.co/8gk3M2kv/1c3a8201568b73a70b0da02de86fec0a.webp",
+    "https://i.ibb.co/tMJGY9Pg/2b17f8ac599f97b5e1e23bf72715e003.webp",
+    "https://i.ibb.co/m5RmK4cd/8ec306cac6277efdbbbce1e282256ca4.webp",
+    "https://i.ibb.co/HDmk26t3/098855dce475018ecfe8bc2383e9e216.webp",
+    "https://i.ibb.co/W4z7FfSY/436021f51dbc69a068f7c965673b3d58.webp",
+    "https://i.ibb.co/4wDd7RWD/14457590.png",
+    "https://i.ibb.co/XrRf637S/A-quickie-before-shower-squirt.jpg",
+    "https://i.ibb.co/pvvTSZDB/Blow-job-Dildo-ride-squirt.jpg",
+    "https://i.ibb.co/nNL1wQhM/Boobies.jpg",
+    "https://i.ibb.co/yczfpLgb/d11f25c660cd1d864a24836f3e07dfa2.webp",
+    "https://i.ibb.co/yntRQG0V/d354c85adfaafb0e3949cd5894f7f877.webp",
+    "https://i.ibb.co/q3L5vDv3/EXTREME-BDSM-Needle-in-the-boobs.jpg",
+    "https://i.ibb.co/W4ktMXW1/EXTREME-BDSM-Needles-in-the-Kitty.jpg",
+    "https://i.ibb.co/wNm34rYc/f95d26172039cd24eaf31c86b98a2678.webp",
+    "https://i.ibb.co/8LrqHV1D/Folderthumb.png",
+    "https://i.ibb.co/hRSfchTH/Forbidden-Roleplay.jpg",
+    "https://i.ibb.co/2RkZVZk/Leg-shaking-Orgasamic-Squirt.jpg",
+    "https://i.ibb.co/67ThC774/Naughty-Padosan-your-sexy-neighbour.jpg",
+    "https://i.ibb.co/sv4BF3tF/Orgasms.jpg",
+    "https://i.ibb.co/Xfj5mmFJ/Portrait.png",
+    "https://i.ibb.co/vCPDHTHt/POV-you-newly-wed-wife-is-wearing-all-white-for-you.jpg",
+    "https://i.ibb.co/213ThPjJ/Ride-the-Dildo-and-Squirt.jpg",
+    "https://i.ibb.co/HpF1J19K/Slutty-bhabhi-1.jpg",
+    "https://i.ibb.co/ks4Mj9nf/Slutty-bhabhi-2.jpg",
+    "https://i.ibb.co/CsMNp1c3/Slutty-Bhabhi-is-here-again-this-time-in-the-kitchen.jpg",
+    "https://i.ibb.co/5hMWpQ35/SLUTTY-BHABHI.jpg",
+    "https://i.ibb.co/LhpLCrjq/Some-anal-play-and-squirting.jpg",
+    "https://i.ibb.co/Q7CqNJkc/Spy-on-my-very-very-intense-exclusive-private-show-BDSM-at-it-s-peak-I-cum-so-much.jpg",
+    "https://i.ibb.co/8Lw8DgT6/Squirting-in-the-balloons.jpg",
+    "https://i.ibb.co/5gJgDKh5/Strip-and-Squirt.jpg",
+    "https://i.ibb.co/wbYh2bd/Teri-Aukat-yaad-dilane-ke-liye-abuses-in-hindi.jpg",
+    "https://i.ibb.co/s99mMZDS/Tujhe-teri-aukaat-yaad-dilane-ke-liye.jpg",
+    "https://i.ibb.co/20y3wfWg/VALENTINE-s-Day-Waterfall.jpg",
+    "https://i.ibb.co/nsg0n782/WAX-on-pussy.jpg",
+    "https://i.ibb.co/hJ28DLBP/WILD-RIDE-SQUIRT.jpg",
+    "https://i.ibb.co/zhnC6hYm/Work-all-my-holes-and-Squirt.jpg",
+    "https://i.ibb.co/DDM7092T/Your-Indian-wife-is-cooking-for-you-but-you-can-t-resist-her-Let-s-do-it-in-the-kitchen.jpg",
+    "https://i.ibb.co/xKZQwT4C/Morning-CUM-gasm-with-dildo-play.jpg"
+  ],
+  clips: [],
+  videos: []
+};

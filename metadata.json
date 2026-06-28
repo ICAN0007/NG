@@ -1,0 +1,8 @@
+{
+  "name": "NAKED GIRLS",
+  "description": "Naked Women and Naked Girls",
+  "requestFramePermissions": ["autoplay", "fullscreen", "picture-in-picture", "encrypted-media"],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

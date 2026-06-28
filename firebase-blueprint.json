@@ -1,0 +1,143 @@
+{
+  "entities": {
+    "Video": {
+      "title": "Video",
+      "description": "Premium video content details",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique video ID" },
+        "title": { "type": "string", "description": "Video title" },
+        "categories": { "type": "array", "description": "List of categories" },
+        "tags": { "type": "array", "description": "List of tags" },
+        "src": { "type": "string", "description": "Video source URL (embed or direct)" },
+        "mirrors": { "type": "array", "description": "Alternative video sources" },
+        "thumb": { "type": "string", "description": "Thumbnail image URL" },
+        "duration": { "type": "string", "description": "Duration in seconds or formatted string" },
+        "addedAt": { "type": "string", "description": "ISO timestamp of when it was added" },
+        "model": { "type": "string", "description": "Primary model name" },
+        "gallery": { "type": "array", "description": "List of image gallery URLs" }
+      },
+      "required": ["id", "title", "src", "thumb", "model"]
+    },
+    "Model": {
+      "title": "Model",
+      "description": "Model profile details",
+      "type": "object",
+      "properties": {
+        "name": { "type": "string", "description": "Model display name" },
+        "image": { "type": "string", "description": "Main portrait image URL" },
+        "card": { "type": "string", "description": "9:16 grid poster image URL" },
+        "hero": { "type": "string", "description": "Wide cinematic banner image URL" },
+        "portrait": { "type": "string", "description": "Side portrait image URL" },
+        "bio": { "type": "string", "description": "Model biography" }
+      },
+      "required": ["name", "image", "bio"]
+    },
+    "Visitor": {
+      "title": "Visitor",
+      "description": "Log of website visitors",
+      "type": "object",
+      "properties": {
+        "ip": { "type": "string", "description": "Visitor IP address" },
+        "userAgent": { "type": "string", "description": "Browser user agent" },
+        "platform": { "type": "string", "description": "Device platform" },
+        "screenWidth": { "type": "integer", "description": "Screen width in pixels" },
+        "screenHeight": { "type": "integer", "description": "Screen height in pixels" },
+        "referrer": { "type": "string", "description": "Referrer URL" },
+        "timestamp": { "type": "string", "description": "ISO timestamp of visit" },
+        "ageVerified": { "type": "boolean", "description": "Age verification status (true)" }
+      },
+      "required": ["ip", "userAgent", "platform", "screenWidth", "screenHeight", "referrer", "timestamp", "ageVerified"]
+    },
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Public and private user profile data",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "email": { "type": "string" },
+        "displayName": { "type": "string" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "email", "createdAt"]
+    },
+    "VideoInteraction": {
+      "title": "Video Interaction",
+      "description": "Like or Save interaction",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "videoId": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["userId", "videoId", "timestamp"]
+    },
+    "ModelInteraction": {
+      "title": "Model Interaction",
+      "description": "Favorite model interaction",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "modelId": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["userId", "modelId", "timestamp"]
+    },
+    "CategoryInteraction": {
+      "title": "Category Interaction",
+      "description": "Favorite category interaction",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "category": { "type": "string" },
+        "timestamp": { "type": "string" }
+      },
+      "required": ["userId", "category", "timestamp"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User account documents"
+    },
+    "/users/{userId}/likedVideos/{videoId}": {
+      "schema": "VideoInteraction",
+      "description": "Videos liked by the user"
+    },
+    "/users/{userId}/savedVideos/{videoId}": {
+      "schema": "VideoInteraction",
+      "description": "Videos saved by the user"
+    },
+    "/users/{userId}/favoriteModels/{modelId}": {
+      "schema": "ModelInteraction",
+      "description": "Models favorited by the user"
+    },
+    "/users/{userId}/favoriteCategories/{categoryId}": {
+      "schema": "CategoryInteraction",
+      "description": "Categories favorited by the user"
+    },
+    "/videos/{videoId}": {
+      "schema": "Video",
+      "description": "Collection of premium videos"
+    },
+    "/models/{modelId}": {
+      "schema": "Model",
+      "description": "Collection of model profiles"
+    },
+    "/visitors/{visitorId}": {
+      "schema": "Visitor",
+      "description": "Log of website visitors"
+    },
+    "/admins/{userId}": {
+      "schema": {
+        "title": "Admin",
+        "type": "object",
+        "properties": {
+          "email": { "type": "string" }
+        },
+        "required": ["email"]
+      },
+      "description": "Trusted admin users"
+    }
+  }
+}
