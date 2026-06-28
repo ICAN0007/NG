@@ -251,7 +251,6 @@ const VideoWatch = () => {
                         webkitallowfullscreen: "true",
                         mozallowfullscreen: "true"
                       } as Record<string, string>)}
-                      sandbox="allow-scripts allow-same-origin allow-forms allow-presentation allow-popups allow-popups-to-escape-sandbox allow-downloads"
                     />
                   );
                 }
