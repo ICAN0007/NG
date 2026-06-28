@@ -356,6 +356,8 @@ export const ashwithaData: Partial<SupModel> = {
       "tags": ["Big Boobs", "Blowjob", "Popular", "Trending"],
       "src": "https://bysekoze.com/e/e9uolba5sp2f/ashwitha-s-indian-model-clear-pussy-strip",
       "thumb": "https://i.ibb.co/tMRD00kb/ash.jpg",
+      "width": 640,
+      "height": 360,
       "duration": "5:27",
       "model": "Ashwitha",
       "addedAt": "2023-06-13T10:00:00Z"

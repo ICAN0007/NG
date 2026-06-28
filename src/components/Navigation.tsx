@@ -35,7 +35,7 @@ export const DesktopHeader = () => {
             to="/sup" 
             className={`hover:text-primary transition-colors uppercase ${location.pathname === '/sup' ? 'text-primary' : ''}`}
           >
-            SUP
+            StripChat
           </Link>
           <a 
             href="https://t.me/Vibevault_18" 
@@ -143,7 +143,7 @@ export const BottomNav = () => {
     { label: "HOME", icon: Home, path: "/" },
     { label: "MODELS", icon: User, path: "/models" },
     { label: "GALLERIES", icon: Image, path: "/galleries" },
-    { label: "SUP", icon: PlayCircle, path: "/sup" },
+    { label: "StripChat", icon: PlayCircle, path: "/sup" },
     { label: "LIBRARY", icon: Bookmark, path: "/library" },
   ];
 

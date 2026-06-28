@@ -632,7 +632,7 @@ const Sup = () => {
             <div className="pt-4 pb-8 flex flex-col gap-6">
               <div className="flex items-center gap-3">
                 <div className="px-2 py-1 bg-primary/20 border border-primary/30 rounded text-[10px] font-black tracking-widest text-primary uppercase">
-                  SUP Members
+                  StripChat Members
                 </div>
                 <h1 className="text-4xl sm:text-5xl font-black tracking-tight text-white italic lowercase">
                   Exclusive Content
@@ -812,7 +812,7 @@ const Sup = () => {
                         <section className="space-y-12">
                           <div className={modelCategory === "All" && searchQuery === "" ? "space-y-16" : "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-8 gap-y-12"}>
                             {modelCategory === "All" && searchQuery === "" ? (
-                              ["OnlyFans", "SUP", "Indian", "Popular", "Uploaded"].map(cat => {
+                              ["OnlyFans", "StripChat", "Indian", "Popular", "Uploaded"].map(cat => {
                                 const modelsInCat = supModels.filter(m => m.platform === cat);
                                 if (modelsInCat.length === 0) return null;
                                 return (
@@ -1315,7 +1315,7 @@ const Sup = () => {
               {/* Branding Label */}
               <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
                 <div className="px-3 py-1 bg-primary text-[10px] font-black uppercase tracking-[0.3em] text-white rounded-md shadow-lg shadow-primary/20">
-                  SUP Exclusive
+                  StripChat Exclusive
                 </div>
                 <p className="text-[10px] font-bold text-white/20 uppercase tracking-widest">Single Collection View</p>
               </div>

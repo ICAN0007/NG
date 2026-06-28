@@ -174,7 +174,7 @@ const VideoWatch = () => {
             </button>
             <nav className="hidden md:flex items-center gap-6 text-[10px] font-black tracking-widest text-white/40">
               <Link to="/models" className="hover:text-primary transition-colors uppercase">MODELS</Link>
-              <Link to="/sup" className="hover:text-primary transition-colors uppercase">SUP</Link>
+              <Link to="/sup" className="hover:text-primary transition-colors uppercase">StripChat</Link>
             </nav>
           </div>
 
@@ -219,7 +219,10 @@ const VideoWatch = () => {
         <div className="space-y-12">
           {/* Main Player Area */}
           <div className="space-y-8">
-            <div className="relative rounded-[2.5rem] overflow-hidden bg-black aspect-video shadow-[0_32px_64px_-12px_rgba(0,0,0,0.8)] ring-1 ring-white/10 group">
+            <div 
+              className="relative rounded-[2.5rem] overflow-hidden bg-black shadow-[0_32px_64px_-12px_rgba(0,0,0,0.8)] ring-1 ring-white/10 group"
+              style={{ aspectRatio: video?.width && video?.height ? `${video.width}/${video.height}` : '16/9' }}
+            >
               {(() => {
                 const url = currentSrc;
                 const isDirect = /\.(mp4|m4v|mov|webm|m3u8|mpd|ogg)(\?|$)/i.test(url);
@@ -507,7 +510,7 @@ const VideoWatch = () => {
                 </h3>
               </div>
               <Link to={isSupVideo(video) ? "/sup" : "/"} className="text-[10px] font-black text-white/30 hover:text-white transition-colors tracking-widest uppercase">
-                {isSupVideo(video) ? "Back to SUP Home" : "View Home"}
+                {isSupVideo(video) ? "Back to StripChat Home" : "View Home"}
               </Link>
             </div>
 

@@ -16,6 +16,8 @@ export interface Video {
   description?: string;
   directedBy?: string;
   rating?: string;
+  width?: number;
+  height?: number;
 }
 
 export const isSupVideo = (v: Video) => {
@@ -34635,6 +34637,11 @@ export function getVideoEmbedUrl(src: string): string {
   // Ensure mixdrop links have /e/ for embedding if they are direct file links
   if (url.includes("mixdrop.ps") && !url.includes("/e/")) {
     url = url.replace("mixdrop.ps/f/", "mixdrop.ps/e/");
+  }
+
+  // Handle bysekoze.com links - ensure embed version
+  if (url.includes("bysekoze.com") && !url.includes("/e/")) {
+    url = url.replace("bysekoze.com/d/", "bysekoze.com/e/");
   }
 
   return url;

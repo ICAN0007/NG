@@ -57,7 +57,7 @@ export type { SupMember, SupModel, SupClip };
 
 export const supCategories = [
   "All",
-  "SUP",
+  "StripChat",
   "OnlyFans",
   "Indian",
   "Popular",
@@ -69,42 +69,42 @@ export const supMembers: SupMember[] = [
     id: "alanareignn",
     name: "AlanaReignn",
     image: "https://i.ibb.co/tpvyfXMR/profile-2.png",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "amcutefatima",
     name: "__amcutefatima",
     image: "https://i.ibb.co/ptrH3LNR/amcutefatima.jpg",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "adrit-vance",
     name: "Adrit Vance",
     image: "https://i.ibb.co/YFpGf0W/adrit-vance.jpg",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "alexa7k7",
     name: "Alexa7k7",
     image: "https://i.ibb.co/Mkmryj9t/Stripchat-Free-Chat-c-alexa7k7-2026-05-30-205716-preview.webp",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "angela-05",
     name: "Angela__05",
     image: "https://i.ibb.co/LhgqN4bq/Pussy-Finguring-in-Panty-frame-at-2m47s.jpg",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "ashayuva",
     name: "AshaYuva",
     image: "https://i.ibb.co/hR4L0Yq/ashayuva.jpg",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
@@ -119,7 +119,7 @@ export const supMembers: SupMember[] = [
     id: "demieliss",
     name: "Demieliss",
     image: "https://i.ibb.co/G4bDZKnS/Portrait.png",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
@@ -134,7 +134,7 @@ export const supMembers: SupMember[] = [
     id: "jasmine678",
     name: "jasmine678",
     image: "https://i.ibb.co/ptrH3LNR/jasmine678.jpg",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
@@ -197,224 +197,224 @@ export const supMembers: SupMember[] = [
     id: "avanya-1",
     name: "AvanYa_1",
     image: "https://i.ibb.co/ptrH3LNR/avanya-1.jpg",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "aysel-elid",
     name: "aysel_elid",
     image: "https://i.ibb.co/YFpGf0W/aysel-elid.jpg",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "bellelouisevp",
     name: "BelleLouiseVp",
     image: "https://i.ibb.co/C3P9Lqf/bellelouisevp.jpg",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "brotherr_sisterr",
     name: "Brotherr Sisterr",
     image: "https://i.ibb.co/gLJyddt2/profile-2.png",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "cutenikkibaby",
     name: "Cutenikkibaby",
     image: "https://i.ibb.co/TDZZ9jzb/profile.png",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "dreamgirl-010",
     name: "Dreamgirl_010",
     image: "https://i.ibb.co/ptrH3LNR/dreamgirl-010.jpg",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "florian-jazmin",
     name: "floriamANDjazmin",
     image: "https://i.ibb.co/YFpGf0W/florian-jazmin.jpg",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "gabriella-wils",
     name: "Gabriella_Wils",
     image: "https://i.ibb.co/C3P9Lqf/gabriella-wils.jpg",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "gerridaes",
     name: "gerridaes",
     image: "https://i.ibb.co/N66Gr6NR/profilee.png",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "hannaclarkk",
     name: "HannaClarrk_",
     image: "https://i.ibb.co/hR4L0Yq/hannaclarkk.jpg",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "hazelperry",
     name: "hazelperry",
     image: "https://i.ibb.co/v4K9Lqf/hazelperry.jpg",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "i-scream",
     name: "I-Scream",
     image: "https://i.ibb.co/Xfj5mmFJ/Portrait.png",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "kinky-spa",
     name: "Kinky_spa",
     image: "https://i.ibb.co/jksYFSX5/portrait.webp",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "lusty-souls",
     name: "Lusty_souls",
     image: "https://i.ibb.co/fVf1SxXn/portait.png",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "mannu79",
     name: "mannu79",
     image: "https://i.ibb.co/pvPMcYpG/Screenshot-2026-06-17-025145.png",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "marry-cordy",
     name: "Marry_Cordy",
     image: "https://i.ibb.co/Wvysvsk2/portrait.webp",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "mia-moonna",
     name: "mia_moonna",
     image: "https://i.ibb.co/zHbSfBcw/Portrait.webp",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "misha-01",
     name: "Misha_01",
     image: "https://i.ibb.co/gF6K2844/Portrait.png",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "nisha-01",
     name: "Nisha_01",
     image: "https://i.ibb.co/NnTBQ08w/portratit.png",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "miss-malaika",
     name: "Miss_malaika",
     image: "https://i.ibb.co/20KwdPmy/Folderthumb.png",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "miss-siya-00",
     name: "miss_siya_00",
     image: "https://i.ibb.co/8gX2B3rL/portrati.png",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "misshermione2",
     name: "MissHermione2",
     image: "https://i.ibb.co/mVB7DZdP/folderthumb.png",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "neha18",
     name: "Neha18",
     image: "https://i.ibb.co/gMdPJFR8/Portrait.webp",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "muskan-1",
     name: "Muskan-1",
     image: "https://i.ibb.co/6J0qQ7F8/Portrait.jpg",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "snow-white123",
     name: "Snow_White123",
     image: "https://i.ibb.co/Cp5ZQ7Lg/Poratit.png",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "sexy-jenny",
     name: "SEXY_JENNY_",
     image: "https://i.ibb.co/C3PmpRRP/porrait.jpg",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "sneha-babe",
     name: "sneha_babe",
     image: "https://i.ibb.co/VYJ8LmHN/portrait.png",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "sukhakunis1",
     name: "sukhakunis1",
     image: "https://i.ibb.co/cKfmtpnP/portrait.webp",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "winterforu",
     name: "Winterforu",
     image: "https://i.ibb.co/gFP89s4T/Porrarit.png",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "zeherkizara",
     name: "Zeherkizara",
     image: "https://i.ibb.co/YnvzXDJ/Portrait.webp",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "the-alejandro-dolls",
     name: "TheAlejandroDolls",
     image: "https://i.ibb.co/KxSDk9kb/Portrait.webp",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
   {
     id: "zuby-duby",
     name: "zuby_duby",
     image: "https://i.ibb.co/YFpGf0W/zuby-duby.jpg",
-    platform: "SUP",
+    platform: "StripChat",
     isNew: true
   },
 
