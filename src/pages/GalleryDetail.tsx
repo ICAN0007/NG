@@ -71,7 +71,7 @@ const GalleryDetailPage: React.FC = () => {
                <span className="w-10 h-0.5 bg-primary" />
                <span className="text-primary text-[10px] font-black uppercase tracking-[0.4em]">EXCLUSIVE COLLECTION</span>
              </div>
-             <h1 className="text-5xl md:text-8xl font-black text-white tracking-tighter leading-[0.9] mb-8 italic uppercase drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)]">
+             <h1 className="text-4xl md:text-8xl font-black text-white tracking-tighter leading-[0.9] mb-8 italic uppercase drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)]">
                {gallery.modelName} <br />
                <span className="text-primary not-italic text-[0.6em]">&</span> {gallery.title}
              </h1>
@@ -90,8 +90,8 @@ const GalleryDetailPage: React.FC = () => {
       </section>
 
       {/* Content */}
-      <main className="max-w-7xl mx-auto px-6 py-32">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-20">
+      <main className="max-w-7xl mx-auto px-6 py-12 md:py-32">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 lg:gap-20">
           {/* Sidebar / Info */}
           <div className="lg:col-span-1">
             <div className="sticky top-32 space-y-16">

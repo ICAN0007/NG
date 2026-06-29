@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import { Eye, Users } from "lucide-react";
 import { slugifyModel } from "@/lib/videos";
+import { getModelUrl } from "@/lib/model-utils";
 
 interface TrendingCreator {
   id: string;
@@ -66,7 +67,7 @@ export const TrendingCreators = () => {
             transition={{ delay: idx * 0.1 }}
           >
             <Link
-              to={`/Stripchat/${slugifyModel(creator.name)}`}
+              to={getModelUrl(creator.name)}
               className="group flex items-center gap-4 transition-all"
             >
               <div className="relative h-14 w-14 shrink-0 rounded-full overflow-hidden border-2 border-white/10 group-hover:border-primary/50 transition-colors">

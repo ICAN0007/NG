@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { onAuthStateChanged, User } from "firebase/auth";
 import { auth, db } from "@/lib/firebase";
 import { collection, query, orderBy, onSnapshot } from "firebase/firestore";
-import { videos as staticVideos, Video, isSupVideo } from "@/lib/videos";
-import { allSupVideos } from "@/lib/sup-data";
+import { videos as staticVideos, Video } from "@/lib/videos";
+import { allSupVideos, isSupVideo } from "@/lib/sup-data";
 import { FirebaseContext } from "@/context/FirebaseContext";
 import { handleFirestoreError, OperationType } from "@/lib/firestore-utils";
 

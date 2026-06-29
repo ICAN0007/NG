@@ -287,7 +287,7 @@ const Models = () => {
                     <span className="inline-flex items-center gap-2 rounded-full bg-primary/95 px-3 py-1 text-[10px] font-black text-primary-foreground tracking-widest uppercase mb-3 shadow-lg shadow-primary/20">
                       <Star className="h-3 w-3 fill-current" /> Performer of the Month
                     </span>
-                    <h1 className="text-4xl sm:text-7xl font-black text-white tracking-tighter leading-none" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+                    <h1 className="text-3xl sm:text-7xl font-black text-white tracking-tighter leading-none" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
                       Agatha Vega
                     </h1>
                   </div>
@@ -311,7 +311,7 @@ const Models = () => {
 
           <div className="mb-10 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div className="flex-1">
-              <h2 className="text-4xl sm:text-5xl font-black text-white flex items-center gap-3 tracking-tight" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
+              <h2 className="text-3xl sm:text-5xl font-black text-white flex items-center gap-3 tracking-tight" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
                 <Sparkles className="h-7 w-7 text-primary" />
                 Pixel Performer Gallery
               </h2>

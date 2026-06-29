@@ -810,20 +810,20 @@ const Sup = () => {
 
                         {/* Collections View */}
                         <section className="space-y-12">
-                          <div className={modelCategory === "All" && searchQuery === "" ? "space-y-16" : "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-8 gap-y-12"}>
+                          <div className={modelCategory === "All" && searchQuery === "" ? "space-y-16" : "grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-4 sm:gap-x-8 gap-y-8 sm:gap-y-12"}>
                             {modelCategory === "All" && searchQuery === "" ? (
                               ["OnlyFans", "StripChat", "Indian", "Popular", "Uploaded"].map(cat => {
                                 const modelsInCat = supModels.filter(m => m.platform === cat);
                                 if (modelsInCat.length === 0) return null;
                                 return (
-                                  <div key={cat} className="space-y-10">
+                                  <div key={cat} className="space-y-6 sm:space-y-10">
                                     <div className="flex items-center gap-4">
-                                      <h3 className="text-2xl sm:text-3xl font-black text-white italic tracking-tighter">
+                                      <h3 className="text-xl sm:text-3xl font-black text-white italic tracking-tighter">
                                         Models Search: {cat} <span className="text-[#FF2D88] ml-2">{modelsInCat.length}</span>
                                       </h3>
                                       <div className="h-px flex-1 bg-gradient-to-r from-white/10 to-transparent" />
                                     </div>
-                                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-8 gap-y-12">
+                                    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-4 sm:gap-x-8 gap-y-8 sm:gap-y-12">
                                       {modelsInCat.map((model, idx) => (
                                        <ModelPortraitCard
                                           key={model.name}
@@ -856,8 +856,8 @@ const Sup = () => {
 
                                 return (
                                   <>
-                                    <div className="col-span-full mb-8">
-                                       <h3 className="text-2xl sm:text-3xl font-black text-white italic tracking-tighter">
+                                    <div className="col-span-full mb-4 sm:mb-8">
+                                       <h3 className="text-xl sm:text-3xl font-black text-white italic tracking-tighter">
                                         Models Search: {searchQuery || modelCategory} <span className="text-[#FF2D88] ml-2">{list.length}</span>
                                       </h3>
                                     </div>
@@ -1032,6 +1032,10 @@ const Sup = () => {
               </div>
             </motion.div>
           )}
+          {/* Mobile Trending Creators */}
+          <div className="lg:hidden mt-12 px-4">
+            <TrendingCreators />
+          </div>
         </AnimatePresence>
       </div>
 

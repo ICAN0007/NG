@@ -56,10 +56,10 @@ const Library = () => {
       <MobileHeader />
 
       <main className="relative z-10 max-w-7xl mx-auto px-6 py-12">
-        <div className="flex gap-4 mb-12 border-b border-white/5">
+        <div className="flex gap-4 mb-12 border-b border-white/5 overflow-x-auto no-scrollbar">
           <button
             onClick={() => setActiveTab("likes")}
-            className={`flex items-center gap-2 px-6 py-4 text-xs font-black tracking-widest uppercase transition-all relative ${
+            className={`flex items-center gap-2 px-6 py-4 text-xs font-black tracking-widest uppercase transition-all relative whitespace-nowrap ${
               activeTab === "likes" ? "text-primary" : "text-white/40 hover:text-white"
             }`}
           >
@@ -71,7 +71,7 @@ const Library = () => {
           </button>
           <button
             onClick={() => setActiveTab("saved")}
-            className={`flex items-center gap-2 px-6 py-4 text-xs font-black tracking-widest uppercase transition-all relative ${
+            className={`flex items-center gap-2 px-6 py-4 text-xs font-black tracking-widest uppercase transition-all relative whitespace-nowrap ${
               activeTab === "saved" ? "text-primary" : "text-white/40 hover:text-white"
             }`}
           >
@@ -83,7 +83,7 @@ const Library = () => {
           </button>
           <button
             onClick={() => setActiveTab("models")}
-            className={`flex items-center gap-2 px-6 py-4 text-xs font-black tracking-widest uppercase transition-all relative ${
+            className={`flex items-center gap-2 px-6 py-4 text-xs font-black tracking-widest uppercase transition-all relative whitespace-nowrap ${
               activeTab === "models" ? "text-primary" : "text-white/40 hover:text-white"
             }`}
           >
@@ -95,7 +95,7 @@ const Library = () => {
           </button>
           <button
             onClick={() => setActiveTab("categories")}
-            className={`flex items-center gap-2 px-6 py-4 text-xs font-black tracking-widest uppercase transition-all relative ${
+            className={`flex items-center gap-2 px-6 py-4 text-xs font-black tracking-widest uppercase transition-all relative whitespace-nowrap ${
               activeTab === "categories" ? "text-primary" : "text-white/40 hover:text-white"
             }`}
           >
@@ -109,7 +109,7 @@ const Library = () => {
 
         {activeTab === "likes" && (
           likedVideos.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
               {likedVideos.map((video) => (
                 <VideoListCard key={video.id} video={video} />
               ))}
@@ -121,7 +121,7 @@ const Library = () => {
 
         {activeTab === "saved" && (
           savedVideos.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
               {savedVideos.map((video) => (
                 <VideoListCard key={video.id} video={video} />
               ))}

@@ -43,7 +43,6 @@ import { DesktopHeader, MobileHeader, BottomNav } from "@/components/Navigation"
 import PixelAtmosphere from "@/components/PixelAtmosphere";
 import { VideoListCard } from "@/components/VideoListCard";
 import { ClipCard } from "@/components/ClipCard";
-import { TrendingCreators } from "@/components/TrendingCreators";
 import Footer from "@/components/Footer";
 import { Skeleton } from "@/components/ui/Skeleton";
 
@@ -379,7 +378,7 @@ const ModelProfile = () => {
 
         {/* Hero Section - 744.626x310.252 */}
         {!isSup && (
-          <section className="relative w-full aspect-[744.626/310.252] overflow-hidden bg-black rounded-3xl mb-12">
+          <section className="relative w-full aspect-[16/9] sm:aspect-[744.626/310.252] overflow-hidden bg-black rounded-3xl mb-12">
             {loading ? (
               <Skeleton className="w-full h-full rounded-none" />
             ) : (
@@ -400,14 +399,14 @@ const ModelProfile = () => {
         )}
 
         {/* Model Portrait & Info Split - Matching Screenshot Style */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start mb-24">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-16 items-start mb-24">
           <motion.div 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="aspect-[1900/1300] overflow-hidden bg-[#111]">
+            <div className="aspect-[1900/1300] sm:aspect-[1900/1300] overflow-hidden bg-[#111]">
               {loading ? (
                 <Skeleton className="w-full h-full rounded-none" />
               ) : (
@@ -667,8 +666,6 @@ const ModelProfile = () => {
 
           {/* Right Sidebar */}
           <aside className="w-full lg:w-[350px] shrink-0 sticky top-32">
-            <TrendingCreators />
-            
             {/* Additional info or ads could go here */}
             <div className="mt-8 p-6 rounded-2xl border border-white/5 bg-gradient-to-br from-primary/10 to-transparent">
               <h4 className="text-sm font-black uppercase tracking-widest mb-2 italic">Creator Perks</h4>

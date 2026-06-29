@@ -114,7 +114,7 @@ export const VideoListCard: React.FC<VideoListCardProps> = ({ video, className =
       </div>
 
       <div className="space-y-1.5 px-0.5">
-        <h4 className="text-base font-bold text-white group-hover:text-primary transition-colors line-clamp-1 leading-tight tracking-tight">
+        <h4 className="text-sm sm:text-base font-bold text-white group-hover:text-primary transition-colors line-clamp-1 leading-tight tracking-tight">
           {getVideoModels(video).length > 0 ? (
             getVideoModels(video).map((m, idx, arr) => (
               <React.Fragment key={m}>

@@ -11,8 +11,8 @@ import {
   getThumbnailAspectRatio,
   Video,
   videoHasModel,
-  isSupVideo
 } from "@/lib/videos";
+import { isSupVideo } from "@/lib/sup-data";
 import { getModelUrl } from "@/lib/model-utils";
 import {
   Clock,
@@ -220,7 +220,7 @@ const VideoWatch = () => {
           {/* Main Player Area */}
           <div className="space-y-8">
             <div 
-              className="relative rounded-[2.5rem] overflow-hidden bg-black shadow-[0_32px_64px_-12px_rgba(0,0,0,0.8)] ring-1 ring-white/10 group"
+              className="relative rounded-2xl md:rounded-[2.5rem] overflow-hidden bg-black shadow-[0_32px_64px_-12px_rgba(0,0,0,0.8)] ring-1 ring-white/10 group"
               style={{ aspectRatio: video?.width && video?.height ? `${video.width}/${video.height}` : '16/9' }}
             >
               {(() => {
@@ -364,22 +364,22 @@ const VideoWatch = () => {
                   )}
                 </AnimatePresence>
 
-                <div className="flex flex-wrap items-center gap-10 py-8 text-white border-b border-white/5">
+                <div className="flex flex-wrap items-center gap-6 md:gap-10 py-8 text-white border-b border-white/5">
                   <div className="flex items-center gap-3.5">
-                    <Clock className="h-7 w-7 text-white/30" />
-                    <span className="text-xl md:text-2xl font-black uppercase tracking-tight">
+                    <Clock className="h-6 w-6 md:h-7 md:w-7 text-white/30" />
+                    <span className="text-lg md:text-2xl font-black uppercase tracking-tight">
                       {formatDuration(video.duration)}
                     </span>
                   </div>
                   <div className="flex items-center gap-3.5">
-                    <Calendar className="h-7 w-7 text-white/30" />
-                    <span className="text-xl md:text-2xl font-black uppercase tracking-tight">
+                    <Calendar className="h-6 w-6 md:h-7 md:w-7 text-white/30" />
+                    <span className="text-lg md:text-2xl font-black uppercase tracking-tight">
                       {new Date(video.addedAt).toLocaleDateString('en-US', { month: 'long', day: '2-digit', year: 'numeric' }).toUpperCase()}
                     </span>
                   </div>
                   <div className="flex items-center gap-3.5">
-                    <Eye className="h-7 w-7 text-white/30" />
-                    <span className="text-xl md:text-2xl font-black uppercase tracking-tight">
+                    <Eye className="h-6 w-6 md:h-7 md:w-7 text-white/30" />
+                    <span className="text-lg md:text-2xl font-black uppercase tracking-tight">
                       {getViews(video.id)}
                     </span>
                   </div>
@@ -496,7 +496,7 @@ const VideoWatch = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
                 {modelVideos.map((v) => (
                   <VideoListCard key={v.id} video={v} />
                 ))}
@@ -518,7 +518,7 @@ const VideoWatch = () => {
               </Link>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
               {videosLoading ? (
                 Array.from({ length: 8 }).map((_, i) => (
                   <div key={i} className="space-y-4">

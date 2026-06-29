@@ -1,4 +1,4 @@
-import { Video, videos, videoHasModel } from './videos';
+import { Video, videoHasModel } from './videos';
 import { legacySupVideos } from './sup-videos-legacy';
 import { SupMember, SupModel, SupClip } from '../types/sup';
 import { ashwithaData } from './sup-data/models/ashwitha';
@@ -67,14 +67,14 @@ export const supCategories = [
 export const supMembers: SupMember[] = [
   {
     id: "alanareignn",
-    name: "AlanaReignn",
+    name: "Alana Reignn",
     image: "https://i.ibb.co/tpvyfXMR/profile-2.png",
     platform: "StripChat",
     isNew: true
   },
   {
     id: "amcutefatima",
-    name: "__amcutefatima",
+    name: "Amcute fatima",
     image: "https://i.ibb.co/ptrH3LNR/amcutefatima.jpg",
     platform: "StripChat",
     isNew: true
@@ -124,7 +124,7 @@ export const supMembers: SupMember[] = [
   },
   {
     id: "jasminx",
-    name: "jasminx",
+    name: "Jasminx",
     image: "https://i.ibb.co/6cRzFmBW/portrait.jpg",
     platform: "OnlyFans",
     isNew: true,
@@ -132,7 +132,7 @@ export const supMembers: SupMember[] = [
   },
   {
     id: "jasmine678",
-    name: "jasmine678",
+    name: "Jasmin678",
     image: "https://i.ibb.co/ptrH3LNR/jasmine678.jpg",
     platform: "StripChat",
     isNew: true
@@ -202,14 +202,14 @@ export const supMembers: SupMember[] = [
   },
   {
     id: "aysel-elid",
-    name: "aysel_elid",
+    name: "Aysel_Eild",
     image: "https://i.ibb.co/YFpGf0W/aysel-elid.jpg",
     platform: "StripChat",
     isNew: true
   },
   {
     id: "bellelouisevp",
-    name: "BelleLouiseVp",
+    name: "Belle LouiseVP",
     image: "https://i.ibb.co/C3P9Lqf/bellelouisevp.jpg",
     platform: "StripChat",
     isNew: true
@@ -237,7 +237,7 @@ export const supMembers: SupMember[] = [
   },
   {
     id: "florian-jazmin",
-    name: "floriamANDjazmin",
+    name: "FloriamANDJazmin",
     image: "https://i.ibb.co/YFpGf0W/florian-jazmin.jpg",
     platform: "StripChat",
     isNew: true
@@ -251,7 +251,7 @@ export const supMembers: SupMember[] = [
   },
   {
     id: "gerridaes",
-    name: "gerridaes",
+    name: "Gerridaes",
     image: "https://i.ibb.co/N66Gr6NR/profilee.png",
     platform: "StripChat",
     isNew: true
@@ -265,7 +265,7 @@ export const supMembers: SupMember[] = [
   },
   {
     id: "hazelperry",
-    name: "hazelperry",
+    name: "Hazel Perry",
     image: "https://i.ibb.co/v4K9Lqf/hazelperry.jpg",
     platform: "StripChat",
     isNew: true
@@ -293,7 +293,7 @@ export const supMembers: SupMember[] = [
   },
   {
     id: "mannu79",
-    name: "mannu79",
+    name: "Mannu79",
     image: "https://i.ibb.co/pvPMcYpG/Screenshot-2026-06-17-025145.png",
     platform: "StripChat",
     isNew: true
@@ -307,7 +307,7 @@ export const supMembers: SupMember[] = [
   },
   {
     id: "mia-moonna",
-    name: "mia_moonna",
+    name: "Mia_Moonna",
     image: "https://i.ibb.co/zHbSfBcw/Portrait.webp",
     platform: "StripChat",
     isNew: true
@@ -328,14 +328,14 @@ export const supMembers: SupMember[] = [
   },
   {
     id: "miss-malaika",
-    name: "Miss_malaika",
+    name: "Miss_Malaika",
     image: "https://i.ibb.co/20KwdPmy/Folderthumb.png",
     platform: "StripChat",
     isNew: true
   },
   {
     id: "miss-siya-00",
-    name: "miss_siya_00",
+    name: "Miss_Siya_00",
     image: "https://i.ibb.co/8gX2B3rL/portrati.png",
     platform: "StripChat",
     isNew: true
@@ -377,14 +377,14 @@ export const supMembers: SupMember[] = [
   },
   {
     id: "sneha-babe",
-    name: "sneha_babe",
+    name: "Sneha_Babe",
     image: "https://i.ibb.co/VYJ8LmHN/portrait.png",
     platform: "StripChat",
     isNew: true
   },
   {
     id: "sukhakunis1",
-    name: "sukhakunis1",
+    name: "Sukhakunis1",
     image: "https://i.ibb.co/cKfmtpnP/portrait.webp",
     platform: "StripChat",
     isNew: true
@@ -412,7 +412,7 @@ export const supMembers: SupMember[] = [
   },
   {
     id: "zuby-duby",
-    name: "zuby_duby",
+    name: "Zuby_Duby",
     image: "https://i.ibb.co/YFpGf0W/zuby-duby.jpg",
     platform: "StripChat",
     isNew: true
@@ -424,16 +424,22 @@ const modelDataMap: Record<string, Partial<SupModel>> = {
   "Ashwitha": ashwithaData,
   "Angela__05": angelaData,
   "Alexa7k7": alexaData,
+  "Alana Reignn": alanaData,
   "AlanaReignn": alanaData,
-  "__amcutefatima": fatimaData,
+  "Amcute fatima": fatimaData,
   "Adrit Vance": adritData,
+  "Jasmin678": jasmine678Data,
   "jasmine678": jasmine678Data,
+  "Jasminx": jasmineData,
   "jasminx": jasmineData,
   "Thestarofus": thestarofusData,
+  "Zuby_Duby": zubyData,
   "zuby_duby": zubyData,
   "AshaYuva": ashayuvaData,
   "AvanYa_1": avanyaData,
+  "Aysel_Eild": ayselData,
   "aysel_elid": ayselData,
+  "Belle LouiseVP": belleData,
   "BelleLouiseVp": belleData,
   "Bonganaarix": bonganaarixData,
   "brotherr_sisterr": brotherrSisterrData,
@@ -452,12 +458,15 @@ const modelDataMap: Record<string, Partial<SupModel>> = {
   "gabriella-wils": gabriellaWilsData,
   "hannaclarkk": hannaclarkkData,
   "HannaClarrk_": hannaclarkkData,
+  "Gerridaes": gerridaesData,
   "gerridaes": gerridaesData,
+  "Hazel Perry": hazelperryData,
   "hazelperry": hazelperryData,
   "hazel perry": hazelperryData,
   "i-scream": iscreamData,
   "I-Scream": iscreamData,
   "i-cream": iscreamData,
+  "FloriamANDJazmin": florianJazminData,
   "floriamANDjazmin": florianJazminData,
   "florian-jazmin": florianJazminData,
   "Pankhuri": pankhuriData,
@@ -469,11 +478,14 @@ const modelDataMap: Record<string, Partial<SupModel>> = {
   "kinky-spa": kinkySpaData,
   "Lusty_souls": lustySoulsData,
   "lusty-souls": lustySoulsData,
+  "Mannu79": mannu79Data,
   "mannu79": mannu79Data,
   "Marry_Cordy": marryCordyData,
   "marry-cordy": marryCordyData,
+  "Mia_Moonna": miaMoonnaData,
   "mia_moonna": miaMoonnaData,
   "mia-moonna": miaMoonnaData,
+  "Miss_Malaika": miss_malaikaData,
   "Miss_malaika": miss_malaikaData,
   "miss-malaika": miss_malaikaData,
   "Misha_01": misha_01Data,
@@ -483,6 +495,7 @@ const modelDataMap: Record<string, Partial<SupModel>> = {
   "nisha-01": nisha_01Data,
   "Unknown": unknownData,
   "dreamgirl-010": dreamgirl_010Data,
+  "Miss_Siya_00": miss_siya_00Data,
   "miss_siya_00": miss_siya_00Data,
   "miss-siya-00": miss_siya_00Data,
   "MissHermione2": missHermione2Data,
@@ -496,12 +509,14 @@ const modelDataMap: Record<string, Partial<SupModel>> = {
   "Neha18": neha18Data,
   "SEXY_JENNY_": sexy_jenny_Data,
   "sexy-jenny": sexy_jenny_Data,
+  "Sneha_Babe": sneha_babeData,
   "sneha_babe": sneha_babeData,
   "sneha-babe": sneha_babeData,
   "Sneha_babe": sneha_babeData,
   "Snow_White123": snow_white123Data,
   "snow-white123": snow_white123Data,
   "snow_white123": snow_white123Data,
+  "Sukhakunis1": sukhakunis1Data,
   "sukhakunis1": sukhakunis1Data,
   "Winterforu": winterforuData,
   "winterforu": winterforuData,
@@ -514,7 +529,7 @@ const modelDataMap: Record<string, Partial<SupModel>> = {
 
 // Pre-map all videos to models for performance
 const videoMap = new Map<string, Video[]>();
-const combinedVideos = [...videos, ...legacySupVideos];
+const combinedVideos = [...legacySupVideos];
 
   combinedVideos.forEach(v => {
   if (!v.model) return;
@@ -637,3 +652,7 @@ legacySupVideos.forEach(v => {
 
 export const allSupVideos: Video[] = supVideosList;
 export const supVideos = allSupVideos;
+
+export const isSupVideo = (v: Video | null | undefined): boolean => {
+  return v?.isSup === true;
+};

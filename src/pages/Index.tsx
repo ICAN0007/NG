@@ -15,9 +15,8 @@ import {
   getViews,
   getThumbnailAspectRatio,
   formatDate,
-  isSupVideo,
 } from "@/lib/videos";
-import { supModels } from "@/lib/sup-data";
+import { supModels, isSupVideo } from "@/lib/sup-data";
 import { getModelUrl } from "@/lib/model-utils";
 import {
   Search, Monitor, Play, Clock, Heart, MessageSquare, Bookmark, Star, Eye, ChevronRight, Film, User, Tag, Folder, X, ArrowUpRight,
@@ -28,7 +27,6 @@ import { Skeleton } from "@/components/ui/Skeleton";
 import { useVideos } from "@/hooks/use-videos";
 import { VideoCard } from "@/components/VideoCard";
 import { TrendingVideos } from "@/components/TrendingVideos";
-import { TrendingCreators } from "@/components/TrendingCreators";
 
 import { useFirebase } from "@/context/FirebaseContext";
 import { useInteractions } from "@/hooks/use-interactions";
@@ -915,11 +913,6 @@ const Index = () => {
 
           {/* Trending Videos Section */}
           <TrendingVideos videos={videos} />
-
-          {/* Trending Creators Section */}
-          <div className="mt-12">
-            <TrendingCreators />
-          </div>
         </aside>
       </div>
 

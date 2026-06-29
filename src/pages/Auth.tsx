@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { Link, useNavigate, useLocation } from "react-router-dom";
+import { Link, useNavigate, useLocation, useSearchParams } from "react-router-dom";
 import { ChevronLeft, Mail, Lock, User as UserIcon, AlertCircle, Loader2 } from "lucide-react";
 import { registerUser, loginUser, loginWithGoogle, logoutUser, resetPassword } from "@/lib/auth-service";
 import PixelAtmosphere from "@/components/PixelAtmosphere";
 import { useFirebase } from "@/context/FirebaseContext";
 
 const Auth = () => {
-  const [mode, setMode] = useState<"login" | "signup" | "reset">("login");
+  const [searchParams] = useSearchParams();
+  const initialMode = (searchParams.get("mode") as "login" | "signup" | "reset") || "login";
+  const [mode, setMode] = useState<"login" | "signup" | "reset">(initialMode);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [displayName, setDisplayName] = useState("");
@@ -23,6 +25,13 @@ const Auth = () => {
   const location = useLocation();
   const { user, loading: authLoading } = useFirebase();
   const from = location.state?.from || "/";
+
+  useEffect(() => {
+    const urlMode = searchParams.get("mode") as "login" | "signup" | "reset";
+    if (urlMode && (urlMode === "login" || urlMode === "signup" || urlMode === "reset")) {
+      setMode(urlMode);
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     if (user && !authLoading) {

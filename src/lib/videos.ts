@@ -20,39 +20,6 @@ export interface Video {
   height?: number;
 }
 
-export const isSupVideo = (v: Video) => {
-  if (!v) return false;
-  if (v.isSup || v.id?.startsWith('sup-') || v.id?.includes('ashwitha-')) return true;
-  
-  const categories = v.categories?.map(c => c.toLowerCase()) || [];
-  if (categories.includes("stripchat") || categories.includes("onlyfans") || categories.includes("sup")) return true;
-  
-  const tags = v.tags?.map(t => t.toLowerCase()) || [];
-  if (tags.includes("stripchat") || tags.includes("onlyfans") || tags.includes("sup")) return true;
-
-  const model = v.model?.toLowerCase() || "";
-  if (
-    model.includes("ashwitha") || 
-    model.includes("angela") || 
-    model.includes("alexa7k7") || 
-    model.includes("alanareignn") || 
-    model.includes("jasmine678") || 
-    model.includes("gabriella_wils") || 
-    model.includes("gerridaes") || 
-    model.includes("hannaclarkk") || 
-    model.includes("hazelperry") || 
-    model.includes("i-scream") || 
-    model.includes("i-cream") ||
-    model.includes("muskan")
-  ) return true;
-
-  if (v.id && /^v\d+$/i.test(v.id)) {
-    const num = parseInt(v.id.substring(1));
-    return (num >= 1 && num <= 116) || (num >= 1000 && num <= 1200);
-  }
-  return false;
-};
-
 export const videos: Video[] = [
   {
     id: "V1",
@@ -9308,7 +9275,7 @@ export const videos: Video[] = [
     title: "Chanel Camryn in ‘Dark Curiosities’",
     categories: ["Sexy Girls"],
     tags: ["Babes", "Huge cocks", "Black Cocks", "Hardcore", "Sneaky sex"],
-    src: "https://deeper.hot-vixens.com/Chanel_Camryn-Dark_Curiosities/video.mp4",
+    src: "https://bysekoze.com/e/pmo8lkhrdy54/dark-curitios",
     thumb: "https://i.ibb.co/7dV80fG2/deeper-100325-cha-cam-3840x2160.webp",
     duration: "642",
     addedAt: "2026-06-04T00:00:00Z",
@@ -29112,28 +29079,6 @@ export const videos: Video[] = [
     model: "Rikako Katayama"
   },
   {
-    id: "V2166",
-    title: "Japanese Model Masturbates and Climaxes #OnlyFans",
-    categories: ["Big Tits"],
-    tags: ["Big Tits"],
-    src: "https://mxdrop.sx/e/039ljr97t8pwzk",
-    thumb: "https://i.ibb.co/FbPGbv74/Japanese-Model-Masturbates-and-Climaxes-Only-Fans.png",
-    duration: "600",
-    addedAt: "2025-01-01T00:00:00Z",
-    model: "Rikako Katayama"
-  },
-  {
-    id: "V2167",
-    title: "NEW J0hnny and Rikako Katayama Creampies, Right Now",
-    categories: ["Creampie", "Big Tits"],
-    tags: ["Creampie", "Big Tits"],
-    src: "https://mxdrop.sx/e/vk7ezqlkhqqg834",
-    thumb: "https://i.ibb.co/ymRh7vMC/NEW-J0hnny-and-Rikako-Katayama-Creampies-Right-Now-creampie-onlyfans-sex-porn-bigtits-bigass.webp",
-    duration: "600",
-    addedAt: "2025-01-01T00:00:00Z",
-    model: "Rikako Katayama"
-  },
-  {
     id: "V2168",
     title: "Rikako Katayama Hotel Hookup BBC Sextape w Nelson Mandingo",
     categories: ["Big Tits", "Black Cocks"],
@@ -29151,17 +29096,6 @@ export const videos: Video[] = [
     tags: ["Big Tits", "Black Cocks", "Hardcore"],
     src: "https://mxdrop.sx/e/dk30q4prc7wrr1",
     thumb: "https://i.ibb.co/7tKXhD03/Rikako-Katayama-Round-2-Asian-Slut-Drilled-Deep-And-RAW-With-Mike-Williams-vidara-so-luluvdo-com-a.webp",
-    duration: "600",
-    addedAt: "2025-01-01T00:00:00Z",
-    model: "Rikako Katayama"
-  },
-  {
-    id: "V2170",
-    title: "Rikako Katayama OnlyFans Round 2 Creampie Scene",
-    categories: ["Creampie", "Big Tits"],
-    tags: ["Creampie", "Big Tits"],
-    src: "https://mxdrop.sx/e/4dvxn878in3rkx",
-    thumb: "https://i.ibb.co/nN70yXP9/Rikako-Katayama-Only-Fans-Round-2-Creampie-Scene-With-Gattouz0-vidara-so-petite-premium-creamp.png",
     duration: "600",
     addedAt: "2025-01-01T00:00:00Z",
     model: "Rikako Katayama"
@@ -33358,8 +33292,60 @@ export const videos: Video[] = [
       "https://i.ibb.co/q36mtBYc/Ashley-Alexander-Slayed-Curvy-Blonde-Makes-Bestie-Cum-With-Glass-Dildo-2025-09-09-006-2000.webp"
     ],
     previewUrl: "https://files.catbox.moe/hlud0v.mp4"
+  },
+  {
+    id: "V2611",
+    title: "Cleaning Up Every Drop",
+    categories: ["Brazzer"],
+    tags: ["Anal Sex", "Black Cocks", "Huge cocks", "Hardcore"],
+    src: "https://files.catbox.moe/wmh6ds.mp4",
+    thumb: "https://i.ibb.co/1fN3mpkN/poster-01.jpg",
+    duration: "1636.2",
+    addedAt: "2023-09-09T10:30:00Z",
+    model: "Eve Sweet",
+    "description": "Eve Sweet is enjoying a spicy moment to herself while taking a shower. Her boyfriend's pervy roomie, Jesus Reyes, has no manners and walks in without knocking. He has no idea that Eve is pleasuring herself in the shower. Eve wants a piece of that! She's all wet and ready to go.",
+    "rating": "9.2",
+    gallery: [
+      
+    ],
+    previewUrl: "https://files.catbox.moe/hlud0v.mp4"
+  },
+  {
+    id: "V2612",
+    title: "Eve sweet big tits nympho eve busty brunette with big titstretched wide by bbc troy francisco in public beach",
+    categories: ["Vixen"],
+    tags: ["Anal Sex", "Black Cocks", "Huge cocks", "Hardcore", "Big Tits"],
+    src: "https://files.catbox.moe/wmh6ds.mp4",
+    thumb: "https://i.ibb.co/93p6X2Pj/Eve-sweet-big-tits-nympho-eve-busty-brunette-with-big-titstretched-wide-by-bbc-troy-francisco-in-pub.png",
+    duration: "603",
+    addedAt: "2025-09-09T10:30:00Z",
+    model: "Eve Sweet",
+    "description": "Eve sweet big tits nympho eve busty brunette with big titstretched wide by bbc troy francisco in public beach.",
+    "rating": "9.2",
+    gallery: [
+      
+    ],
+    previewUrl: "https://files.catbox.moe/hlud0v.mp4"
+  },
+  {
+    id: "V2613",
+    title: "Eve Sweet Doing Hard Blowjob",
+    categories: ["Vixen"],
+    tags: ["Anal Sex", "Black Cocks", "Huge cocks", "Hardcore"],
+    src: "https://files.catbox.moe/wmh6ds.mp4",
+    thumb: "https://i.ibb.co/0yFVx6VL/slayed-curvy-blonde-makes-bestie-cum-with-glass-dildo-3840x2160.webp",
+    duration: "1383",
+    addedAt: "2025-09-09T10:30:00Z",
+    model: "Eve Sweet",
+    "description": "Eve sweet big tits nympho eve busty brunette with big titstretched wide by bbc troy francisco in public beach",
+    "rating": "9.2",
+    gallery: [
+      
+    ],
+    previewUrl: "https://files.catbox.moe/hlud0v.mp4"
   }
 ];
+
 
 export const categories = [
   "69",
@@ -33495,7 +33481,6 @@ export const categories = [
   name,
   count: videos.filter(
     (v) =>
-      !isSupVideo(v) &&
       (v.categories.some((c) => c.toLowerCase() === name.toLowerCase()) ||
        v.tags.some((t) => t.toLowerCase() === name.toLowerCase())) &&
       v.tags.some((t) => t.toUpperCase() === "NAKED GIRLS")
@@ -34626,7 +34611,7 @@ export function getVideoEmbedUrl(src: string): string {
   // If it's already an embed link (has /e/), normalize the domain
   // Mixdrop domains change often, here are common ones found in data
   if (url.includes("/e/") || url.includes("mixdrop") || url.includes("mxdrop")) {
-    url = url.replace(/(?:mix|mx|md)drop\.(?:sx|top|co|to|bz|ag|ch|vc|st|ps|io|net|gl|ch)/g, "mixdrop.ps");
+    url = url.replace(/(?:mix|miix|mx|md)drop\.(?:sx|top|co|to|bz|ag|ch|vc|st|ps|io|net|gl|ch)/g, "mixdrop.ps");
   }
 
   // If it's a mixdrop ID but not a full URL
@@ -34654,17 +34639,16 @@ export function getVideoThumbnailUrl(thumb: string | undefined): string {
 }
 
 export function getThumbnailAspectRatio(thumb: string | undefined): string {
-  // Stripchat, damplips, and ibb.co thumbnails are typically 16:9
+  // Damplips and ibb.co thumbnails are typically 16:9
   if (
     thumb && (
       thumb.includes("damplips.com") || 
-      thumb.includes("ibb.co") || 
-      thumb.toLowerCase().includes("stripchat")
+      thumb.includes("ibb.co")
     )
   ) {
     return "aspect-video";
   }
-  // Default to 16:9 as well as it's more standard for the 340x191 request
+  // Default to 16:9
   return "aspect-video";
 }
 

@@ -1,10 +1,10 @@
 import React, { useMemo } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import { motion } from "motion/react";
-import { videos, isSupVideo, slugifyModel } from "../lib/videos";
+import { videos, slugifyModel } from "../lib/videos";
 import { getModelUrl } from "../lib/model-utils";
 import { galleries } from "../lib/galleries";
-import { supModels, allSupVideos } from "../lib/sup-data";
+import { supModels, allSupVideos, isSupVideo } from "../lib/sup-data";
 import { DesktopHeader, MobileHeader, BottomNav } from "../components/Navigation";
 import Footer from "../components/Footer";
 import { VideoCard } from "../components/VideoCard";
@@ -95,7 +95,7 @@ const SearchPage: React.FC = () => {
             <Search size={20} className="text-primary" />
             <span className="text-[10px] font-black tracking-[0.3em] text-white/40 uppercase">SEARCH RESULTS</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-black tracking-tighter uppercase italic">
+          <h1 className="text-3xl md:text-6xl font-black tracking-tighter uppercase italic">
             {query ? (
               <>RESULTS FOR "<span className="text-primary not-italic">{query}</span>"</>
             ) : (
