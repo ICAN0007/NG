@@ -86,7 +86,7 @@ export const VideoListCard: React.FC<VideoListCardProps> = ({ video, className =
         )}
 
         {/* Duration badge - Top Left */}
-        <div className="absolute top-2.5 left-2.5 bg-black/60 backdrop-blur-md border border-white/10 px-2 py-0.5 rounded-md flex items-center gap-1.5 z-20">
+        <div className={`absolute top-2.5 left-2.5 bg-black/60 backdrop-blur-md border border-white/10 px-2 py-0.5 rounded-md flex items-center gap-1.5 z-20 transition-opacity duration-300 ${showPreview ? 'opacity-0' : 'opacity-100'}`}>
           <Clock className="h-3 w-3 text-white/80" />
           <span className="text-[10px] font-bold text-white uppercase tracking-wider">
             {formatDuration(video.duration)}
@@ -94,12 +94,12 @@ export const VideoListCard: React.FC<VideoListCardProps> = ({ video, className =
         </div>
 
         {/* Resolution badge - Bottom Right */}
-        <div className="absolute bottom-2.5 right-2.5 bg-primary/90 backdrop-blur-sm px-1.5 py-0.5 rounded text-[10px] font-black text-white uppercase tracking-tighter z-20 shadow-lg">
+        <div className={`absolute bottom-2.5 right-2.5 bg-primary/90 backdrop-blur-sm px-1.5 py-0.5 rounded text-[10px] font-black text-white uppercase tracking-tighter z-20 shadow-lg transition-opacity duration-300 ${showPreview ? 'opacity-0' : 'opacity-100'}`}>
           4K ULTRA HD
         </div>
 
         {/* Status badges */}
-        <div className="absolute top-2.5 right-2.5 flex gap-1 z-20">
+        <div className={`absolute top-2.5 right-2.5 flex gap-1 z-20 transition-opacity duration-300 ${showPreview ? 'opacity-0' : 'opacity-100'}`}>
           {liked && (
             <div className="bg-primary p-1.5 rounded-full shadow-lg border border-white/20">
               <Heart className="h-2.5 w-2.5 fill-white text-white" />
@@ -113,7 +113,7 @@ export const VideoListCard: React.FC<VideoListCardProps> = ({ video, className =
         </div>
       </div>
 
-      <div className="space-y-1.5 px-0.5">
+      <div className={`space-y-1.5 px-0.5 transition-opacity duration-300 ${showPreview ? 'opacity-0' : 'opacity-100'}`}>
         <h4 className="text-sm sm:text-base font-bold text-white group-hover:text-primary transition-colors line-clamp-1 leading-tight tracking-tight">
           {getVideoModels(video).length > 0 ? (
             getVideoModels(video).map((m, idx, arr) => (

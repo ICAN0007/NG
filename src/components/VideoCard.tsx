@@ -87,7 +87,7 @@ export const VideoCard: React.FC<VideoCardProps> = ({ video, formatDate = defaul
 
         {/* LATEST badge */}
         {isLatest && (
-          <div className="absolute top-4 left-4 z-20">
+          <div className={`absolute top-4 left-4 z-20 transition-opacity duration-300 ${showPreview ? 'opacity-0' : 'opacity-100'}`}>
             <div className="bg-primary text-white text-[10px] font-black px-3 py-1.5 rounded-lg shadow-xl shadow-primary/30 tracking-widest uppercase animate-pulse">
               Latest
             </div>
@@ -95,19 +95,19 @@ export const VideoCard: React.FC<VideoCardProps> = ({ video, formatDate = defaul
         )}
 
         {/* Duration badge */}
-        <div className="absolute bottom-3 right-3 rounded-lg bg-background/90 px-2 py-0.5 text-[10px] font-bold text-foreground backdrop-blur-md shadow-2xl border border-white/5 z-10">
+        <div className={`absolute bottom-3 right-3 rounded-lg bg-background/90 px-2 py-0.5 text-[10px] font-bold text-foreground backdrop-blur-md shadow-2xl border border-white/5 z-10 transition-opacity duration-300 ${showPreview ? 'opacity-0' : 'opacity-100'}`}>
           {formatDuration(video.duration)}
         </div>
 
         {/* Play overlay */}
-        <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300 pointer-events-none opacity-0 group-hover:opacity-100 z-10">
+        <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 pointer-events-none z-10 ${showPreview ? 'opacity-0' : 'opacity-0 group-hover:opacity-100'}`}>
           <div className="flex h-20 w-20 items-center justify-center rounded-full border-2 border-white text-white transition-transform duration-500 group-hover:scale-110">
             <Play size={36} className="fill-white ml-1.5" />
           </div>
         </div>
 
         {/* Status badges */}
-        <div className="absolute top-4 right-4 flex flex-col gap-2 z-20">
+        <div className={`absolute top-4 right-4 flex flex-col gap-2 z-20 transition-opacity duration-300 ${showPreview ? 'opacity-0' : 'opacity-100'}`}>
           {liked && (
             <div className="bg-primary p-2 rounded-full shadow-lg shadow-primary/20 animate-in zoom-in duration-300">
               <Heart className="h-3 w-3 fill-white text-white" />
@@ -120,7 +120,7 @@ export const VideoCard: React.FC<VideoCardProps> = ({ video, formatDate = defaul
           )}
         </div>
         
-        <div className="absolute bottom-4 left-6 right-6 z-10">
+        <div className={`absolute bottom-4 left-6 right-6 z-10 transition-opacity duration-300 ${showPreview ? 'opacity-0' : 'opacity-100'}`}>
           <h4 className="text-xl sm:text-3xl font-black leading-tight text-white transition-colors group-hover:text-primary tracking-tight line-clamp-2" style={{ fontFamily: "'Playfair Display', Georgia, serif" }}>
             {video.title}
           </h4>

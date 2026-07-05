@@ -69,10 +69,19 @@ const SearchPage: React.FC = () => {
     const supNames = new Set(supModels.map(m => m.name.toLowerCase()));
     
     return {
-      videos: [...videos, ...allSupVideos].filter(v => 
-        (v.title.toLowerCase().includes(q) || (v.model || "").toLowerCase().includes(q)) && 
-        !isSupVideo(v)
-      ),
+      videos: [...videos, ...allSupVideos]
+        .filter(v => 
+          (v.title.toLowerCase().includes(q) || (v.model || "").toLowerCase().includes(q)) && 
+          !isSupVideo(v)
+        )
+        .sort((a, b) => {
+          const timeA = new Date(a.addedAt).getTime() || 0;
+          const timeB = new Date(b.addedAt).getTime() || 0;
+          if (timeA !== timeB) return timeB - timeA;
+          const numIdA = parseInt(a.id.replace(/\D/g, '')) || 0;
+          const numIdB = parseInt(b.id.replace(/\D/g, '')) || 0;
+          return numIdB - numIdA;
+        }),
       models: allModels.filter(m => 
         m.name.toLowerCase().includes(q) && !supNames.has(m.name.toLowerCase())
       ),

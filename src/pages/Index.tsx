@@ -182,11 +182,17 @@ const Index = () => {
       return [...result].sort((a, b) => a.duration.localeCompare(b.duration));
     }
     
-    // Default: Newest Videos / Latest (descending date, then descending ID for stability)
+    // Default: Newest Videos / Latest (descending date, then descending numeric ID for stability)
     return [...result].sort((a, b) => {
-      const dateA = new Date(a.addedAt).getTime();
-      const dateB = new Date(b.addedAt).getTime();
-      if (dateA !== dateB) return dateB - dateA;
+      const timeA = new Date(a.addedAt).getTime() || 0;
+      const timeB = new Date(b.addedAt).getTime() || 0;
+      if (timeA !== timeB) return timeB - timeA;
+      
+      // Secondary sort by numeric ID
+      const numIdA = parseInt(a.id.replace(/\D/g, '')) || 0;
+      const numIdB = parseInt(b.id.replace(/\D/g, '')) || 0;
+      if (numIdA !== numIdB) return numIdB - numIdA;
+      
       return b.id.localeCompare(a.id);
     });
   }, [selectedModel, selectedTag, activeFilter, videos, searchQuery]);
