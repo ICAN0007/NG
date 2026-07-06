@@ -1,9 +1,13 @@
 import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
+import { AdBanner728x90 } from "./AdBanner";
 
 const Footer = () => {
   return (
     <footer className="bg-[#050505] text-[#9ca3af] py-20 px-6 border-t border-white/5 mt-20 relative z-10">
+      <div className="max-w-7xl mx-auto mb-12">
+        <AdBanner728x90 />
+      </div>
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-7 gap-12 lg:gap-8">
         
         {/* Logo & Description */}

@@ -38,6 +38,14 @@ export const DesktopHeader = () => {
             StripChat
           </Link>
           <a 
+            href="https://www.effectivecpmnetwork.com/t6j472icg?key=d3f31ac7a34a8ece159e3b8bdfedc762" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors uppercase bg-primary/20 px-3 py-1 rounded-full text-primary font-black"
+          >
+            PREMIUM
+          </a>
+          <a 
             href="https://t.me/Vibevault_18" 
             target="_blank" 
             rel="noopener noreferrer"

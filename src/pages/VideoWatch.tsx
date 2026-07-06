@@ -31,6 +31,7 @@ import { Skeleton } from "@/components/ui/Skeleton";
 import { VideoGallery } from "@/components/VideoGallery";
 import { VideoListCard } from "@/components/VideoListCard";
 import Footer from "@/components/Footer";
+import { NativeBanner } from "@/components/AdBanner";
 
 import { useVideos } from "@/hooks/use-videos";
 import { useInteractions } from "@/hooks/use-interactions";
@@ -503,6 +504,10 @@ const VideoWatch = () => {
               </div>
             </section>
           )}
+
+          <div className="max-w-4xl mx-auto">
+            <NativeBanner />
+          </div>
 
           {/* Recommended - BELOW */}
           <section className="space-y-8">

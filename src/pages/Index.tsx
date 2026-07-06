@@ -27,6 +27,7 @@ import { Skeleton } from "@/components/ui/Skeleton";
 import { useVideos } from "@/hooks/use-videos";
 import { VideoCard } from "@/components/VideoCard";
 import { TrendingVideos } from "@/components/TrendingVideos";
+import { NativeBanner, AdBanner728x90 } from "@/components/AdBanner";
 
 import { useFirebase } from "@/context/FirebaseContext";
 import { useInteractions } from "@/hooks/use-interactions";
@@ -638,6 +639,10 @@ const Index = () => {
             </div>
           </section>
 
+          <div className="mt-8">
+            <AdBanner728x90 />
+          </div>
+
           {/* Pagination */}
           <div className="mt-6 py-6 border-t border-border/30">
             <Pagination 
@@ -758,6 +763,8 @@ const Index = () => {
               </a>
             </div>
           </div>
+
+          <NativeBanner />
 
           {/* Categories */}
           <div id="categories-section" className="rounded-2xl border border-border bg-card p-5">
