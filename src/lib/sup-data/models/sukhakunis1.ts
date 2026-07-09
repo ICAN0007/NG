@@ -52,11 +52,11 @@ export const sukhakunis1Data: Partial<SupModel> = {
     "https://i.ibb.co/SXxBDwSv/Where-do-you-want-to-start.jpg"
   ],
   clips: [
-    { title: "Short Clip 1", url: "https://files.catbox.moe/3why34.mp4", thumbnail: "https://i.ibb.co/dsPQv6RL/Folderthumb.jpg" },
-    { title: "Short Clip 2", url: "https://files.catbox.moe/nb5pzx.mp4", thumbnail: "https://i.ibb.co/dsPQv6RL/Folderthumb.jpg" }
+    { title: "Short Clip 1", url: "https://files.catbox.moe/3why34.mp4" },
+    { title: "Short Clip 2", url: "https://files.catbox.moe/nb5pzx.mp4" }
   ],
   videos: [
-    { id: "sk-c1", title: "Short Clip 1", src: "https://files.catbox.moe/3why34.mp4", thumb: "https://i.ibb.co/dsPQv6RL/Folderthumb.jpg", categories: ["Stripchat", "Short Clips"] },
-    { id: "sk-c2", title: "Short Clip 2", src: "https://files.catbox.moe/nb5pzx.mp4", thumb: "https://i.ibb.co/dsPQv6RL/Folderthumb.jpg", categories: ["Stripchat", "Short Clips"] }
+    { id: "sk-c1", title: "Short Clip 1", src: "https://files.catbox.moe/3why34.mp4", thumb: "https://i.ibb.co/dsPQv6RL/Folderthumb.jpg", channel: [] },
+    { id: "sk-c2", title: "Short Clip 2", src: "https://files.catbox.moe/nb5pzx.mp4", thumb: "https://i.ibb.co/dsPQv6RL/Folderthumb.jpg", channel: [] }
   ]
 };

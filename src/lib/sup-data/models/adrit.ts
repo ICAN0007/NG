@@ -10,7 +10,7 @@ export const adritData: Partial<SupModel> = {
     {
       id: "v1",
       title: "Adrit Vance Vibrator in pussy",
-      categories: ["Stripchat", "Popular"],
+      channel: [],
       tags: ["Stripchat", "Premium",  "Hardcore"],
       src: "https://mxdrop.sx/e/jdqxgwkzc03rmr",
       previewUrl: "https://files.catbox.moe/765jq5.mp4",
@@ -22,7 +22,7 @@ export const adritData: Partial<SupModel> = {
     {
       id: "v2",
       title: "Adrit Vance Vibrator in pussy",
-      categories: ["Stripchat", "Popular"],
+      channel: [],
       tags: ["Stripchat", "Premium", "Indian", "Hardcore"],
       src: "https://mxdrop.sx/e/gj0wx76qf7dzn6",
       previewUrl: "https://files.catbox.moe/ryaitm.mp4",
@@ -34,7 +34,7 @@ export const adritData: Partial<SupModel> = {
     {
       id: "v3",
       title: "Adrit Vance Vibrator in pussy",
-      categories: ["Stripchat", "Popular"],
+      channel: [],
       tags: ["Stripchat", "Premium", "Indian", "Hardcore"],
       src: "https://mxdrop.sx/e/7k9v67odsgrkep",
       previewUrl: "https://files.catbox.moe/qi4848.mp4",
@@ -46,7 +46,7 @@ export const adritData: Partial<SupModel> = {
     {
       id: "v4",
       title: "Adrit Vance Vibrator in pussy",
-      categories: ["Stripchat", "Popular"],
+      channel: [],
       tags: ["Stripchat", "Premium", "Indian", "Hardcore"],
       src: "https://mxdrop.sx/e/wlk7rg9du99on0",
       previewUrl: "https://files.catbox.moe/kweuci.mp4",
@@ -58,7 +58,7 @@ export const adritData: Partial<SupModel> = {
     {
       id: "v5",
       title: "Adrit Vance Vibrator in pussy",
-      categories: ["Stripchat", "Popular"],
+      channel: [],
       tags: ["Stripchat", "Premium", "Indian", "Hardcore"],
       src: "https://mxdrop.sx/e/ow48rk9vfl4goq",
       previewUrl: "https://files.catbox.moe/sme4sv.mp4",
@@ -70,7 +70,7 @@ export const adritData: Partial<SupModel> = {
     {
       id: "v6",
       title: "Adrit Vance Vibrator in pussy",
-      categories: ["Stripchat", "Popular"],
+      channel: [],
       tags: ["Stripchat", "Premium", "Indian", "Hardcore"],
       src: "https://mxdrop.sx/e/7k9v6nrvudedzgk",
       previewUrl: "https://files.catbox.moe/t576h1.mp4",
@@ -82,7 +82,7 @@ export const adritData: Partial<SupModel> = {
     {
       id: "v113",
       title: "Adrit Vance - Stripchat",
-      categories: ["Stripchat", "Popular"],
+      channel: [],
       tags: ["Stripchat", "Premium", "Indian", "Hardcore"],
       src: "https://files.catbox.moe/8lpg16.mp4",
       previewUrl: "https://files.catbox.moe/g53l3i.mp4",
@@ -94,7 +94,7 @@ export const adritData: Partial<SupModel> = {
     {
       id: "v114",
       title: "Adrit Vance - Exclusive Private Session",
-      categories: ["Stripchat", "Popular"],
+      channel: [],
       tags: ["Stripchat", "Private", "Indian", "Hardcore"],
       src: "https://files.catbox.moe/tljaw3.mp4",
       previewUrl: "https://files.catbox.moe/1fyv1t.mp4",
@@ -106,7 +106,7 @@ export const adritData: Partial<SupModel> = {
     {
       id: "v115",
       title: "Adrit Vance",
-      categories: ["Stripchat", "Popular"],
+      channel: [],
       tags: ["Stripchat", "Midnight", "Indian", "Hardcore"],
       src: "https://files.catbox.moe/83wsf4.mp4",
       previewUrl: "https://files.catbox.moe/gxpkd9.mp4",
@@ -118,7 +118,7 @@ export const adritData: Partial<SupModel> = {
     {
       id: "v116",
       title: "Adrit Vance",
-      categories: ["Stripchat", "Popular"],
+      channel: [],
       tags: ["Stripchat", "Fashion", "Lifestyle", "Hardcore"],
       src: "https://files.catbox.moe/ui1gs7.mp4",
       previewUrl: "https://files.catbox.moe/xyf4t1.mp4",
@@ -130,7 +130,7 @@ export const adritData: Partial<SupModel> = {
     {
       id: "v117",
       title: "Adrit Vance",
-      categories: ["Stripchat", "Popular"],
+      channel: [],
       tags: ["Stripchat", "Indian", "Hardcore"],
       src: "https://files.catbox.moe/1mv7jd.mp4",
       previewUrl: "https://files.catbox.moe/njulqv.mp4",
@@ -142,7 +142,7 @@ export const adritData: Partial<SupModel> = {
     {
       id: "v118",
       title: "Adrit Vance",
-      categories: ["Stripchat", "Popular"],
+      channel: [],
       tags: ["Stripchat", "Indian", "Hardcore"],
       src: "https://files.catbox.moe/ewzsk5.mp4",
       thumb: "https://i.ibb.co/M5p1nXZ8/Screen-Recording-2026-05-17-175428-frame-at-1m20s.jpg",
@@ -153,7 +153,7 @@ export const adritData: Partial<SupModel> = {
     {
       id: "v119",
       title: "Adrit Vance",
-      categories: ["Stripchat", "Popular"],
+      channel: [],
       tags: ["Stripchat", "Indian", "Hardcore"],
       src: "https://files.catbox.moe/ba6mvr.mp4",
       thumb: "https://i.ibb.co/8DcMFh1N/Screen-Recording-2026-06-06-173821-frame-at-0m0s.jpg",
@@ -164,7 +164,7 @@ export const adritData: Partial<SupModel> = {
     {
       id: "v120",
       title: "Adrit Vance",
-      categories: ["Stripchat", "Popular"],
+      channel: [],
       tags: ["Stripchat", "Indian", "Hardcore"],
       src: "https://files.catbox.moe/ykzc2f.mp4",
       thumb: "https://i.ibb.co/N2qDjpPP/Screen-Recording-2026-06-06-174155-frame-at-0m1s.jpg",
@@ -175,7 +175,7 @@ export const adritData: Partial<SupModel> = {
     {
       id: "v121",
       title: "Adrit Vance",
-      categories: ["Stripchat", "Popular"],
+      channel: [],
       tags: ["Stripchat", "Indian", "Hardcore"],
       src: "https://bysekoze.com/d/j9irnrpl0etx/7",
       previewUrl: "https://files.catbox.moe/vux3n7.mp4",

@@ -2,8 +2,7 @@ import { useState, useMemo, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Link, useNavigate, useSearchParams, useLocation } from "react-router-dom";
 import {
-  categories,
-  modelCodes,
+  channels, categories, modelCodes,
   filters,
   sortOptions,
   formatDuration,
@@ -38,10 +37,12 @@ const Index = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const { user } = useFirebase();
-  const { toggleFavoriteModel, toggleFavoriteCategory, isModelFavorite, isCategoryFavorite } = useInteractions();
+  const { toggleFavoriteModel, toggleFavoriteChannel, isModelFavorite, isChannelFavorite } = useInteractions();
   const [searchParams, setSearchParams] = useSearchParams();
-  const { videos, loading: videosLoading } = useVideos();
+  const { videos, allVideos, loading: videosLoading } = useVideos();
   const [loading, setLoading] = useState(true);
+  
+  const isDisplayLoading = loading || videosLoading;
   
   const initialFilter = searchParams.get("filter") || "Homepage";
   const initialTag = searchParams.get("tag") || null;
@@ -111,11 +112,12 @@ const Index = () => {
     const supNames = new Set(supModels.map(m => m.name.toLowerCase()));
     const matchedModels = modelCodes.filter((m) => !supNames.has(m.toLowerCase()) && m.toLowerCase().includes(q)).slice(0, 5);
     
-    const matchedCategories = categories.filter((c) => c.name.toLowerCase() !== "sup" && c.name.toLowerCase() !== "onlyfans" && c.name.toLowerCase().includes(q)).slice(0, 5);
+    const matchedChannels = channels.filter((c) => c.name.toLowerCase() !== "sup" && c.name.toLowerCase() !== "onlyfans" && c.name.toLowerCase().includes(q)).slice(0, 5);
+    const matchedCategories = categories.filter((c) => c.name.toLowerCase().includes(q)).slice(0, 5);
     const allTags = [...new Set(videos.filter(v => !isSupVideo(v)).flatMap((v) => v.tags))];
     const matchedTags = allTags.filter((t) => t.toLowerCase() !== "sup" && t.toLowerCase() !== "onlyfans" && t.toLowerCase().includes(q)).slice(0, 5);
     
-    return { matchedVideos, matchedModels, matchedCategories, matchedTags };
+    return { matchedVideos, matchedModels, matchedChannels, matchedCategories, matchedTags };
   }, [searchQuery, videos]);
 
   const filteredVideos = useMemo(() => {
@@ -124,11 +126,18 @@ const Index = () => {
     // Strictly exclude Stripchat/Sup videos from results on the Home page
     result = result.filter(v => !isSupVideo(v));
 
+    if (activeFilter === "Categories") {
+      // When "Categories" filter is active, we don't show videos directly, 
+      // instead we might want to show the category grid in the main section
+      // For now, let's just return all videos but the UI will handle showing the grid
+      return result;
+    }
+
     if (selectedModel) {
       result = result.filter((v) => videoHasModel(v, selectedModel));
     }
     if (selectedTag) {
-      result = result.filter((v) => v.tags.includes(selectedTag));
+      result = result.filter((v) => (v.tags || []).includes(selectedTag));
     }
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase();
@@ -136,8 +145,18 @@ const Index = () => {
         (v) =>
           v.title.toLowerCase().includes(q) ||
           getVideoModels(v).some((m) => m.toLowerCase().includes(q)) ||
-          v.categories.some((c) => c.toLowerCase().includes(q)) ||
-          v.tags.some((t) => t.toLowerCase().includes(q))
+          (v.channel || []).some((c) => c.toLowerCase().includes(q)) ||
+          (v.tags || []).some((t) => t.toLowerCase().includes(q))
+      );
+    }
+
+    // Handle channel/tag filtering
+    const specialFilters = ["Homepage", "Home Page", "Newest Videos", "Latest", "Top Rated", "Most Viewed", "Longest", "Most Commented", "Most Favorited", "Random Videos", "Being Watched", "Categories", "Channels", "Models"];
+    if (activeFilter && !specialFilters.includes(activeFilter)) {
+      result = result.filter(
+        (v) => 
+          (v.channel || []).some((c) => c.toLowerCase() === activeFilter.toLowerCase()) ||
+          (v.tags || []).some((t) => t.toLowerCase() === activeFilter.toLowerCase())
       );
     }
     
@@ -198,10 +217,18 @@ const Index = () => {
     });
   }, [selectedModel, selectedTag, activeFilter, videos, searchQuery]);
 
-  const filteredCategories = useMemo(() => {
-    if (!searchQuery.trim()) return categories;
+  const filteredChannels = useMemo(() => {
+    if (!searchQuery.trim()) return channels;
     const q = searchQuery.toLowerCase();
-    return categories.filter((c) => c.name.toLowerCase().includes(q));
+    return channels.filter((c) => c.name.toLowerCase().includes(q));
+  }, [searchQuery]);
+
+  const filteredCategories = useMemo(() => {
+    // Only include categories with images
+    const base = categories.filter(c => c.image);
+    if (!searchQuery.trim()) return base;
+    const q = searchQuery.toLowerCase();
+    return base.filter((c) => c.name.toLowerCase().includes(q));
   }, [searchQuery]);
 
   const filteredModels = useMemo(() => {
@@ -239,6 +266,10 @@ const Index = () => {
       .slice(0, 5);
   }, [videos]);
 
+  const getChannelCount = (catName: string) => {
+    return channels.find(c => c.name === catName)?.count || 0;
+  };
+
   const getCategoryCount = (catName: string) => {
     return categories.find(c => c.name === catName)?.count || 0;
   };
@@ -264,7 +295,7 @@ const Index = () => {
                   setSearchFocused(false);
                 }
               }}
-              placeholder="Search videos, models, categories..."
+              placeholder="Search videos, models, channels, categories..."
               className="w-full rounded-full bg-secondary border border-border pl-12 pr-12 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 transition-all"
             />
             <Monitor className="absolute right-4 h-5 w-5 text-muted-foreground" />
@@ -333,11 +364,36 @@ const Index = () => {
                 </div>
               )}
 
+              {/* Matched Channels */}
+              {searchResults.matchedChannels.length > 0 && (
+                <div className="p-3 border-b border-border">
+                  <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                    <Folder className="h-3 w-3" /> Channels
+                  </p>
+                  <div className="flex flex-wrap gap-1.5">
+                    {searchResults.matchedChannels.map((c) => (
+                      <button
+                        key={c.name}
+                        onClick={() => {
+                          setSearchParams({ filter: c.name });
+                          setSearchFocused(false);
+                          setSearchQuery("");
+                          scrollToCollection();
+                        }}
+                        className="px-3 py-1.5 rounded-full bg-secondary text-[11px] font-medium text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+                      >
+                        {c.name}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {/* Matched Categories */}
               {searchResults.matchedCategories.length > 0 && (
                 <div className="p-3 border-b border-border">
                   <p className="text-[10px] font-bold text-muted-foreground uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                    <Folder className="h-3 w-3" /> Categories
+                    <Tag className="h-3 w-3" /> Categories
                   </p>
                   <div className="flex flex-wrap gap-1.5">
                     {searchResults.matchedCategories.map((c) => (
@@ -386,7 +442,7 @@ const Index = () => {
               {/* No results */}
               {searchResults.matchedVideos.length === 0 &&
                 searchResults.matchedModels.length === 0 &&
-                searchResults.matchedCategories.length === 0 &&
+                searchResults.matchedChannels.length === 0 &&
                 searchResults.matchedTags.length === 0 && (
                 <div className="p-6 text-center text-sm text-muted-foreground">
                   No results found for "{searchQuery}"
@@ -417,11 +473,11 @@ const Index = () => {
               >
                 {f}
               </Link>
-            ) : f === "Categories" ? (
+            ) : f === "Channels" ? (
               <button
                 key={f}
                 onClick={() => {
-                  const el = document.getElementById("categories-section");
+                  const el = document.getElementById("channels-section");
                   if (el) {
                     el.scrollIntoView({ behavior: "smooth" });
                     // Optionally set the filter too if we want it active
@@ -537,7 +593,11 @@ const Index = () => {
             <div className="mb-8 md:mb-12">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-8 md:mb-10">
                 <h3 className="text-lg sm:text-2xl font-black tracking-[0.2em] uppercase text-white whitespace-nowrap italic">
-                  {(activeFilter === "Homepage" || activeFilter === "Newest Videos" || activeFilter === "Latest" || activeFilter === "Most Viewed" || activeFilter === "Top Rated" || activeFilter === "Longest" || activeFilter === "Most Commented" || activeFilter === "Most Favorited" || activeFilter === "Random Videos") ? "NEWEST VIDEOS" : activeFilter.toUpperCase()}
+                  {(activeFilter === "Homepage" || activeFilter === "Home Page" || activeFilter === "Newest Videos" || activeFilter === "Latest" || activeFilter === "Most Viewed" || activeFilter === "Top Rated" || activeFilter === "Longest" || activeFilter === "Most Commented" || activeFilter === "Most Favorited" || activeFilter === "Random Videos") 
+                    ? "NEWEST VIDEOS" 
+                    : activeFilter === "Categories" 
+                      ? "EXPLORE CATEGORIES" 
+                      : activeFilter.toUpperCase()}
                   <span className="block h-1 w-12 bg-primary mt-2 md:hidden" />
                 </h3>
 
@@ -618,7 +678,7 @@ const Index = () => {
             )}
 
             <div className="grid gap-8 grid-cols-1">
-              {loading ? (
+              {isDisplayLoading ? (
                 Array.from({ length: 5 }).map((_, i) => (
                   <div key={i} className="rounded-2xl border border-border overflow-hidden">
                     <Skeleton className="aspect-video w-full rounded-none" />
@@ -631,6 +691,56 @@ const Index = () => {
                     </div>
                   </div>
                 ))
+              ) : activeFilter === "Categories" ? (
+                <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-10">
+                  {filteredCategories.map((cat) => (
+                    <div
+                      key={cat.name}
+                      onClick={() => {
+                        setSearchParams({ filter: cat.name });
+                        scrollToCollection();
+                      }}
+                      className="group cursor-pointer"
+                    >
+                      {/* Thumbnail Box */}
+                      <div className="relative aspect-[4/5] rounded-2xl border border-white/5 overflow-hidden bg-secondary/30 shadow-2xl transition-all duration-500 group-hover:scale-[1.02] group-hover:border-primary/30 group-hover:shadow-primary/10">
+                        {cat.image ? (
+                          <div className="absolute inset-0">
+                            <img 
+                              src={cat.image} 
+                              alt={cat.name}
+                              className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                              referrerPolicy="no-referrer"
+                            />
+                            <div className="absolute inset-0 bg-black/5 group-hover:bg-transparent transition-colors" />
+                          </div>
+                        ) : (
+                          <div className="absolute inset-0 flex items-center justify-center">
+                            <Folder className="w-12 h-12 text-white/5 group-hover:text-primary/20 transition-colors" />
+                          </div>
+                        )}
+                        
+                        {/* Status Overlay */}
+                        <div className="absolute top-3 right-3 h-8 w-8 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all">
+                          <ArrowUpRight size={14} />
+                        </div>
+                      </div>
+
+                      {/* Label Below */}
+                      <div className="mt-4 px-1">
+                        <h4 className="text-[10px] font-black text-white/90 italic tracking-[0.2em] uppercase group-hover:text-primary transition-colors">
+                          {cat.name}
+                        </h4>
+                        <div className="flex items-center gap-2 mt-1">
+                          <span className="h-0.5 w-4 bg-primary/30 group-hover:w-8 group-hover:bg-primary transition-all" />
+                          <p className="text-[9px] font-bold text-white/20 uppercase tracking-widest">
+                            {cat.count} Files
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               ) : (
                 paginatedVideos.map((video) => (
                   <VideoCard key={video.id} video={video} formatDate={formatDate} />
@@ -766,17 +876,17 @@ const Index = () => {
 
           <NativeBanner />
 
-          {/* Categories */}
-          <div id="categories-section" className="rounded-2xl border border-border bg-card p-5">
+          {/* Channels */}
+          <div id="channels-section" className="rounded-2xl border border-border bg-card p-5">
             <h3 
               onClick={() => {
-                setSearchParams({ filter: "NAKED GIRLS" });
+                setSearchParams({ filter: "Latest" });
                 scrollToCollection();
               }}
               className="text-sm font-bold tracking-wider text-foreground mb-4 uppercase flex items-center gap-2 cursor-pointer hover:text-primary transition-colors group"
             >
               <span className="h-5 w-1 rounded-full bg-primary group-hover:scale-y-125 transition-transform" />
-              NAKED GIRLS
+              CHANNELS
             </h3>
             <div className="grid grid-cols-2 gap-2 max-h-[400px] overflow-y-auto pr-1 scrollbar-thin">
               {loading ? (
@@ -784,7 +894,7 @@ const Index = () => {
                   <Skeleton key={i} className="h-14 w-full rounded-xl" />
                 ))
               ) : (
-                filteredCategories.map((cat) => {
+                filteredChannels.map((cat) => {
                   const isActive = activeFilter === cat.name;
                   return (
                     <div
@@ -810,21 +920,21 @@ const Index = () => {
                           <button
                             onClick={(e) => {
                               e.stopPropagation();
-                              toggleFavoriteCategory(cat.name);
+                              toggleFavoriteChannel(cat.name);
                             }}
                             className={`p-1 rounded-full transition-all ${
-                              isCategoryFavorite(cat.name) 
+                              isChannelFavorite(cat.name) 
                                 ? "text-primary bg-primary/10" 
                                 : "text-white/10 hover:text-primary hover:bg-primary/10 opacity-0 group-hover:opacity-100"
                             }`}
                           >
-                            <Bookmark size={10} className={isCategoryFavorite(cat.name) ? "fill-current" : ""} />
+                            <Bookmark size={10} className={isChannelFavorite(cat.name) ? "fill-current" : ""} />
                           </button>
-                          {isActive && !isCategoryFavorite(cat.name) && (
+                          {isActive && !isChannelFavorite(cat.name) && (
                             <span className="h-1.5 w-1.5 rounded-full bg-primary mt-1" />
                           )}
                         </div>
-                        {isCategoryFavorite(cat.name) && (
+                        {isChannelFavorite(cat.name) && (
                           <Link 
                             to="/library" 
                             onClick={(e) => e.stopPropagation()}
@@ -833,6 +943,91 @@ const Index = () => {
                             Library
                           </Link>
                         )}
+                      </div>
+                    </div>
+                  );
+                })
+              )}
+            </div>
+          </div>
+
+          {/* Categories */}
+          <div id="categories-section" className="rounded-2xl border border-border bg-card p-5">
+            <h3 
+              onClick={() => {
+                setSearchParams({ filter: "Latest" });
+                scrollToCollection();
+              }}
+              className="text-sm font-bold tracking-wider text-foreground mb-4 uppercase flex items-center gap-2 cursor-pointer hover:text-primary transition-colors group"
+            >
+              <span className="h-5 w-1 rounded-full bg-primary group-hover:scale-y-125 transition-transform" />
+              CATEGORIES
+            </h3>
+            <div className="grid grid-cols-2 gap-3 max-h-[500px] overflow-y-auto pr-1 scrollbar-thin">
+              {loading ? (
+                Array.from({ length: 12 }).map((_, i) => (
+                  <Skeleton key={i} className="h-28 w-full rounded-xl" />
+                ))
+              ) : (
+                filteredCategories.map((cat) => {
+                  const isActive = activeFilter === cat.name;
+                  return (
+                    <div
+                      key={cat.name}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setSearchParams({ filter: cat.name });
+                        scrollToCollection();
+                      }}
+                      className={`group relative rounded-xl border hover:border-primary/50 transition-all duration-300 overflow-hidden text-left cursor-pointer aspect-[4/3] ${
+                        isActive
+                          ? "border-primary/50 ring-1 ring-primary/30"
+                          : "border-border/40"
+                      }`}
+                    >
+                      {/* Category Image */}
+                      {cat.image ? (
+                        <div className="absolute inset-0 w-full h-full">
+                          <img 
+                            src={cat.image} 
+                            alt={cat.name}
+                            loading="lazy"
+                            referrerPolicy="no-referrer"
+                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                          />
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent" />
+                        </div>
+                      ) : (
+                        <div className="absolute inset-0 bg-secondary/50 flex items-center justify-center">
+                          <Tag className="w-6 h-6 text-white/10" />
+                        </div>
+                      )}
+
+                      <div className="absolute bottom-0 left-0 right-0 p-3 z-10">
+                        <span className={`block text-[11px] font-black tracking-wider uppercase truncate transition-colors ${
+                          isActive ? "text-primary" : "text-white group-hover:text-primary"
+                        }`}>
+                          {cat.name}
+                        </span>
+                        <span className="text-[9px] font-bold text-white/50 mt-0.5 block">
+                          {getCategoryCount(cat.name)} videos
+                        </span>
+                      </div>
+
+                      <div className="absolute top-2 right-2 flex flex-col items-end gap-1 z-10">
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            toggleFavoriteChannel(cat.name);
+                          }}
+                          className={`p-1.5 rounded-lg backdrop-blur-md transition-all ${
+                            isChannelFavorite(cat.name) 
+                              ? "text-primary bg-primary/20 border border-primary/30" 
+                              : "text-white/40 bg-black/40 border border-white/10 hover:text-primary hover:bg-primary/20 opacity-0 group-hover:opacity-100"
+                          }`}
+                        >
+                          <Bookmark size={10} className={isChannelFavorite(cat.name) ? "fill-current" : ""} />
+                        </button>
                       </div>
                     </div>
                   );

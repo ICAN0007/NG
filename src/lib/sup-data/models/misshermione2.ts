@@ -14,13 +14,11 @@ export const missHermione2Data: Partial<SupModel> = {
   clips: [
     {
       title: "Short Clip 1",
-      url: "https://files.catbox.moe/lm45o8.mp4",
-      thumbnail: "https://i.ibb.co/mVB7DZdP/folderthumb.png"
+      url: "https://files.catbox.moe/lm45o8.mp4"
     },
     {
       title: "Short Clip 2",
-      url: "https://files.catbox.moe/mqim68.mp4",
-      thumbnail: "https://i.ibb.co/mVB7DZdP/folderthumb.png"
+      url: "https://files.catbox.moe/mqim68.mp4"
     }
   ],
   videos: [
@@ -29,14 +27,14 @@ export const missHermione2Data: Partial<SupModel> = {
       title: "Short Clip 1",
       src: "https://files.catbox.moe/lm45o8.mp4",
       thumb: "https://i.ibb.co/mVB7DZdP/folderthumb.png",
-      categories: ["Stripchat", "Short Clips"]
+      channel: []
     },
     {
       id: "mh2-2",
       title: "Short Clip 2",
       src: "https://files.catbox.moe/mqim68.mp4",
       thumb: "https://i.ibb.co/mVB7DZdP/folderthumb.png",
-      categories: ["Stripchat", "Short Clips"]
+      channel: []
     }
   ]
 };

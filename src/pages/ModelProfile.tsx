@@ -2,6 +2,7 @@ import { useParams, Link, useNavigate, useLocation } from "react-router-dom";
 import { useEffect, useMemo, useState, useRef } from "react";
 import { motion } from "motion/react";
 import { 
+  channels,
   modelCodes, 
   modelProfiles, 
   slugifyModel, 
@@ -136,7 +137,7 @@ const ModelProfile = () => {
   const [sortBy, setSortBy] = useState("Latest");
   const [sortOpen, setSortOpen] = useState(false);
   const sortRef = useRef<HTMLDivElement>(null);
-  const [categoryFilter, setCategoryFilter] = useState("");
+  const [channelFilter, setChannelFilter] = useState("");
   const [activeTab, setActiveTab] = useState<'videos' | 'photos' | 'clips'>('videos');
   const [selectedPhoto, setSelectedPhoto] = useState<number | null>(null);
   const [selectedClipIndex, setSelectedClipIndex] = useState<number | null>(null);
@@ -267,8 +268,8 @@ const ModelProfile = () => {
       });
     }
 
-    if (categoryFilter && categoryFilter !== "All") {
-      result = result.filter(v => v.categories.some(c => c.toLowerCase() === categoryFilter.toLowerCase()));
+    if (channelFilter && channelFilter !== "All") {
+      result = result.filter(v => v.channel.some(c => c.toLowerCase() === channelFilter.toLowerCase()));
     }
 
     if (sortBy === "Top Rated") {
@@ -333,7 +334,7 @@ const ModelProfile = () => {
       if (dateA !== dateB) return dateB - dateA;
       return b.id.localeCompare(a.id);
     });
-  }, [modelName, allVideos, sortBy, categoryFilter, supMemberData]);
+  }, [modelName, allVideos, sortBy, channelFilter, supMemberData]);
 
   useEffect(() => {
     window.scrollTo(0, 0);

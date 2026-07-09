@@ -136,7 +136,7 @@ export const meetikalherData: Partial<SupModel> = {
     {
       "id": "v55",
       "title": "Desi+ Newly Married NRI Pornstar Meeti Kalher First Honeymoon Sex Uncut Exclusive Leaked Content",
-      "categories": ["Indian"],
+      "channels": ["Indian"],
       "tags": ["Indian", "Teen", "Wife", "BigTits", "Creampie"],
       "src": "https://files.catbox.moe/6zl3b0.mp4",
       "thumb": "https://files.catbox.moe/8e719f.png",
@@ -147,7 +147,7 @@ export const meetikalherData: Partial<SupModel> = {
     {
       "id": "v62",
       "title": "Desi+ Indian NRI Pornstar Meetii Kalher Christmas Sex Uncut Exclusive Leaked Content",
-      "categories": ["Indian"],
+      "channels": ["Indian"],
       "tags": ["Indian", "Teen", "Creampie", "Hardcore", "Deepthroat"],
       "src": "https://files.catbox.moe/h0s87l.mp4",
       "previewUrl": "https://files.catbox.moe/mycxwj.mp4",
@@ -159,7 +159,7 @@ export const meetikalherData: Partial<SupModel> = {
     {
       "id": "v101",
       "title": "Desi Indian meeti kalher girl blowjob #Indian #homemade.",
-      "categories": ["Indian"],
+      "channels": ["Indian"],
       "tags": ["blowjob", "Desi", "cumshot"],
       "src": "https://files.catbox.moe/u7c35f.mp4",
       "thumb": "https://files.catbox.moe/vv98f9.png",

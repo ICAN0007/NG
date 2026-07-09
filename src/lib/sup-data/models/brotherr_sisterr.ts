@@ -38,7 +38,7 @@ export const brotherrSisterrData: Partial<SupModel> = {
     {
       id: "brotherr-sisterr-v1",
       title: "Fuck Show Brother and Sister",
-      categories: ["Indian", "OnlyFans", "Handmade"],
+      channel: ["Onlyfans"],
       tags: ["Hardcore", "Exclusive", "Popular"],
       src: "https://files.catbox.moe/c2c0ey.mp4",
       thumb: "https://i.ibb.co/bwMzhN5/my-collage.png",

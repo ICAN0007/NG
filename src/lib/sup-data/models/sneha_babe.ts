@@ -21,14 +21,14 @@ export const sneha_babeData: Partial<SupModel> = {
     { title: "Short Clip 9", url: "https://files.catbox.moe/q6ygs0.mp4", thumbnail: "https://i.ibb.co/Rk9x6TpZ/Profile.png" }
   ],
   videos: [
-    { id: "sb-c1", title: "Short Clip 1", src: "https://files.catbox.moe/oxirg9.mp4", thumb: "https://i.ibb.co/Rk9x6TpZ/Profile.png", categories: ["Stripchat", "Short Clips"] },
-    { id: "sb-c2", title: "Short Clip 2", src: "https://files.catbox.moe/ot4law.mp4", thumb: "https://i.ibb.co/Rk9x6TpZ/Profile.png", categories: ["Stripchat", "Short Clips"] },
-    { id: "sb-c3", title: "Short Clip 3", src: "https://files.catbox.moe/nneur7.mp4", thumb: "https://i.ibb.co/Rk9x6TpZ/Profile.png", categories: ["Stripchat", "Short Clips"] },
-    { id: "sb-c4", title: "Short Clip 4", src: "https://files.catbox.moe/y3k8dk.mp4", thumb: "https://i.ibb.co/Rk9x6TpZ/Profile.png", categories: ["Stripchat", "Short Clips"] },
-    { id: "sb-c5", title: "Short Clip 5", src: "https://files.catbox.moe/c36uvl.mp4", thumb: "https://i.ibb.co/Rk9x6TpZ/Profile.png", categories: ["Stripchat", "Short Clips"] },
-    { id: "sb-c6", title: "Short Clip 6", src: "https://files.catbox.moe/0zkzhc.mp4", thumb: "https://i.ibb.co/Rk9x6TpZ/Profile.png", categories: ["Stripchat", "Short Clips"] },
-    { id: "sb-c7", title: "Short Clip 7", src: "https://files.catbox.moe/e0nt30.mp4", thumb: "https://i.ibb.co/Rk9x6TpZ/Profile.png", categories: ["Stripchat", "Short Clips"] },
-    { id: "sb-c8", title: "Short Clip 8", src: "https://files.catbox.moe/01z6ni.mp4", thumb: "https://i.ibb.co/Rk9x6TpZ/Profile.png", categories: ["Stripchat", "Short Clips"] },
-    { id: "sb-c9", title: "Short Clip 9", src: "https://files.catbox.moe/q6ygs0.mp4", thumb: "https://i.ibb.co/Rk9x6TpZ/Profile.png", categories: ["Stripchat", "Short Clips"] }
+    { id: "sb-c1", title: "Short Clip 1", src: "https://files.catbox.moe/oxirg9.mp4", thumb: "https://i.ibb.co/Rk9x6TpZ/Profile.png", channel: [] },
+    { id: "sb-c2", title: "Short Clip 2", src: "https://files.catbox.moe/ot4law.mp4", thumb: "https://i.ibb.co/Rk9x6TpZ/Profile.png", channel: [] },
+    { id: "sb-c3", title: "Short Clip 3", src: "https://files.catbox.moe/nneur7.mp4", thumb: "https://i.ibb.co/Rk9x6TpZ/Profile.png", channel: [] },
+    { id: "sb-c4", title: "Short Clip 4", src: "https://files.catbox.moe/y3k8dk.mp4", thumb: "https://i.ibb.co/Rk9x6TpZ/Profile.png", channel: [] },
+    { id: "sb-c5", title: "Short Clip 5", src: "https://files.catbox.moe/c36uvl.mp4", thumb: "https://i.ibb.co/Rk9x6TpZ/Profile.png", channel: [] },
+    { id: "sb-c6", title: "Short Clip 6", src: "https://files.catbox.moe/0zkzhc.mp4", thumb: "https://i.ibb.co/Rk9x6TpZ/Profile.png", channel: [] },
+    { id: "sb-c7", title: "Short Clip 7", src: "https://files.catbox.moe/e0nt30.mp4", thumb: "https://i.ibb.co/Rk9x6TpZ/Profile.png", channel: [] },
+    { id: "sb-c8", title: "Short Clip 8", src: "https://files.catbox.moe/01z6ni.mp4", thumb: "https://i.ibb.co/Rk9x6TpZ/Profile.png", channel: [] },
+    { id: "sb-c9", title: "Short Clip 9", src: "https://files.catbox.moe/q6ygs0.mp4", thumb: "https://i.ibb.co/Rk9x6TpZ/Profile.png", channel: [] }
   ]
 };

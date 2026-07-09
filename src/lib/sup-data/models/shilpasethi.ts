@@ -7,7 +7,7 @@ export const shilpaSethiData: Partial<SupModel> = {
     {
       "id": "v9",
       "title": "Desi Shilpa Sethi Solo dildo Riding and Exclusive OnlyFans Content!",
-      "categories": ["Indian", "OnlyFans"],
+      "channels": ["Indian", "OnlyFans"],
       "tags": ["Solo", "Masturbation", "Blowjob", "MILF"],
       "src": "https://files.catbox.moe/boavf6.mp4",
       "thumb": "https://files.catbox.moe/mrqjg9.png",
@@ -18,7 +18,7 @@ export const shilpaSethiData: Partial<SupModel> = {
     {
       "id": "v58",
       "title": "Desi+ Shilpa Sethi Mssethi in Hardcore Interracial Session Uncut Exclusive Leaked Content",
-      "categories": ["Indian"],
+      "channels": ["Indian"],
       "tags": ["Indian", "Hardcore", "Bigtits", "Bigass", "Blowjob"],
       "src": "https://files.catbox.moe/00nx3x.mp4",
       "thumb": "https://files.catbox.moe/zdvmxh.png",
@@ -29,7 +29,7 @@ export const shilpaSethiData: Partial<SupModel> = {
     {
       "id": "v109",
       "title": "Indian Girl Sethi fuck by her hardcore Boyfriend.",
-      "categories": ["Indian"],
+      "channels": ["Indian"],
       "tags": ["Milf", "Blowjob", "bigtits", "masturbation", "hardcore"],
       "src": "https://files.catbox.moe/6al4s9.mp4",
       "thumb": "https://files.catbox.moe/48fr24.png",

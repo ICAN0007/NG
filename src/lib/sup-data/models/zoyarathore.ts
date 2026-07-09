@@ -18,7 +18,7 @@ export const zoyarathoreData: Partial<SupModel> = {
     {
       "id": "v37",
       "title": "Desi+ Zoya Rathore in Sister-in-Law's Affair with Neighbour Hindi Uncut Hot Short Film Part-1",
-      "categories": ["Indian"],
+      "channels": ["Indian"],
       "tags": ["Indian", "MILF", "Cheating", "Missionary", "Hardcore"],
       "src": "https://files.catbox.moe/zq31ki.mp4",
       "thumb": "https://files.catbox.moe/d7yh1h.png",
@@ -29,7 +29,7 @@ export const zoyarathoreData: Partial<SupModel> = {
     {
       "id": "v38",
       "title": "Desi+ Zoya Rathore in Sister-in-Law's Affair with Neighbour Hindi Uncut Hot Short Film Part-2",
-      "categories": ["Indian"],
+      "channels": ["Indian"],
       "tags": ["Indian", "MILF", "Cheating", "Missionary", "Hardcore"],
       "src": "https://files.catbox.moe/g70vba.mp4",
       "thumb": "https://files.catbox.moe/d7yh1h.png",

@@ -12,7 +12,7 @@ export const belleData: Partial<SupModel> = {
     {
       id: "V2611",
       title: "BelleLouiseVP Ass & Pussy finguring",
-      categories: ["Stripchat"],
+      channel: [],
       tags: ["Ass", "Pussy Fingering", "Squirt"],
       src: "https://files.catbox.moe/ujujn8.mp4",
       thumb: "https://i.ibb.co/5XTLyvpd/portrait.jpg",

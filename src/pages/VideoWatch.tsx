@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo, useRef } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "motion/react";
 import {
+  channels,
   getVideoEmbedUrl,
   getVideoThumbnailUrl,
   formatDuration,
@@ -45,7 +46,7 @@ const VideoWatch = () => {
   const navigate = useNavigate();
   const { videos, supVideos, allVideos, loading: videosLoading } = useVideos();
   const { user } = useFirebase();
-  const { toggleLike, toggleSave, isLiked, isSaved, toggleFavoriteCategory, isCategoryFavorite } = useInteractions();
+  const { toggleLike, toggleSave, isLiked, isSaved, toggleFavoriteChannel, isChannelFavorite } = useInteractions();
   
   const [activeMirror, setActiveMirror] = useState<number>(-1); // -1 is main
   const [showInfo, setShowInfo] = useState(false);
@@ -66,9 +67,9 @@ const VideoWatch = () => {
     if (!video) return { modelVideos: [], recommendedVideos: [] };
     
     const currentModels = getVideoModels(video);
-    const currentCats = video.categories;
+    const currentCats = video.channel || [];
 
-    const candidateVideos = isSup ? supVideos : videos;
+    const candidateVideos = isSup ? (supVideos || []) : (videos || []);
 
     const allRelated = candidateVideos
       .filter((v) => v.id !== video.id)
@@ -77,7 +78,7 @@ const VideoWatch = () => {
         const vModels = getVideoModels(v);
         const sharedModels = vModels.filter(m => currentModels.includes(m));
         if (sharedModels.length > 0) score += 100 * sharedModels.length;
-        const sharedCats = v.categories.filter(c => currentCats.includes(c));
+        const sharedCats = (v.channel || []).filter(c => currentCats.includes(c));
         score += sharedCats.length * 10;
         
         // For Stripchat/OnlyFans, we want to strictly favor model matches
@@ -264,7 +265,7 @@ const VideoWatch = () => {
                     <div className="space-y-1">
                       {isSup && (
                         <div className="flex flex-wrap gap-2 mb-3">
-                          {video.categories.filter(c => ['OnlyFans', 'Stripchat', 'Onlyfans', 'stripchat'].includes(c)).map(cat => (
+                          {(video.channel || []).filter(c => channels.some(chan => chan.name.toLowerCase() === c.toLowerCase())).map(cat => (
                             <span key={cat} className="px-3 py-1 rounded bg-primary text-[10px] font-black text-white uppercase tracking-[0.1em]">
                               {cat}
                             </span>
@@ -416,40 +417,55 @@ const VideoWatch = () => {
                   </div>
                 )}
 
-                {/* Tags and Categories */}
-                <div className="flex flex-wrap gap-3 py-6">
-                  {video.categories.map(c => {
-                    const isCatFav = isCategoryFavorite(c);
-                    return (
-                      <div key={c} className="flex items-center gap-1">
-                        <Link 
-                          to={`/?filter=${encodeURIComponent(c)}`}
-                          className="px-4 py-1.5 rounded-xl bg-white/5 border border-white/5 text-[10px] font-black text-white/40 uppercase tracking-[0.2em] hover:text-white hover:bg-primary/20 hover:border-primary/30 transition-all"
-                        >
-                          {c}
-                        </Link>
-                        <button
-                          onClick={() => toggleFavoriteCategory(c)}
-                          className={`p-1.5 rounded-xl transition-all ${
-                            isCatFav 
-                              ? "bg-primary text-white border border-primary" 
-                              : "bg-white/5 border border-white/10 text-white/20 hover:text-primary hover:border-primary/30"
-                          }`}
-                        >
-                          <Bookmark size={10} className={isCatFav ? "fill-current" : ""} />
-                        </button>
+                {/* Tags and Channels */}
+                <div className="space-y-6 py-6">
+                  {(video.channel || []).length > 0 && (
+                    <div className="space-y-3">
+                      <h4 className="text-[9px] font-black uppercase tracking-[0.3em] text-white/30 px-1">Channels</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {(video.channel || []).map(c => {
+                          const isCatFav = isChannelFavorite(c);
+                          return (
+                            <div key={c} className="flex items-center gap-1">
+                              <Link 
+                                to={`/?filter=${encodeURIComponent(c)}`}
+                                className="px-4 py-1.5 rounded-xl bg-white/5 border border-white/5 text-[10px] font-black text-white/40 uppercase tracking-[0.2em] hover:text-white hover:bg-primary/20 hover:border-primary/30 transition-all"
+                              >
+                                {c}
+                              </Link>
+                              <button
+                                onClick={() => toggleFavoriteChannel(c)}
+                                className={`p-1.5 rounded-xl transition-all ${
+                                  isCatFav 
+                                    ? "bg-primary text-white border border-primary" 
+                                    : "bg-white/5 border border-white/10 text-white/20 hover:text-primary hover:border-primary/30"
+                                }`}
+                              >
+                                <Bookmark size={10} className={isCatFav ? "fill-current" : ""} />
+                              </button>
+                            </div>
+                          );
+                        })}
                       </div>
-                    );
-                  })}
-                  {video.tags.map(t => (
-                    <Link 
-                      key={t} 
-                      to={`/?tag=${encodeURIComponent(t)}`}
-                      className="px-4 py-1.5 rounded-xl bg-primary/10 border border-primary/20 text-[10px] font-black text-primary uppercase tracking-[0.2em] hover:bg-primary/20 transition-all"
-                    >
-                      {t}
-                    </Link>
-                  ))}
+                    </div>
+                  )}
+
+                  {(video.tags || []).length > 0 && (
+                    <div className="space-y-3">
+                      <h4 className="text-[9px] font-black uppercase tracking-[0.3em] text-white/30 px-1">Categories</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {(video.tags || []).map(t => (
+                          <Link 
+                            key={t} 
+                            to={`/?filter=${encodeURIComponent(t)}`}
+                            className="px-4 py-1.5 rounded-xl bg-primary/10 border border-primary/20 text-[10px] font-black text-primary uppercase tracking-[0.2em] hover:bg-primary/20 transition-all"
+                          >
+                            {t}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </div>
 
                 {/* Video Gallery */}
@@ -497,7 +513,7 @@ const VideoWatch = () => {
                 </div>
               </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
                 {modelVideos.map((v) => (
                   <VideoListCard key={v.id} video={v} />
                 ))}
@@ -523,7 +539,7 @@ const VideoWatch = () => {
               </Link>
             </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
               {videosLoading ? (
                 Array.from({ length: 8 }).map((_, i) => (
                   <div key={i} className="space-y-4">

@@ -29,7 +29,7 @@ export const miazData: Partial<SupModel> = {
     {
       "id": "v10",
       "title": "MiaZ fuck himself doing sex with Bestfriend",
-      "categories": ["Indian", "OnlyFans"],
+      "channels": ["Indian", "OnlyFans"],
       "tags": ["Blowjob", "Missionary", "Hardcore", "Teen"],
       "src": "https://files.catbox.moe/pvqa6t.mp4",
       "thumb": "https://files.catbox.moe/kerdiv.png",
@@ -40,7 +40,7 @@ export const miazData: Partial<SupModel> = {
     {
       "id": "v16",
       "title": "Desi MiaZ Raw Fuck Part-1 sextapes Exclusive OnlyFans Content",
-      "categories": ["Indian", "OnlyFans"],
+      "channels": ["Indian", "OnlyFans"],
       "tags": ["Blowjob", "Hardcore", "Amateur", "Cumshot"],
       "src": "https://files.catbox.moe/r5pklt.mp4",
       "thumb": "https://files.catbox.moe/zqma0e.png",
@@ -51,7 +51,7 @@ export const miazData: Partial<SupModel> = {
     {
       "id": "v17",
       "title": "Desi MiaZ Raw Fuck Part-2 sextapes Exclusive OnlyFans Content",
-      "categories": ["Indian", "OnlyFans"],
+      "channels": ["Indian", "OnlyFans"],
       "tags": ["Blowjob", "Hardcore", "Amateur", "Cumshot"],
       "src": "https://files.catbox.moe/q39glk.mp4",
       "thumb": "https://files.catbox.moe/zqma0e.png",

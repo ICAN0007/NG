@@ -30,7 +30,7 @@ export const nisha_01Data: Partial<SupModel> = {
       title: "Short Clip 1",
       src: "https://files.catbox.moe/d1wcwn.mp4",
       thumb: "https://i.ibb.co/4rVqWwg/folderthumb.webp",
-      categories: ["Stripchat", "Short Clips"]
+      channel: []
     }
   ]
 };

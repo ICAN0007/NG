@@ -55,7 +55,7 @@ import { the_alejandro_dollsData } from './sup-data/models/the_alejandro_dolls';
 
 export type { SupMember, SupModel, SupClip };
 
-export const supCategories = [
+export const supChannels = [
   "All",
   "StripChat",
   "OnlyFans",
@@ -570,10 +570,10 @@ export const supModels: SupModel[] = supMembers.map(member => {
   });
 
   const modelVideos = dedupedVideos.map(v => {
-    const cats = new Set([...(v.categories || []), member.platform, "Popular"]);
+    const cats = new Set([...(v.channel || []), member.platform, "Popular"]);
     return {
       ...v,
-      categories: Array.from(cats),
+      channel: Array.from(cats),
       isSup: true
     };
   });
@@ -643,7 +643,7 @@ legacySupVideos.forEach(v => {
       allVideosSet.add(v.id);
       supVideosList.push({
         ...v,
-        categories: Array.from(new Set([...(v.categories || []), "Unknown"])),
+        channel: Array.from(new Set([...(v.channel || []), "Unknown"])),
         isSup: true
       });
     }

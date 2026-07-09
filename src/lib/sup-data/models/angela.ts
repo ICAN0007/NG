@@ -1,4 +1,5 @@
 import { SupModel } from '../sup-data';
+import { Video } from '../../videos';
 
 export const angelaData: Partial<SupModel> = {
   banner: {
@@ -18,5 +19,21 @@ export const angelaData: Partial<SupModel> = {
     "https://i.ibb.co/zTqZHF5P/639bbd9fb5facc96d74151191ff87635.webp",
     "https://i.ibb.co/BHK04qhw/6828b4fad0dc167e15d2e241553bcbf0.webp",
     "https://i.ibb.co/Z1HwsSgD/ab77aa08ecdc52494528fe0fa7236b3b.webp"
+  ],
+  videos: [
+    {
+      id: "Van1",
+      title: "Angela__05 - My Stripchat Stream recordable-privates camel-toe latin-foot-fetish shaven gagging",
+      channel: [],
+      tags: ["recordable-privates", "camel-toe", "latin-foot-fetish", "shaven", "gagging"],
+      src: "https://bysekoze.com/e/jaaugn4s2cvo/angela-05-my-stripchat-stream-recordable-privates-camel-toe-latin-foot-fetish-shaven-gagging",
+      thumb: "https://i.ibb.co/LhgqN4bq/Pussy-Finguring-in-Panty-frame-at-2m47s.jpg",
+      duration: "1200",
+      addedAt: "2026-07-08T12:00:00Z",
+      model: "Angela__05",
+      description: "Angela__05 - My Stripchat Stream recordable-privates camel-toe latin-foot-fetish shaven gagging",
+      gallery: [],
+      previewUrl: "https://files.catbox.moe/pg8mtn.mp4"
+    }
   ]
 };

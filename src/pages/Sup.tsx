@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { useVideos } from '@/hooks/use-videos';
 import { useFirebase } from '@/context/FirebaseContext';
 import { logoutUser } from '@/lib/auth-service';
-import { supModels, supVideos as initialSupVideos, SupModel, SupClip, supCategories } from '@/lib/sup-data';
+import { supModels, supVideos as initialSupVideos, SupModel, SupClip, supChannels } from '@/lib/sup-data';
 import { VideoListCard } from '@/components/VideoListCard';
 import { ClipCard } from '@/components/ClipCard';
 import { 
@@ -641,7 +641,7 @@ const Sup = () => {
 
               {/* Model Category Tabs */}
               <div className="flex items-center gap-4 border-b border-white/5 pt-2 pb-6 overflow-x-auto no-scrollbar">
-                {supCategories.map((cat) => (
+                {supChannels.map((cat) => (
                   <button
                     key={cat}
                     onClick={() => setModelCategory(cat)}

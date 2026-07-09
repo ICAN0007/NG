@@ -8,7 +8,7 @@ export const muskan_1Data: Partial<SupModel> = {
     {
       id: "muskan1-v1",
       title: "Rubbing vibrator in pussy",
-      categories: ["SUP"],
+      channel: [],
       tags: ["Blowjob"],
       src: "https://mixdrop.ps/e/0391eeeecol6j9",
       thumb: "https://i.ibb.co/j97PHrg2/Rubbing-vibrator-in-pussy-frame-at-0m40s.jpg",

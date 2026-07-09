@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
-import { ChevronLeft, Heart, Bookmark, Play, Tag } from "lucide-react";
+import { ChevronLeft, Heart, Bookmark, Play, Tag, Folder } from "lucide-react";
 import { useFirebase } from "@/context/FirebaseContext";
 import { VideoListCard } from "@/components/VideoListCard";
 import { getModelUrlBySlug } from "@/lib/model-utils";
+import { channels as allChannels, categories as allCategories } from "@/lib/videos";
 import Footer from "@/components/Footer";
 import PixelAtmosphere from "@/components/PixelAtmosphere";
 
@@ -14,9 +15,9 @@ import { logoutUser } from "@/lib/auth-service";
 const EmptyState = ({ tab }: { tab: string }) => (
   <div className="py-32 text-center space-y-4">
     <div className="h-16 w-16 bg-white/5 rounded-full flex items-center justify-center mx-auto text-white/20">
-      {tab === "likes" ? <Heart size={32} /> : tab === "saved" ? <Bookmark size={32} /> : tab === "categories" ? <Tag size={32} /> : <Play size={32} />}
+      {tab === "likes" ? <Heart size={32} /> : tab === "saved" ? <Bookmark size={32} /> : tab === "channels" ? <Folder size={32} /> : <Play size={32} />}
     </div>
-    <h3 className="text-xl font-black italic">No {tab} yet</h3>
+    <h3 className="text-xl font-black italic">No {tab === "channels" ? "channels or categories" : tab} yet</h3>
     <p className="text-white/40 text-sm max-w-xs mx-auto">
       Start browsing our gallery and add some items to your collection!
     </p>
@@ -27,13 +28,23 @@ const EmptyState = ({ tab }: { tab: string }) => (
 );
 
 const Library = () => {
-  const { user, videos, likedVideoIds, savedVideoIds, favoriteModelIds, favoriteCategories, loading } = useFirebase();
-  const [activeTab, setActiveTab] = useState<"likes" | "saved" | "models" | "categories">("likes");
+  const { user, videos, likedVideoIds, savedVideoIds, favoriteModelIds, favoriteChannels, loading } = useFirebase();
+  const [activeTab, setActiveTab] = useState<"likes" | "saved" | "models" | "channels">("likes");
 
   const likedVideos = videos.filter(v => likedVideoIds.has(v.id));
   const savedVideos = videos.filter(v => savedVideoIds.has(v.id));
   const favoriteModelsList = Array.from(favoriteModelIds);
-  const favoriteCategoriesList = Array.from(favoriteCategories);
+  
+  const { channelsList, categoriesList } = useMemo(() => {
+    const favs = Array.from(favoriteChannels);
+    const channelNames = new Set(allChannels.map(c => c.name.toLowerCase()));
+    const categoryNames = new Set(allCategories.map(c => c.name.toLowerCase()));
+    
+    return {
+      channelsList: favs.filter(f => channelNames.has(f.toLowerCase())),
+      categoriesList: favs.filter(f => categoryNames.has(f.toLowerCase()) || (!channelNames.has(f.toLowerCase()) && !categoryNames.has(f.toLowerCase())))
+    };
+  }, [favoriteChannels]);
 
   if (!user && !loading) {
     return (
@@ -94,14 +105,14 @@ const Library = () => {
             )}
           </button>
           <button
-            onClick={() => setActiveTab("categories")}
+            onClick={() => setActiveTab("channels")}
             className={`flex items-center gap-2 px-6 py-4 text-xs font-black tracking-widest uppercase transition-all relative whitespace-nowrap ${
-              activeTab === "categories" ? "text-primary" : "text-white/40 hover:text-white"
+              activeTab === "channels" ? "text-primary" : "text-white/40 hover:text-white"
             }`}
           >
             <Tag size={14} />
-            Saved Categories
-            {activeTab === "categories" && (
+            Channels & Categories
+            {activeTab === "channels" && (
               <motion.div layoutId="tab" className="absolute bottom-0 left-0 right-0 h-0.5 bg-primary" />
             )}
           </button>
@@ -109,7 +120,7 @@ const Library = () => {
 
         {activeTab === "likes" && (
           likedVideos.length > 0 ? (
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
               {likedVideos.map((video) => (
                 <VideoListCard key={video.id} video={video} />
               ))}
@@ -121,7 +132,7 @@ const Library = () => {
 
         {activeTab === "saved" && (
           savedVideos.length > 0 ? (
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6">
               {savedVideos.map((video) => (
                 <VideoListCard key={video.id} video={video} />
               ))}
@@ -156,26 +167,59 @@ const Library = () => {
           )
         )}
 
-        {activeTab === "categories" && (
-          favoriteCategoriesList.length > 0 ? (
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-              {favoriteCategoriesList.map((catId) => (
-                <Link 
-                  key={catId} 
-                  to={`/?filter=${encodeURIComponent(catId.replace(/-/g, ' '))}`}
-                  className="group bg-white/5 border border-white/10 rounded-2xl p-4 hover:border-primary/50 transition-colors text-center"
-                >
-                  <div className="aspect-square bg-white/10 rounded-2xl mb-3 flex items-center justify-center">
-                    <Tag size={24} className="text-primary/40" />
+        {activeTab === "channels" && (
+          (channelsList.length > 0 || categoriesList.length > 0) ? (
+            <div className="space-y-12">
+              {channelsList.length > 0 && (
+                <div className="space-y-6">
+                  <h3 className="text-sm font-black uppercase tracking-[0.3em] text-white/30 px-1 flex items-center gap-2">
+                    <Folder size={14} /> Saved Channels
+                  </h3>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+                    {channelsList.map((catId) => (
+                      <Link 
+                        key={catId} 
+                        to={`/?filter=${encodeURIComponent(catId)}`}
+                        className="group bg-white/5 border border-white/10 rounded-2xl p-4 hover:border-primary/50 transition-colors text-center"
+                      >
+                        <div className="aspect-square bg-white/10 rounded-2xl mb-3 flex items-center justify-center">
+                          <Folder size={24} className="text-primary/40" />
+                        </div>
+                        <span className="text-[10px] font-black tracking-widest uppercase group-hover:text-primary transition-colors">
+                          {catId}
+                        </span>
+                      </Link>
+                    ))}
                   </div>
-                  <span className="text-[10px] font-black tracking-widest uppercase group-hover:text-primary transition-colors">
-                    {catId.replace(/-/g, ' ')}
-                  </span>
-                </Link>
-              ))}
+                </div>
+              )}
+
+              {categoriesList.length > 0 && (
+                <div className="space-y-6">
+                  <h3 className="text-sm font-black uppercase tracking-[0.3em] text-white/30 px-1 flex items-center gap-2">
+                    <Tag size={14} /> Saved Categories
+                  </h3>
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
+                    {categoriesList.map((catId) => (
+                      <Link 
+                        key={catId} 
+                        to={`/?filter=${encodeURIComponent(catId)}`}
+                        className="group bg-white/5 border border-white/10 rounded-2xl p-4 hover:border-primary/50 transition-colors text-center"
+                      >
+                        <div className="aspect-square bg-white/10 rounded-2xl mb-3 flex items-center justify-center">
+                          <Tag size={24} className="text-primary/40" />
+                        </div>
+                        <span className="text-[10px] font-black tracking-widest uppercase group-hover:text-primary transition-colors">
+                          {catId}
+                        </span>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           ) : (
-            <EmptyState tab="categories" />
+            <EmptyState tab="channels" />
           )
         )}
       </main>

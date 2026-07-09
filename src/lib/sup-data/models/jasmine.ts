@@ -180,7 +180,7 @@ export const jasmineData: Partial<SupModel> = {
     {
       "id": "v2",
       "title": "jasminx dominated Uncut Exclusive OnlyFans Content",
-      "categories": ["Indian", "OnlyFans"],
+      "channels": ["Indian", "OnlyFans"],
       "tags": ["Fingering", "Masturbation", "Squirt", "Teen"],
       "src": "https://files.catbox.moe/7dt5ce.mp4",
       "thumb": "https://files.catbox.moe/4v4vcn.png",
@@ -191,7 +191,7 @@ export const jasmineData: Partial<SupModel> = {
     {
       "id": "v7",
       "title": "jasminx dominated Exclusive OnlyFans Content",
-      "categories": ["Indian", "OnlyFans"],
+      "channels": ["Indian", "OnlyFans"],
       "tags": ["Masturbation", "Squirt", "Teen", "Fingering"],
       "src": "https://files.catbox.moe/o4aqqn.mp4",
       "thumb": "https://files.catbox.moe/7pde9k.png",
@@ -202,7 +202,7 @@ export const jasmineData: Partial<SupModel> = {
     {
       "id": "v11",
       "title": "Desi jasminx fucked hard in saree Exclusive Onlyfans content.",
-      "categories": ["Indian", "OnlyFans"],
+      "channels": ["Indian", "OnlyFans"],
       "tags": ["Blowjob", "Deepthroat", "Hardcore", "cumshot"],
       "src": "https://files.catbox.moe/yrm7s4.mp4",
       "thumb": "https://files.catbox.moe/ss5qe5.png",

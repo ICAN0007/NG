@@ -40,7 +40,7 @@ export const demielissData: Partial<SupModel> = {
     {
       id: "demieliss-v1",
       title: "Demieliss Public Show Collection",
-      categories: ["Stripchat", "Popular", "Indian"],
+      channel: [],
       tags: ["Public Show", "Exclusive", "New"],
       src: "https://files.catbox.moe/c2c0ey.mp4", // Using a sample video for now
       thumb: "https://i.ibb.co/G4bDZKnS/Portrait.png",

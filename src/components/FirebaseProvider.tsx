@@ -23,7 +23,7 @@ export const FirebaseProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   const [likedVideoIds, setLikedVideoIds] = useState<Set<string>>(new Set());
   const [savedVideoIds, setSavedVideoIds] = useState<Set<string>>(new Set());
   const [favoriteModelIds, setFavoriteModelIds] = useState<Set<string>>(new Set());
-  const [favoriteCategories, setFavoriteCategories] = useState<Set<string>>(new Set());
+  const [favoriteChannels, setFavoriteChannels] = useState<Set<string>>(new Set());
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
@@ -37,10 +37,15 @@ export const FirebaseProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   useEffect(() => {
     const q = query(collection(db, 'videos'), orderBy('addedAt', 'desc'));
     const unsubscribeVideos = onSnapshot(q, (snapshot) => {
-      const dbVideos = snapshot.docs.map(doc => ({
-        ...doc.data(),
-        id: doc.id
-      })) as Video[];
+      const dbVideos = snapshot.docs.map(doc => {
+        const data = doc.data();
+        return {
+          ...data,
+          id: doc.id,
+          channel: data.channel || [],
+          tags: data.tags || []
+        };
+      }) as Video[];
 
       const dbVideoIds = new Set(dbVideos.map(v => v.id));
       const remainingStatic = staticVideos.filter(v => !dbVideoIds.has(v.id));
@@ -82,7 +87,7 @@ export const FirebaseProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       setLikedVideoIds(new Set());
       setSavedVideoIds(new Set());
       setFavoriteModelIds(new Set());
-      setFavoriteCategories(new Set());
+      setFavoriteChannels(new Set());
       return;
     }
 
@@ -116,13 +121,13 @@ export const FirebaseProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       }
     );
 
-    const categoriesUnsub = onSnapshot(
-      collection(db, "users", user.uid, "favoriteCategories"),
+    const channelsUnsub = onSnapshot(
+      collection(db, "users", user.uid, "favoriteChannels"),
       (snapshot) => {
-        setFavoriteCategories(new Set(snapshot.docs.map((doc) => doc.id)));
+        setFavoriteChannels(new Set(snapshot.docs.map((doc) => doc.id)));
       },
       (error) => {
-        handleFirestoreError(error, OperationType.LIST, `users/${user.uid}/favoriteCategories`);
+        handleFirestoreError(error, OperationType.LIST, `users/${user.uid}/favoriteChannels`);
       }
     );
 
@@ -130,7 +135,7 @@ export const FirebaseProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       likesUnsub();
       savesUnsub();
       modelsUnsub();
-      categoriesUnsub();
+      channelsUnsub();
     };
   }, [user]);
 
@@ -142,7 +147,7 @@ export const FirebaseProvider: React.FC<{ children: React.ReactNode }> = ({ chil
       likedVideoIds, 
       savedVideoIds, 
       favoriteModelIds,
-      favoriteCategories,
+      favoriteChannels,
       loading 
     }}>
       {children}

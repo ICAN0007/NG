@@ -7,7 +7,7 @@ export const pankhuriData: Partial<SupModel> = {
     {
       "id": "v6",
       "title": "Hotwife Pankhuri cucks her husband with 21 year student OnlyFans Content",
-      "categories": ["Indian", "OnlyFans"],
+      "channels": ["Indian", "OnlyFans"],
       "tags": ["Threesome", "Cuckold", "Deepthroat", "MILF"],
       "src": "https://files.catbox.moe/v80cm0.mp4",
       "thumb": "https://files.catbox.moe/jr0udr.png",

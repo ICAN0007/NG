@@ -11,7 +11,7 @@ export const bonganaarixData: Partial<SupModel> = {
     {
       "id": "v39",
       "title": "Desi+ Sarmishtha Sarkar aka Bongonaarix Live Hardcore Fuck Uncut Exclusive OnlyFans Content",
-      "categories": ["Indian", "OnlyFans"],
+      "channels": ["Indian", "OnlyFans"],
       "tags": ["Indian", "Teen", "Doggystyle", "Deepthroat", "Hardcore"],
       "src": "https://files.catbox.moe/9f6k88.mp4",
       "thumb": "https://files.catbox.moe/4fscyw.png",
@@ -22,7 +22,7 @@ export const bonganaarixData: Partial<SupModel> = {
     {
       "id": "v111",
       "title": "Desi Bongonaarix show her sexy Fucking boobs Exclusive OnlyFans Content.",
-      "categories": ["Indian", "OnlyFans"],
+      "channels": ["Indian", "OnlyFans"],
       "tags": ["Desi", "Teen", "bigtits", "pussy", "boobs"],
       "src": "https://files.catbox.moe/y8hiz3.mp4",
       "thumb": "https://files.catbox.moe/1f5ui5.png",

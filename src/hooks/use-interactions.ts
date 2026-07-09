@@ -4,7 +4,7 @@ import { useFirebase } from "@/context/FirebaseContext";
 import { useNavigate } from "react-router-dom";
 
 export const useInteractions = () => {
-  const { user, likedVideoIds, savedVideoIds, favoriteModelIds, favoriteCategories } = useFirebase();
+  const { user, likedVideoIds, savedVideoIds, favoriteModelIds, favoriteChannels } = useFirebase();
   const navigate = useNavigate();
 
   const toggleLike = async (videoId: string) => {
@@ -76,7 +76,7 @@ export const useInteractions = () => {
     }
   };
 
-  const toggleFavoriteCategory = async (category: string) => {
+  const toggleFavoriteChannel = async (category: string) => {
     if (!user) {
       navigate("/auth", { state: { from: window.location.pathname } });
       return;
@@ -84,10 +84,10 @@ export const useInteractions = () => {
 
     // Use a URL-safe version of the category name as ID
     const categoryId = category.toLowerCase().replace(/[^a-z0-9]/g, '-');
-    const categoryRef = doc(db, "users", user.uid, "favoriteCategories", categoryId);
+    const categoryRef = doc(db, "users", user.uid, "favoriteChannels", categoryId);
     
     try {
-      if (favoriteCategories.has(categoryId)) {
+      if (favoriteChannels.has(categoryId)) {
         await deleteDoc(categoryRef);
       } else {
         await setDoc(categoryRef, {
@@ -105,13 +105,13 @@ export const useInteractions = () => {
     toggleLike,
     toggleSave,
     toggleFavoriteModel,
-    toggleFavoriteCategory,
+    toggleFavoriteChannel,
     isLiked: (id: string) => likedVideoIds.has(id),
     isSaved: (id: string) => savedVideoIds.has(id),
     isModelFavorite: (id: string) => favoriteModelIds.has(id),
-    isCategoryFavorite: (category: string) => {
+    isChannelFavorite: (category: string) => {
       const categoryId = category.toLowerCase().replace(/[^a-z0-9]/g, '-');
-      return favoriteCategories.has(categoryId);
+      return favoriteChannels.has(categoryId);
     }
   };
 };

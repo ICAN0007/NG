@@ -9,7 +9,7 @@ export interface FirebaseContextType {
   likedVideoIds: Set<string>;
   savedVideoIds: Set<string>;
   favoriteModelIds: Set<string>;
-  favoriteCategories: Set<string>;
+  favoriteChannels: Set<string>;
   loading: boolean;
 }
 
@@ -20,7 +20,7 @@ export const FirebaseContext = createContext<FirebaseContextType>({
   likedVideoIds: new Set(),
   savedVideoIds: new Set(),
   favoriteModelIds: new Set(),
-  favoriteCategories: new Set(),
+  favoriteChannels: new Set(),
   loading: true 
 });
 

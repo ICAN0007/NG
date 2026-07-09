@@ -14,13 +14,11 @@ export const neha18Data: Partial<SupModel> = {
   clips: [
     {
       title: "Short Clip 1",
-      url: "https://files.catbox.moe/xncvzz.mp4",
-      thumbnail: "https://i.ibb.co/PfDPym5/Folderthumb.jpg"
+      url: "https://files.catbox.moe/xncvzz.mp4"
     },
     {
       title: "Short Clip 2",
-      url: "https://files.catbox.moe/7jq15j.mp4",
-      thumbnail: "https://i.ibb.co/PfDPym5/Folderthumb.jpg"
+      url: "https://files.catbox.moe/7jq15j.mp4"
     }
   ],
   videos: [
@@ -29,14 +27,14 @@ export const neha18Data: Partial<SupModel> = {
       title: "Short Clip 1",
       src: "https://files.catbox.moe/xncvzz.mp4",
       thumb: "https://i.ibb.co/PfDPym5/Folderthumb.jpg",
-      categories: ["Stripchat", "Short Clips"]
+      channel: []
     },
     {
       id: "neha18-c2",
       title: "Short Clip 2",
       src: "https://files.catbox.moe/7jq15j.mp4",
       thumb: "https://i.ibb.co/PfDPym5/Folderthumb.jpg",
-      categories: ["Stripchat", "Short Clips"]
+      channel: []
     }
   ]
 };

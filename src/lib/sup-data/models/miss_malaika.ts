@@ -36,13 +36,11 @@ export const miss_malaikaData: Partial<SupModel> = {
   clips: [
     {
       title: "Short Clip 1",
-      url: "https://files.catbox.moe/vv2hym.mp4",
-      thumbnail: "https://i.ibb.co/20KwdPmy/Folderthumb.png"
+      url: "https://files.catbox.moe/vv2hym.mp4"
     },
     {
       title: "Short Clip 2",
-      url: "https://files.catbox.moe/zhnauy.mp4",
-      thumbnail: "https://i.ibb.co/20KwdPmy/Folderthumb.png"
+      url: "https://files.catbox.moe/zhnauy.mp4"
     }
   ],
   videos: [
@@ -51,14 +49,14 @@ export const miss_malaikaData: Partial<SupModel> = {
       title: "Short Clip 1",
       src: "https://files.catbox.moe/vv2hym.mp4",
       thumb: "https://i.ibb.co/20KwdPmy/Folderthumb.png",
-      categories: ["Stripchat", "Popular"]
+      channel: []
     },
     {
       id: "mm2",
       title: "Short Clip 2",
       src: "https://files.catbox.moe/zhnauy.mp4",
       thumb: "https://i.ibb.co/20KwdPmy/Folderthumb.png",
-      categories: ["Stripchat", "Popular"]
+      channel: []
     }
   ]
 };

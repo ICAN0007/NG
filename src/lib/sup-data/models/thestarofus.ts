@@ -5,7 +5,7 @@ export const thestarofusData: Partial<SupModel> = {
     {
       "id": "v1",
       "title": "Desi VIP indian onlyfans the star of us she sucks the big cock.",
-      "categories": ["Indian", "OnlyFans"],
+      "channels": ["Indian", "OnlyFans"],
       "tags": ["Pussy", "Tits", "Ass", "bigdick"],
       "src": "https://files.catbox.moe/ydxh68.mp4",
       "thumb": "https://files.catbox.moe/x13o1w.png",
@@ -16,7 +16,7 @@ export const thestarofusData: Partial<SupModel> = {
     {
       "id": "v3",
       "title": "Onlyfans Indian the star of us i will sucks your dick well but fuck me better.",
-      "categories": ["Indian", "OnlyFans"],
+      "channels": ["Indian", "OnlyFans"],
       "tags": ["Blowjob", "Missionary", "Cowgirl", "Hardcore"],
       "src": "https://files.catbox.moe/iidf41.mp4",
       "thumb": "https://files.catbox.moe/7xjtwb.png",
@@ -27,7 +27,7 @@ export const thestarofusData: Partial<SupModel> = {
     {
       "id": "v4",
       "title": "Onlyfans Indian the star of us she rode the dick directly.",
-      "categories": ["Indian", "OnlyFans"],
+      "channels": ["Indian", "OnlyFans"],
       "tags": ["Blowjob", "Cowgirl", "Cum", "Hardcore"],
       "src": "https://files.catbox.moe/iipfhl.mp4",
       "thumb": "https://files.catbox.moe/rhrtox.png",
@@ -38,7 +38,7 @@ export const thestarofusData: Partial<SupModel> = {
     {
       "id": "v8",
       "title": "Desi VIP indian onlyfans the star of us she sucks the big cock.",
-      "categories": ["Indian", "OnlyFans"],
+      "channels": ["Indian", "OnlyFans"],
       "tags": ["Blowjob", "Cowgirl", "Cum", "Hardcore"],
       "src": "https://files.catbox.moe/ydxh68.mp4",
       "thumb": "https://files.catbox.moe/x13o1w.png",
