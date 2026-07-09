@@ -1009,9 +1009,6 @@ const Index = () => {
                         }`}>
                           {cat.name}
                         </span>
-                        <span className="text-[9px] font-bold text-white/50 mt-0.5 block">
-                          {getCategoryCount(cat.name)} videos
-                        </span>
                       </div>
 
                       <div className="absolute top-2 right-2 flex flex-col items-end gap-1 z-10">

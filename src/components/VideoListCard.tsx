@@ -56,21 +56,34 @@ export const VideoListCard: React.FC<VideoListCardProps> = ({ video, className =
       className={`group space-y-4 w-full block cursor-pointer ${className}`}
     >
       <div className={`relative ${getThumbnailAspectRatio(video.thumb)} rounded-2xl overflow-hidden bg-[#1a1a1a] transition-all duration-300 group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.5)]`}>
-        <img 
-          src={getVideoThumbnailUrl(video.thumb)} 
-          alt={video.title}
-          loading="lazy"
-          className={`w-full h-full object-cover transition-all duration-1000 ${
-            showPreview ? 'opacity-0 scale-105' : 'group-hover:scale-105'
-          }`}
-          referrerPolicy="no-referrer"
-          draggable={false}
-        />
+        {video.thumb ? (
+          <img 
+            src={getVideoThumbnailUrl(video.thumb)} 
+            alt={video.title}
+            loading="lazy"
+            className={`w-full h-full object-cover transition-all duration-700 ${
+              showPreview ? 'opacity-0' : 'group-hover:scale-105'
+            }`}
+            referrerPolicy="no-referrer"
+            draggable={false}
+          />
+        ) : (
+          <video
+            src={video.previewUrl || video.src}
+            muted
+            playsInline
+            preload="metadata"
+            className={`w-full h-full object-cover transition-all duration-700 ${
+              showPreview ? 'opacity-0' : ''
+            }`}
+          />
+        )}
         
         {showPreview && (
           <video
             ref={videoRef}
             src={video.previewUrl || video.src}
+            poster={getVideoThumbnailUrl(video.thumb)}
             autoPlay
             muted
             loop

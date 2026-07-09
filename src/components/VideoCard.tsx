@@ -62,27 +62,40 @@ export const VideoCard: React.FC<VideoCardProps> = ({ video, formatDate = defaul
     >
       <div className="relative overflow-hidden bg-secondary">
         <div className={getThumbnailAspectRatio(video.thumb)}>
-          <img
-            src={getVideoThumbnailUrl(video.thumb)}
-            alt={`${video.title} thumbnail`}
-            loading="lazy"
-            className={`h-full w-full object-cover transition-all duration-700 ${
-              showPreview ? 'opacity-0 scale-105' : 'opacity-100 group-hover:scale-110 group-hover:brightness-110'
-            }`}
-            referrerPolicy="no-referrer"
-          />
-          {showPreview && (
-            <video
-              ref={videoRef}
-              src={video.previewUrl || video.src}
-              autoPlay
-              muted
-              loop
-              playsInline
+          {video.thumb ? (
+            <img
+              src={getVideoThumbnailUrl(video.thumb)}
+              alt={`${video.title} thumbnail`}
+              loading="lazy"
+              className={`h-full w-full object-cover transition-all duration-700 ${
+                showPreview ? 'opacity-0' : 'opacity-100 group-hover:scale-110 group-hover:brightness-110'
+              }`}
               referrerPolicy="no-referrer"
-              className="absolute inset-0 h-full w-full object-cover animate-in fade-in zoom-in-105 duration-500"
+            />
+          ) : (
+            <video
+              src={video.previewUrl || video.src}
+              muted
+              playsInline
+              preload="metadata"
+              className={`h-full w-full object-cover transition-all duration-700 ${
+                showPreview ? 'opacity-0' : 'opacity-100'
+              }`}
             />
           )}
+        {showPreview && (
+          <video
+            ref={videoRef}
+            src={video.previewUrl || video.src}
+            poster={getVideoThumbnailUrl(video.thumb)}
+            autoPlay
+            muted
+            loop
+            playsInline
+            referrerPolicy="no-referrer"
+            className="absolute inset-0 h-full w-full object-cover animate-in fade-in zoom-in-105 duration-500"
+          />
+        )}
         </div>
 
         {/* LATEST badge */}
