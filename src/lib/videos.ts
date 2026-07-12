@@ -35553,6 +35553,7 @@ const videosPart2: Video[] = [
     tags: ["College Girls", "Black Cocks", "Foursome", "Group Sex", "Natural Tits", "Cumshot", "Facial", "Handjob", "Blowjob", "Pussy Licking", "Titty Fuck", "Amateur Porn", "Interracial", "Cow Girl", "Doggystyle", "Missionary", "Reverse Cowgirl", "Asian Girls", "Big Tits", "Blowjob", "Brunette",],
     src: "https://bysekoze.com/e/jlcxztsbts3c/582253-720p",
     thumb: "https://i.ibb.co/Rk9bF83v/blacked-college-hotties-get-plowed-in-hardcore-orgy-3840x2160.webp",
+    overlay: "https://i.ibb.co/Fq6fcvkb/images-1.webp",
     duration: "2344.2",
     addedAt: "2026-07-02T12:00:00Z",
     model: "Della Cate, Hazel Mooore, Melanie Marie",
