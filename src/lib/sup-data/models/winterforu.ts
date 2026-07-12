@@ -41,9 +41,21 @@ export const winterforuData: Partial<SupModel> = {
   ],
   videos: [
     {
+      id: "wf-v0",
+      title: "Winterforu - My Stripchat Stream",
+      tags: ["Stripchat", "Private"],
+      src: "https://xpornium.net/embed/vg9mjg9lap2zoy",
+      thumb: "https://i.ibb.co/1tj7fxNP/wmremove-transformed.png",
+      duration: "10800",
+      addedAt: "2026-07-08T12:00:00Z",
+      model: "Winterforu",
+      description: "Winterforu - My Stripchat Stream",
+      gallery: [],
+      previewUrl: ""
+    },
+    {
       id: "wf-v1",
       title: "Winterforu - My Stripchat Stream",
-      channel: [],
       tags: ["Stripchat", "Private"],
       src: "https://bysekoze.com/e/rplrwr2ii1yf/1",
       thumb: "",
@@ -53,6 +65,205 @@ export const winterforuData: Partial<SupModel> = {
       description: "Winterforu - My Stripchat Stream",
       gallery: [],
       previewUrl: "https://files.catbox.moe/hkmvo7.mp4"
+    },
+    {
+      id: "wf-v2",
+      title: "Winterforu Collection #2",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/e/dxp8qkw05tbp/2",
+      thumb: "",
+      duration: "2612.4",
+      addedAt: "2026-07-11T12:00:00Z",
+      model: "Winterforu",
+      previewUrl: "https://files.catbox.moe/wbh07i.mp4"
+    },
+    {
+      id: "wf-v3",
+      title: "Winterforu Collection #3",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/e/lmv3frwej03j/4",
+      thumb: "",
+      duration: "11126.4",
+      addedAt: "2026-07-11T12:00:00Z",
+      model: "Winterforu",
+      previewUrl: "https://files.catbox.moe/yrz9yw.mp4"
+    },
+    {
+      id: "wf-v4",
+      title: "Winterforu Collection #4",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/e/3662j0bzok30/5",
+      thumb: "",
+      duration: "4764.6",
+      addedAt: "2026-07-11T12:00:00Z",
+      model: "Winterforu",
+      previewUrl: "https://files.catbox.moe/yrz9yw.mp4"
+    },
+    {
+      id: "wf-v5",
+      title: "Winterforu Collection #5",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/e/gcxuelio7qof/6",
+      thumb: "",
+      overlay: "https://i.ibb.co/4Zfp8FGd/z1dq7636td9gl4-4x4.jpg",
+      duration: "843.6",
+      addedAt: "2026-07-11T12:00:00Z",
+      model: "Winterforu",
+      previewUrl: "https://files.catbox.moe/asbn6u.mp4"
+    },
+    {
+      id: "wf-v6",
+      title: "Winterforu Collection #6",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/e/bptbs2jsyog7/7",
+      thumb: "",
+      duration: "3994.8",
+      addedAt: "2026-07-11T12:00:00Z",
+      model: "Winterforu",
+      previewUrl: "https://files.catbox.moe/toctcf.mp4"
+    },
+    {
+      id: "wf-v7",
+      title: "Winterforu Collection #7",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/e/qi07ck3cnwku/8",
+      thumb: "",
+      duration: "495.6",
+      addedAt: "2026-07-11T12:00:00Z",
+      model: "Winterforu",
+      previewUrl: "https://files.catbox.moe/6e7dj4.mp4"
+    },
+    {
+      id: "wf-v8",
+      title: "Winterforu Collection #8",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/e/flhlnvriv020/9",
+      thumb: "",
+      duration: "1441.8",
+      addedAt: "2026-07-11T12:00:00Z",
+      model: "Winterforu",
+      previewUrl: "https://files.catbox.moe/h9oksm.mp4"
+    },
+    {
+      id: "wf-v9",
+      title: "Winterforu Collection #9",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/e/kf8cb29f0qdf/10",
+      thumb: "",
+      duration: "12725.4",
+      addedAt: "2026-07-11T12:00:00Z",
+      model: "Winterforu",
+      previewUrl: "https://files.catbox.moe/5e0el1.mp4"
+    },
+    {
+      id: "wf-v10",
+      title: "Winterforu Collection #10",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/e/dsgeohprrm8t/11",
+      thumb: "",
+      duration: "8727.6",
+      addedAt: "2026-07-11T12:00:00Z",
+      model: "Winterforu",
+      previewUrl: "https://files.catbox.moe/6i08y5.mp4"
+    },
+    {
+      id: "wf-v11",
+      title: "Winterforu Collection #11",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/e/dkxfn2t0qq7b/12",
+      thumb: "",
+      duration: "4321.8",
+      addedAt: "2026-07-11T12:00:00Z",
+      model: "Winterforu",
+      previewUrl: "https://files.catbox.moe/i5kkvp.mp4"
+    },
+    {
+      id: "wf-v12",
+      title: "Winterforu Collection #12",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/e/sod5ni3fru84/13",
+      thumb: "",
+      duration: "1393.2",
+      addedAt: "2026-07-11T12:00:00Z",
+      model: "Winterforu",
+      previewUrl: "https://files.catbox.moe/rt2axp.mp4"
+    },
+    {
+      id: "wf-v13",
+      title: "Winterforu Collection #13",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/e/m161rdryvgf5/14",
+      thumb: "",
+      duration: "13229.4",
+      addedAt: "2026-07-11T12:00:00Z",
+      model: "Winterforu",
+      previewUrl: "https://files.catbox.moe/27gqcj.mp4"
+    },
+    {
+      id: "wf-v14",
+      title: "Winterforu Collection #14",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/e/oxnypgj7n4gt/15",
+      thumb: "",
+      duration: "1167.6",
+      addedAt: "2026-07-11T12:00:00Z",
+      model: "Winterforu",
+      previewUrl: "https://files.catbox.moe/i9kfs6.mp4"
+    },
+    {
+      id: "wf-v15",
+      title: "Winterforu Collection #15",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/e/3uy8l5cvsr3h/16",
+      thumb: "",
+      duration: "2592.6",
+      addedAt: "2026-07-11T12:00:00Z",
+      model: "Winterforu",
+      previewUrl: "https://files.catbox.moe/21nk2i.mp4"
+    },
+    {
+      id: "wf-v16",
+      title: "Winterforu Collection #16",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/e/hytec9jjemik/17",
+      thumb: "",
+      duration: "2532",
+      addedAt: "2026-07-11T12:00:00Z",
+      model: "Winterforu",
+      previewUrl: "https://files.catbox.moe/1ngzoy.mp4"
+    },
+    {
+      id: "wf-v17",
+      title: "Winterforu Collection #17",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/e/34sxe86vcs9s/18",
+      thumb: "",
+      duration: "3184.8",
+      addedAt: "2026-07-11T12:00:00Z",
+      model: "Winterforu",
+      previewUrl: "https://files.catbox.moe/m55q2b.mp4"
+    },
+    {
+      id: "wf-v18",
+      title: "Winterforu Collection #18",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/e/h26bgh49uurc/19",
+      thumb: "",
+      duration: "4576.8",
+      addedAt: "2026-07-11T12:00:00Z",
+      model: "Winterforu",
+      previewUrl: "https://files.catbox.moe/3g63s2.mp4"
+    },
+     {
+      id: "wf-v19",
+      title: "Winterforu Collection #19",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/e/csopbrdaelcq/20",
+      thumb: "",
+      duration: "7408.2",
+      addedAt: "2026-07-11T12:00:00Z",
+      model: "Winterforu",
+      previewUrl: "https://files.catbox.moe/xzr4ey.mp4"
     }
   ]
 };

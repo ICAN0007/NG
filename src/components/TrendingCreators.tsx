@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
-import { Eye, Users } from "lucide-react";
+import { Users } from "lucide-react";
 import { slugifyModel } from "@/lib/videos";
 import { getModelUrl } from "@/lib/model-utils";
 
@@ -85,10 +85,6 @@ export const TrendingCreators = () => {
                   <span className="flex items-center gap-1">
                     <Users className="h-3 w-3 text-primary/60" />
                     {creator.followers}
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Eye className="h-3 w-3 text-primary/60" />
-                    {creator.views}
                   </span>
                 </div>
               </div>

@@ -27,7 +27,7 @@ export const miazData: Partial<SupModel> = {
   ],
   videos: [
     {
-      "id": "v10",
+      "id": "vmiaz4",
       "title": "MiaZ fuck himself doing sex with Bestfriend",
       "channels": ["Indian", "OnlyFans"],
       "tags": ["Blowjob", "Missionary", "Hardcore", "Teen"],
@@ -38,7 +38,7 @@ export const miazData: Partial<SupModel> = {
       "addedAt": "2025-07-25T07:33:00Z"
     },
     {
-      "id": "v16",
+      "id": "vmiaz3",
       "title": "Desi MiaZ Raw Fuck Part-1 sextapes Exclusive OnlyFans Content",
       "channels": ["Indian", "OnlyFans"],
       "tags": ["Blowjob", "Hardcore", "Amateur", "Cumshot"],
@@ -49,7 +49,7 @@ export const miazData: Partial<SupModel> = {
       "addedAt": "2025-07-25T07:35:00Z"
     },
     {
-      "id": "v17",
+      "id": "vmiaz2",
       "title": "Desi MiaZ Raw Fuck Part-2 sextapes Exclusive OnlyFans Content",
       "channels": ["Indian", "OnlyFans"],
       "tags": ["Blowjob", "Hardcore", "Amateur", "Cumshot"],
@@ -58,6 +58,18 @@ export const miazData: Partial<SupModel> = {
       "duration": "900",
       "model": "Miaz",
       "addedAt": "2025-07-25T07:35:00Z"
+    },
+    {
+      "id": "Vmiaz1",
+      "title": "Indian Desi Miazcam Show (1440)",
+      "channels": ["Indian", "OnlyFans"],
+      "tags": ["Blowjob", "Hardcore", "Amateur", "Cumshot"],
+      "src": "https://bysekoze.com/e/umokldqv7o54/eporner-com-m3moc0aabhq-indian-desi-miazcam-show-1440",
+      "thumb": "",
+      "duration": "903",
+      "model": "Miaz",
+      "addedAt": "2026-03-25T07:35:00Z",
+      "previewUrl": "https://files.catbox.moe/cboqjo.mp4"
     }
   ]
 };

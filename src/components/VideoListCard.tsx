@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Play, Clock, Eye, Heart, Bookmark } from 'lucide-react';
+import { Play, Clock, Heart, Bookmark } from 'lucide-react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Video, formatDuration, getVideoThumbnailUrl, getThumbnailAspectRatio, getVideoModels } from '@/lib/videos';
 import { getModelUrl } from '@/lib/model-utils';

@@ -246,5 +246,183 @@ export const zubyData: Partial<SupModel> = {
     "https://www.camshowrecordings.com/video/Stripchat/2024/09/29/Stripchat-Public.Show-f-zuby_duby-2024.09.29.184931.preview.mp4",
     "https://www.camshowrecordings.com/video/Stripchat/2024/09/29/Stripchat-Public.Show-f-zuby_duby-2024.09.29.010719.preview.mp4",
     "https://www.camshowrecordings.com/video/Stripchat/2024/09/25/Stripchat-Public.Show-f-zuby_duby-2024.09.25.213803.preview.mp4"
+  ],
+  videos: [
+    {
+      id: "zuby-v1",
+      title: "Zuby Duby Collection #1",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/d/v4b65mjdj64c/1",
+      thumb: "",
+      duration: "2186.4",
+      model: "Zuby_Duby",
+      addedAt: "2026-07-11T12:00:00Z",
+      previewUrl: "https://files.catbox.moe/xbctkp.mp4"
+    },
+    {
+      id: "zuby-v2",
+      title: "Zuby Duby Collection #2",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/d/4q1bcddurobp/2",
+      thumb: "",
+      duration: "3262.8",
+      model: "Zuby_Duby",
+      addedAt: "2026-07-11T12:00:00Z",
+      previewUrl: "https://files.catbox.moe/korfw0.mp4"
+    },
+    {
+      id: "zuby-v3",
+      title: "Zuby Duby Collection #3",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/d/0cd88ropdupd/4",
+      thumb: "",
+      duration: "11520:00",
+      model: "Zuby_Duby",
+      addedAt: "2026-07-11T12:00:00Z",
+      previewUrl: "https://files.catbox.moe/2vjr4v.mp4"
+    },
+    {
+      id: "zuby-v4",
+      title: "Zuby Duby Collection #4",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/d/1qdg9287ncq9/5",
+      thumb: "",
+      duration: "4771.2",
+      model: "Zuby_Duby",
+      addedAt: "2026-07-11T12:00:00Z",
+      previewUrl: "https://files.catbox.moe/y7rged.mp4"
+    },
+    {
+      id: "zuby-v5",
+      title: "Zuby Duby Collection #5",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/d/n3csyoyntl03/6",
+      thumb: "",
+      duration: "3544.2",
+      model: "Zuby_Duby",
+      addedAt: "2026-07-11T12:00:00Z",
+      previewUrl: "https://files.catbox.moe/ubobm2.mp4"
+    },
+    {
+      id: "zuby-v6",
+      title: "Zuby Duby Collection #6",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/d/jky2jlfl01kj/7",
+      thumb: "",
+      duration: "2584.8",
+      model: "Zuby_Duby",
+      addedAt: "2026-07-11T12:00:00Z",
+      previewUrl: "https://files.catbox.moe/ovyyl6.mp4"
+    },
+    {
+      id: "zuby-v7",
+      title: "Zuby Duby Collection #7",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/d/n4uyqjwl5p1g/9",
+      thumb: "",
+      duration: "5553",
+      model: "Zuby_Duby",
+      addedAt: "2026-07-11T12:00:00Z",
+      previewUrl: "https://files.catbox.moe/8hrwbd.mp4"
+    },
+    {
+      id: "zuby-v8",
+      title: "Zuby Duby Collection #8",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/d/3n86gjr4ovgv/10",
+      thumb: "",
+      duration: "1150.8",
+      model: "Zuby_Duby",
+      addedAt: "2026-07-11T12:00:00Z",
+      previewUrl: "https://files.catbox.moe/5rnlxc.mp4"
+    },
+    {
+      id: "zuby-v9",
+      title: "Zuby Duby Collection #9",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/d/7kqcinsa5lby/11",
+      thumb: "",
+      duration: "7173.6",
+      model: "Zuby_Duby",
+      addedAt: "2026-07-11T12:00:00Z",
+      previewUrl: "https://files.catbox.moe/ch68eb.mp4"
+    },
+    {
+      id: "zuby-v10",
+      title: "Zuby Duby Collection #10",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/d/8q9ux6didyx6/12",
+      thumb: "",
+      duration: "1873.2",
+      model: "Zuby_Duby",
+      addedAt: "2026-07-11T12:00:00Z",
+      previewUrl: "https://files.catbox.moe/037f41.mp4"
+    },
+    {
+      id: "zuby-v11",
+      title: "Zuby Duby Collection #11",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/d/64r29nbq6vdx/13",
+      thumb: "",
+      duration: "2705.4",
+      model: "Zuby_Duby",
+      addedAt: "2026-07-11T12:00:00Z",
+      previewUrl: "https://files.catbox.moe/sj3y16.mp4"
+    },
+    {
+      id: "zuby-v12",
+      title: "Zuby Duby Collection #12",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/d/yhtxpqnwu8gg/14",
+      thumb: "",
+      duration: "612",
+      model: "Zuby_Duby",
+      addedAt: "2026-07-11T12:00:00Z",
+      previewUrl: "https://files.catbox.moe/t4dv84.mp4"
+    },
+    {
+      id: "zuby-v13",
+      title: "Zuby Duby Collection #13",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/d/d9xpyvozp6kp/15",
+      thumb: "",
+      duration: "78",
+      model: "Zuby_Duby",
+      addedAt: "2026-07-11T12:00:00Z",
+      previewUrl: "https://files.catbox.moe/9kbate.mp4"
+    },
+    {
+      id: "zuby-v14",
+      title: "Zuby Duby Collection #14",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/d/38pqpdg6hs97/16",
+      thumb: "",
+      duration: "843",
+      model: "Zuby_Duby",
+      addedAt: "2026-07-11T12:00:00Z",
+      previewUrl: "https://files.catbox.moe/lol22b.mp4"
+    },
+    {
+      id: "zuby-v15",
+      title: "Zuby Duby 2023-08-05 00:17:40",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/d/3nfzc6tvuzww/zuby-duby20230805001740",
+      thumb: "",
+      duration: "2541.6",
+      model: "Zuby_Duby",
+      addedAt: "2026-07-11T12:00:00Z",
+      previewUrl: "https://files.catbox.moe/6ron00.mp4"
+    },
+    {
+      id: "zuby-v16",
+      title: "Zuby Duby Fdmal D 2023-05-04 03:10:38 8",
+      tags: ["Exclusive"],
+      src: "https://bysekoze.com/d/w1p51h0bf57v/zuby-duby-fdmal-d-2023-05-04-03-10-38-8",
+      thumb: "",
+      duration: "1088.4",
+      model: "Zuby_Duby",
+      addedAt: "2026-07-11T12:00:00Z",
+      previewUrl: "https://files.catbox.moe/thshyi.mp4"
+    }
   ]
 };

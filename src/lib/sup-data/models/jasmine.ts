@@ -1,6 +1,8 @@
 import { SupModel } from '../sup-data';
 
 export const jasmineData: Partial<SupModel> = {
+  id: "jasminx",
+  name: "Jasminx",
   banner: {
     type: 'video',
     url: 'https://files.catbox.moe/da1lxp.mp4'
@@ -178,7 +180,7 @@ export const jasmineData: Partial<SupModel> = {
   ],
   videos: [
     {
-      "id": "v2",
+      "id": "jasminx-v2",
       "title": "jasminx dominated Uncut Exclusive OnlyFans Content",
       "channels": ["Indian", "OnlyFans"],
       "tags": ["Fingering", "Masturbation", "Squirt", "Teen"],
@@ -189,7 +191,7 @@ export const jasmineData: Partial<SupModel> = {
       "addedAt": "2025-07-25T00:17:00Z"
     },
     {
-      "id": "v7",
+      "id": "jasminx-v7",
       "title": "jasminx dominated Exclusive OnlyFans Content",
       "channels": ["Indian", "OnlyFans"],
       "tags": ["Masturbation", "Squirt", "Teen", "Fingering"],
@@ -200,7 +202,7 @@ export const jasmineData: Partial<SupModel> = {
       "addedAt": "2025-07-25T07:32:00Z"
     },
     {
-      "id": "v11",
+      "id": "jasminx-v11",
       "title": "Desi jasminx fucked hard in saree Exclusive Onlyfans content.",
       "channels": ["Indian", "OnlyFans"],
       "tags": ["Blowjob", "Deepthroat", "Hardcore", "cumshot"],

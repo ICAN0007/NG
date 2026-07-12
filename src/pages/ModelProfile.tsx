@@ -10,7 +10,6 @@ import {
   formatDuration, 
   getVideoEmbedUrl,
   videoHasModel,
-  getViews,
   getThumbnailAspectRatio,
   Video,
   sortOptions
@@ -24,11 +23,9 @@ import { logoutUser } from "@/lib/auth-service";
 import { 
   ChevronLeft, 
   Play, 
-  Star, 
   Heart, 
   Share2, 
   Users, 
-  Eye, 
   Clock, 
   CheckCircle2,
   ChevronRight,
@@ -116,9 +113,8 @@ const LatestSceneBanner = ({ video }: { video: Video }) => {
         </button>
       </div>
 
-      {/* Views/Stats overlay */}
+      {/* Stats overlay */}
       <div className="absolute bottom-8 left-8 flex items-center gap-6 text-[10px] font-black tracking-widest uppercase text-white/40">
-        <span className="flex items-center gap-2"><Eye className="h-4 w-4" /> {getViews(video.id)}</span>
         <span className="flex items-center gap-2"><Clock className="h-4 w-4" /> {formatDuration(video.duration)}</span>
         <span className="px-3 py-1 bg-white/10 rounded-full border border-white/5">Ultra 4K</span>
       </div>
@@ -272,38 +268,6 @@ const ModelProfile = () => {
       result = result.filter(v => v.channel.some(c => c.toLowerCase() === channelFilter.toLowerCase()));
     }
 
-    if (sortBy === "Top Rated") {
-      return [...result].sort((a, b) => {
-        const getV = (id: string) => {
-          try {
-            const v = getViews(id);
-            if (!v) return 0;
-            return parseInt(v.replace(/[kK]/g, '')) * (v.toLowerCase().includes('k') ? 1000 : 1);
-          } catch {
-            return 0;
-          }
-        };
-        const viewsA = getV(a.id);
-        const viewsB = getV(b.id);
-        return viewsB - viewsA || b.id.localeCompare(a.id);
-      });
-    }
-    if (sortBy === "Most Viewed") {
-      return [...result].sort((a, b) => {
-        const getV = (id: string) => {
-          try {
-            const v = getViews(id);
-            if (!v) return 0;
-            return parseInt(v.replace(/[kK]/g, '')) * (v.toLowerCase().includes('k') ? 1000 : 1);
-          } catch {
-            return 0;
-          }
-        };
-        const viewsA = getV(a.id);
-        const viewsB = getV(b.id);
-        return viewsB - viewsA;
-      });
-    }
     if (sortBy === "Longest") {
       return [...result].sort((a, b) => {
         const getSecs = (d: string | undefined) => {

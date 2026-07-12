@@ -432,6 +432,8 @@ const modelDataMap: Record<string, Partial<SupModel>> = {
   "jasmine678": jasmine678Data,
   "Jasminx": jasmineData,
   "jasminx": jasmineData,
+  "jasmine": jasmineData,
+  "Jasmine": jasmineData,
   "Thestarofus": thestarofusData,
   "Zuby_Duby": zubyData,
   "zuby_duby": zubyData,

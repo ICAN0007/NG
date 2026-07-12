@@ -18,7 +18,7 @@ import {
 import { supModels, isSupVideo } from "@/lib/sup-data";
 import { getModelUrl } from "@/lib/model-utils";
 import {
-  Search, Monitor, Play, Clock, Heart, MessageSquare, Bookmark, Star, Eye, ChevronRight, Film, User, Tag, Folder, X, ArrowUpRight,
+  Search, Monitor, Play, Clock, Heart, MessageSquare, Bookmark, ChevronRight, Film, User, Tag, Folder, X, ArrowUpRight,
 } from "lucide-react";
 import Pagination from "@/components/Pagination";
 import Footer from "@/components/Footer";
@@ -151,7 +151,7 @@ const Index = () => {
     }
 
     // Handle channel/tag filtering
-    const specialFilters = ["Homepage", "Home Page", "Newest Videos", "Latest", "Top Rated", "Most Viewed", "Longest", "Most Commented", "Most Favorited", "Random Videos", "Being Watched", "Categories", "Channels", "Models"];
+    const specialFilters = ["Homepage", "Home Page", "Newest Videos", "Latest", "Longest", "Most Commented", "Most Favorited", "Random Videos", "Being Watched", "Categories", "Channels", "Models"];
     if (activeFilter && !specialFilters.includes(activeFilter)) {
       result = result.filter(
         (v) => 
@@ -161,21 +161,6 @@ const Index = () => {
     }
     
     // Handle special sorting
-    if (activeFilter === "Top Rated") {
-      // Sort by a combination of view count and ID as a proxy for rating
-      return [...result].sort((a, b) => {
-        const viewsA = parseInt(getViews(a.id).replace(/[kK]/g, '')) * (getViews(a.id).includes('k') ? 1000 : 1);
-        const viewsB = parseInt(getViews(b.id).replace(/[kK]/g, '')) * (getViews(b.id).includes('k') ? 1000 : 1);
-        return viewsB - viewsA || b.id.localeCompare(a.id);
-      });
-    }
-    if (activeFilter === "Most Viewed") {
-      return [...result].sort((a, b) => {
-        const viewsA = parseInt(getViews(a.id).replace(/[kK]/g, '')) * (getViews(a.id).includes('k') ? 1000 : 1);
-        const viewsB = parseInt(getViews(b.id).replace(/[kK]/g, '')) * (getViews(b.id).includes('k') ? 1000 : 1);
-        return viewsB - viewsA;
-      });
-    }
     if (activeFilter === "Longest") {
       return [...result].sort((a, b) => {
         const getSecs = (d: string) => {

@@ -7,13 +7,14 @@ export interface Video {
   src: string;
   mirrors?: string[];
   thumb: string;
-  duration: string;
+  duration?: string;
   addedAt: string;
   model: string;
   gallery?: string[];
   previewUrl?: string;
   isSup?: boolean;
   description?: string;
+  overlay?: string;
   directedBy?: string;
   rating?: string;
   width?: number;
@@ -35869,6 +35870,7 @@ export const modelCodes = [
   "Jadilica",
   "Janice Griffith",
   "Jasmine Sherni",
+  "Jasminx",
   "Jazlyn Ray",
   "Jazmin Luv",
   "Jia Lissa",
@@ -35944,8 +35946,6 @@ export const modelcodes = modelCodes;
 
 export const sortOptions = [
   "Latest",
-  "Most Viewed",
-  "Top Rated",
   "Longest",
   "Most Commented",
   "Most Favorited",
@@ -36432,6 +36432,13 @@ export const modelProfiles: Record<string, ModelProfile> = {
     "hero": "https://i.ibb.co/HLTPjh7J/1.jpg",
     "portrait": "https://i.ibb.co/HLTPjh7J/1.jpg",
     "bio": "Jasmine Sherni brings fierce beauty and bold sensuality.",
+  },
+  "Jasminx": {
+    "image": "https://i.ibb.co/6cRzFmBW/portrait.jpg",
+    "card": "https://i.ibb.co/6cRzFmBW/portrait.jpg",
+    "hero": "https://files.catbox.moe/da1lxp.mp4",
+    "portrait": "https://i.ibb.co/6cRzFmBW/portrait.jpg",
+    "bio": "Jasminx captivates with her stunning presence and exclusive content.",
   },
   "Jazmin Luv": {
     "image": "https://i.ibb.co/qF5RrXR6/Jazmin-Luv.png",
@@ -36977,18 +36984,23 @@ export function formatDate(dateStr: string): string {
 }
 
 export function formatDuration(seconds: string | number | undefined): string {
-  if (!seconds) return "0:00";
+  if (!seconds) return "00:00:00";
   
   if (typeof seconds === 'string' && seconds.includes(':')) {
+    const parts = seconds.split(':');
+    if (parts.length === 2) return `00:${parts[0].padStart(2, "0")}:${parts[1].padStart(2, "0")}`;
+    if (parts.length === 3) return parts.map(p => p.padStart(2, "0")).join(':');
     return seconds;
   }
   
-  const s = typeof seconds === 'number' ? seconds : parseInt(seconds, 10);
-  if (isNaN(s)) return typeof seconds === 'string' ? seconds : "0:00";
+  const totalSeconds = Math.floor(typeof seconds === 'number' ? seconds : parseFloat(seconds));
+  if (isNaN(totalSeconds)) return "00:00:00";
   
-  const m = Math.floor(s / 60);
-  const rem = s % 60;
-  return `${m}:${rem.toString().padStart(2, "0")}`;
+  const hrs = Math.floor(totalSeconds / 3600);
+  const mins = Math.floor((totalSeconds % 3600) / 60);
+  const secs = totalSeconds % 60;
+  
+  return `${hrs.toString().padStart(2, "0")}:${mins.toString().padStart(2, "0")}:${secs.toString().padStart(2, "0")}`;
 }
 
 /**

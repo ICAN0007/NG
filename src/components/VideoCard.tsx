@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Play, User, Clock, Eye, Heart, Bookmark } from 'lucide-react';
+import { Play, User, Clock, Heart, Bookmark } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Video, formatDuration, getVideoThumbnailUrl, getThumbnailAspectRatio, getVideoModels, slugifyModel, getViews, formatDate as defaultFormatDate } from '@/lib/videos';
 import { getModelUrl } from '@/lib/model-utils';
@@ -166,10 +166,6 @@ export const VideoCard: React.FC<VideoCardProps> = ({ video, formatDate = defaul
               <span className="flex items-center gap-1.5">
                 <Clock className="h-3 w-3 text-primary" />
                 {formatDate(video.addedAt)}
-              </span>
-              <span className="flex items-center gap-1.5">
-                <Eye className="h-3 w-3 text-primary" />
-                {getViews(video.id)}
               </span>
             </span>
           </div>

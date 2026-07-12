@@ -69,10 +69,9 @@ const SearchPage: React.FC = () => {
     const supNames = new Set(supModels.map(m => m.name.toLowerCase()));
     
     return {
-      videos: [...videos, ...allSupVideos]
+      videos: Array.from(new Map([...videos, ...allSupVideos].map(v => [v.id, v])).values())
         .filter(v => 
-          (v.title.toLowerCase().includes(q) || (v.model || "").toLowerCase().includes(q)) && 
-          !isSupVideo(v)
+          v.title.toLowerCase().includes(q) || (v.model || "").toLowerCase().includes(q)
         )
         .sort((a, b) => {
           const timeA = new Date(a.addedAt).getTime() || 0;
@@ -83,7 +82,7 @@ const SearchPage: React.FC = () => {
           return numIdB - numIdA;
         }),
       models: allModels.filter(m => 
-        m.name.toLowerCase().includes(q) && !supNames.has(m.name.toLowerCase())
+        m.name.toLowerCase().includes(q)
       ),
       galleries: galleries.filter(g => 
         g.title.toLowerCase().includes(q) || g.modelName.toLowerCase().includes(q)

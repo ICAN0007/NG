@@ -8,7 +8,6 @@ import {
   formatDuration,
   getVideoModels,
   slugifyModel,
-  getViews,
   getThumbnailAspectRatio,
   Video,
   videoHasModel,
@@ -24,8 +23,6 @@ import {
   Play,
   ArrowLeft,
   ChevronRight,
-  Eye,
-  Star,
   Calendar,
 } from "lucide-react";
 import { Skeleton } from "@/components/ui/Skeleton";
@@ -50,6 +47,11 @@ const VideoWatch = () => {
   
   const [activeMirror, setActiveMirror] = useState<number>(-1); // -1 is main
   const [showInfo, setShowInfo] = useState(false);
+  const [overlayDismissed, setOverlayDismissed] = useState(false);
+
+  useEffect(() => {
+    setOverlayDismissed(false);
+  }, [id]);
 
   const video = useMemo(() => allVideos.find((v) => v.id === id), [id, allVideos]);
   const isSup = useMemo(() => video ? isSupVideo(video) : false, [video]);
@@ -225,6 +227,24 @@ const VideoWatch = () => {
               className="relative rounded-2xl md:rounded-[2.5rem] overflow-hidden bg-black shadow-[0_32px_64px_-12px_rgba(0,0,0,0.8)] ring-1 ring-white/10 group"
               style={{ aspectRatio: video?.width && video?.height ? `${video.width}/${video.height}` : '16/9' }}
             >
+              {video.overlay && !overlayDismissed && (
+                <div 
+                  className="absolute inset-0 z-10 cursor-pointer group/overlay"
+                  onClick={() => setOverlayDismissed(true)}
+                >
+                  <img 
+                    src={video.overlay} 
+                    alt="Overlay"
+                    className="w-full h-full object-cover transition-opacity duration-300 group-hover/overlay:opacity-90"
+                    referrerPolicy="no-referrer"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover/overlay:bg-black/10 transition-colors">
+                    <div className="w-20 h-20 bg-primary/90 rounded-full flex items-center justify-center shadow-2xl scale-90 group-hover/overlay:scale-100 transition-transform">
+                      <Play className="w-10 h-10 text-white fill-white ml-1" />
+                    </div>
+                  </div>
+                </div>
+              )}
               {(() => {
                 const url = currentSrc;
                 const isDirect = /\.(mp4|m4v|mov|webm|m3u8|mpd|ogg)(\?|$)/i.test(url);
@@ -296,10 +316,6 @@ const VideoWatch = () => {
                   </div>
 
                   <div className="flex flex-col items-start md:items-end gap-3 shrink-0">
-                    <div className="flex items-center gap-2.5 text-white font-black text-sm uppercase tracking-widest">
-                      <Star className="h-5 w-5 text-white fill-white" />
-                      <span>RATING {video.rating || "9.2"}</span>
-                    </div>
                     <div className="flex flex-col md:flex-row gap-4 md:gap-8">
                        <div className="flex flex-col gap-1">
                         <button 
@@ -377,12 +393,6 @@ const VideoWatch = () => {
                     <Calendar className="h-6 w-6 md:h-7 md:w-7 text-white/30" />
                     <span className="text-lg md:text-2xl font-black uppercase tracking-tight">
                       {new Date(video.addedAt).toLocaleDateString('en-US', { month: 'long', day: '2-digit', year: 'numeric' }).toUpperCase()}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-3.5">
-                    <Eye className="h-6 w-6 md:h-7 md:w-7 text-white/30" />
-                    <span className="text-lg md:text-2xl font-black uppercase tracking-tight">
-                      {getViews(video.id)}
                     </span>
                   </div>
                 </div>
